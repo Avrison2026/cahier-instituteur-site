@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Le Cahier de l'instituteur — Télécharger l'application</title>
+<link rel="icon" href="images/icon_full.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --papier: #faf6ea;
+    --papier-fonce: #f1ead4;
+    --encre: #20201a;
+    --encre-douce: #5b5647;
+    --marine: #14265c;
+    --marine-clair: #1c3277;
+    --orange: #ef7f1a;
+    --orange-sombre: #c1660f;
+    --vert: #1f7a46;
+    --jaune: #f6c948;
+    --ligne: rgba(32, 32, 26, 0.10);
+    --marge: #d6467b;
+    --rayon: 4px;
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--papier);
+    color: var(--encre);
+    font-family: 'Work Sans', -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .marque {
+    font-family: 'Arvo', Georgia, serif;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ---------- bande d'en-tête ---------- */
+  .bandeau {
+    background: var(--marine);
+    color: #cdd6ec;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .bandeau .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .bandeau a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+
+  /* ---------- héros ---------- */
+  .hero { padding: 56px 0 48px; }
+  .hero .wrap {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .hero-texte { flex: 1 1 380px; }
+  .hero-image { flex: 1 1 260px; text-align: center; }
+  .hero-image img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    animation: apparaitre 0.7s ease-out both;
+  }
+  @keyframes apparaitre {
+    0%   { opacity: 0; transform: translateY(14px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-image img { animation: none; }
+  }
+
+  .marque-ligne {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .marque-ligne img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    flex-shrink: 0;
+  }
+  .marque-ligne h1 { font-size: clamp(24px, 3.6vw, 32px); color: var(--marine); line-height: 1.2; }
+
+  .sous-titre {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 17px;
+    color: var(--encre-douce);
+    margin-bottom: 18px;
+    max-width: 46ch;
+  }
+
+  .hero-texte p { max-width: 48ch; color: var(--encre-douce); }
+
+  .pilules {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 26px;
+  }
+  .pilule {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 20px;
+  }
+
+  .btn {
+    display: inline-block;
+    background: var(--orange);
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 15px 28px;
+    border-radius: var(--rayon);
+    text-decoration: none;
+    box-shadow: 0 4px 0 var(--orange-sombre);
+  }
+  .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--orange-sombre); }
+
+  .cta-meta {
+    margin-top: 12px;
+    font-size: 14px;
+    color: var(--encre-douce);
+  }
+  .cta-meta a { text-decoration: underline; text-underline-offset: 3px; color: var(--marine); }
+
+  /* ---------- page cahier ---------- */
+  .page { padding: 20px 0 70px; }
+
+  .colonne {
+    position: relative;
+    padding-left: 30px;
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent, transparent 37px,
+      var(--ligne) 37px, var(--ligne) 38px
+    );
+  }
+  .colonne::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--marge);
+    opacity: 0.5;
+  }
+
+  section { margin-bottom: 48px; }
+  section:last-child { margin-bottom: 0; }
+
+  h2 { font-size: 21px; margin-bottom: 14px; color: var(--marine); }
+
+  p { margin: 0 0 12px; max-width: 62ch; }
+
+  ul.liste, ol.etapes {
+    margin: 0;
+    padding-left: 20px;
+  }
+  ul.liste li, ol.etapes li {
+    margin-bottom: 10px;
+    max-width: 60ch;
+  }
+  ol.etapes li::marker {
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    color: var(--marge);
+  }
+
+  .avertissement {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--papier-fonce);
+    border-left: 3px solid var(--jaune);
+    border-radius: var(--rayon);
+    font-size: 15px;
+    max-width: 58ch;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 15px;
+  }
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--ligne);
+  }
+  th {
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: var(--encre-douce);
+  }
+  td a { color: var(--marge); text-decoration: underline; text-underline-offset: 3px; }
+
+  footer {
+    background: var(--marine);
+    color: #b7c1e0;
+    padding: 30px 0;
+    font-size: 14px;
+  }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer strong { color: #fff; }
+
+  @media (max-width: 560px) {
+    .hero { padding: 40px 0 36px; }
+    .colonne { padding-left: 22px; }
+    .btn { width: 100%; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="bandeau">
+    <div class="wrap">
+      <span>Fiches pédagogiques du CP1 au CM2</span>
+      <a href="https://github.com/Avrison2026/Cahier-de-l-instituteur">Voir le code source</a>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-texte">
+        <div class="marque-ligne">
+          <img src="images/icon_full.png" alt="Icône Le Cahier de l'instituteur">
+          <h1>Le Cahier de l'instituteur</h1>
+        </div>
+        <div class="sous-titre">Des fiches pédagogiques prêtes, pour tous les niveaux et toutes les matières du primaire.</div>
+
+        <p>
+          L'instituteur choisit un niveau, une matière, une leçon puis une séance.
+          L'application construit la fiche complète — objectifs, situation d'apprentissage,
+          déroulement, évaluation — en suivant les programmes officiels, puis l'exporte en
+          fichier Word. Un dictionnaire, un conjugueur et un générateur d'exercices
+          complètent l'ensemble.
+        </p>
+
+        <div class="pilules">
+          <span class="pilule" style="background:#ef7f1a">CP1</span>
+          <span class="pilule" style="background:#f2a73b">CP2</span>
+          <span class="pilule" style="background:#3f9142">CE1</span>
+          <span class="pilule" style="background:#2f86c9">CE2</span>
+          <span class="pilule" style="background:#7a4fb5">CM1</span>
+          <span class="pilule" style="background:#d6467b">CM2</span>
+        </div>
+
+        <!-- Remplacer ce lien par l'adresse exacte de votre release GitHub une fois l'APK publié.
+             Exemple : https://github.com/Avrison2026/Cahier-de-l-instituteur/releases/latest/download/cahier-instituteur.apk -->
+        <a class="btn" href="https://github.com/Avrison2026/Cahier-de-l-instituteur/releases/latest/download/cahier-instituteur.apk" download>
+          Télécharger l'APK
+        </a>
+        <div class="cta-meta">
+          Version 1.0 · Android 8.0 ou plus récent ·
+          <a href="https://github.com/Avrison2026/Cahier-de-l-instituteur/releases">toutes les versions</a>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="images/header_instituteur.png" alt="Instituteur écrivant au tableau : une bonne fiche, c'est une leçon réussie">
+      </div>
+    </div>
+  </header>
+
+  <div class="page">
+    <div class="wrap">
+      <div class="colonne">
+
+        <section>
+          <h2>Ce que fait l'application</h2>
+          <p>
+            Toutes les classes du primaire sont couvertes, du CP1 au CM2, dans toutes les
+            matières au programme :
+          </p>
+          <div class="pilules">
+            <span class="pilule" style="background:#2f6fd1">Français</span>
+            <span class="pilule" style="background:#ef7f1a">Mathématiques</span>
+            <span class="pilule" style="background:#1f7a46">Histoire-Géographie</span>
+            <span class="pilule" style="background:#7a4fb5">Sciences</span>
+            <span class="pilule" style="background:#d6467b">EDHC / AEC</span>
+            <span class="pilule" style="background:#159e8a">EPS</span>
+          </div>
+          <ul class="liste">
+            <li>Génération de fiches conformes aux guides pédagogiques officiels, exportées en Word prêt à imprimer.</li>
+            <li>Dictionnaire français hors ligne, pour vérifier une définition en un instant.</li>
+            <li>Conjugueur donnant toutes les formes d'un verbe, à tous les temps.</li>
+            <li>Générateur d'exercices : QCM, textes à trous, exercices d'appariement.</li>
+            <li>Fonctionne sans connexion internet une fois installée.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Installer l'application</h2>
+          <p>
+            L'application n'est pas sur le Play Store : elle est distribuée directement
+            en fichier APK, ici même. L'installation prend deux minutes.
+          </p>
+          <ol class="etapes">
+            <li>Toucher le bouton « Télécharger l'APK » ci-dessus, depuis le téléphone.</li>
+            <li>Ouvrir le fichier téléchargé, depuis les notifications ou le dossier Téléchargements.</li>
+            <li>Si le téléphone le demande, autoriser « Installer les applications inconnues » pour le navigateur utilisé.</li>
+            <li>Toucher Installer, puis ouvrir Le Cahier de l'instituteur.</li>
+          </ol>
+          <div class="avertissement">
+            Un message peut avertir que l'application vient d'une source inconnue de Google.
+            C'est normal pour toute application installée hors Play Store — cela ne signifie
+            pas qu'elle est dangereuse. Toucher « Installer quand même » pour continuer.
+          </div>
+        </section>
+
+        <section>
+          <h2>Versions disponibles</h2>
+          <table>
+            <thead>
+              <tr><th>Version</th><th>Date</th><th>Notes</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1.0</td>
+                <td>À publier</td>
+                <td><a href="https://github.com/Avrison2026/Cahier-de-l-instituteur/releases">Voir sur GitHub</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <span><strong>Le Cahier de l'instituteur</strong></span>
+      <span>Questions ou problème d'installation : contacter Avrison Allah</span>
+    </div>
+  </footer>
+
+</body>
+</html>
