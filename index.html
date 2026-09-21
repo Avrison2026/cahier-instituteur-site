@@ -274,7 +274,8 @@
           Télécharger l'APK
         </a>
         <div class="cta-meta">
-          Version 1.0 · Android 8.0 ou plus récent ·
+          <span id="version-info">Version 1.0</span> · Android 8.0 ou plus récent ·
+          <span id="download-count"></span>
           <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">toutes les versions</a>
         </div>
       </div>
@@ -358,6 +359,35 @@
     </div>
   </footer>
 
+  <script>
+    // Interroge l'API publique de GitHub (aucune clé nécessaire) pour afficher
+    // la version réelle et le nombre de téléchargements de l'APK en ligne.
+    // En cas d'échec (pas de réseau, API indisponible), le texte statique
+    // défini plus haut dans la page reste affiché, sans erreur visible.
+    (async () => {
+      try {
+        const res = await fetch(
+          'https://api.github.com/repos/Avrison2026/cahier-instituteur-site/releases/latest',
+          { headers: { Accept: 'application/vnd.github+json' } }
+        );
+        if (!res.ok) return;
+        const data = await res.json();
+
+        const tag = (data.tag_name || '').replace(/^v/i, '');
+        const versionEl = document.getElementById('version-info');
+        if (tag && versionEl) versionEl.textContent = `Version ${tag}`;
+
+        const asset = (data.assets || []).find(a => a.name === 'cahier-instituteur.apk');
+        const countEl = document.getElementById('download-count');
+        if (asset && countEl) {
+          const n = asset.download_count;
+          countEl.textContent = `${n} téléchargement${n === 1 ? '' : 's'} ·`;
+        }
+      } catch (erreur) {
+        // Pas de réseau ou API GitHub injoignable : on garde le texte statique.
+      }
+    })();
+  </script>
+
 </body>
 </html>
-
