@@ -250,6 +250,22 @@
   .avertissement svg { flex-shrink: 0; margin-top: 2px; color: var(--orange-sombre); }
   .avertissement p { margin: 0; color: var(--texte); }
 
+  .faq-install {
+    margin-top: 14px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 10px;
+    max-width: 58ch;
+  }
+  .faq-item {
+    padding: 12px 14px;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon-sm);
+  }
+  .faq-item strong { display: block; font-size: 13.5px; color: var(--texte); margin-bottom: 3px; }
+  .faq-item span { display: block; font-size: 13px; color: var(--texte-doux); }
+
   table {
     border-collapse: collapse; width: 100%; font-size: 14.5px;
     background: var(--carte); border-radius: var(--rayon); overflow: hidden;
@@ -322,6 +338,7 @@
           <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>Android 8.0 ou plus récent</span>
           <span id="download-count"></span>
           <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">toutes les versions</a>
+          <a href="#installer" style="margin-left:16px">comment installer ?</a>
         </div>
       </div>
 
@@ -421,7 +438,7 @@
         </div>
       </section>
 
-      <section>
+      <section id="installer">
         <div class="titre-section">
           <span class="icone-titre">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>
@@ -430,14 +447,25 @@
         </div>
         <p>L'application n'est pas sur le Play Store : elle est distribuée directement en fichier APK, ici même. L'installation prend deux minutes.</p>
         <ol class="etapes">
-          <li><span class="texte-etape">Toucher le bouton « Télécharger l'APK » ci-dessus, depuis le téléphone.</span></li>
-          <li><span class="texte-etape">Ouvrir le fichier téléchargé, depuis les notifications ou le dossier Téléchargements.</span></li>
-          <li><span class="texte-etape">Si le téléphone le demande, autoriser « Installer les applications inconnues » pour le navigateur utilisé.</span></li>
-          <li><span class="texte-etape">Toucher Installer, puis ouvrir Le Cahier de l'instituteur.</span></li>
+          <li><span class="texte-etape">Toucher le bouton « Télécharger l'APK » ci-dessus, depuis le téléphone. Le fichier se télécharge en quelques secondes.</span></li>
+          <li><span class="texte-etape">Ouvrir le fichier téléchargé : soit depuis la notification « Téléchargement terminé », soit depuis l'application Fichiers &gt; dossier Téléchargements.</span></li>
+          <li><span class="texte-etape">Android affiche « Installer des applications inconnues » — c'est normal pour toute application hors Play Store. Activer l'interrupteur, puis toucher Retour.</span></li>
+          <li><span class="texte-etape">Toucher Installer, patienter quelques secondes, puis toucher Ouvrir.</span></li>
         </ol>
         <div class="avertissement">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
           <p>Un message peut avertir que l'application vient d'une source inconnue de Google. C'est normal pour toute application installée hors Play Store — cela ne signifie pas qu'elle est dangereuse. Toucher « Installer quand même » pour continuer.</p>
+        </div>
+
+        <div class="faq-install">
+          <div class="faq-item">
+            <strong>Le bouton Installer reste grisé ?</strong>
+            <span>L'interrupteur de l'étape 3 n'est pas encore activé — revenir en arrière et l'activer.</span>
+          </div>
+          <div class="faq-item">
+            <strong>Fichier introuvable ?</strong>
+            <span>Ouvrir Fichiers (ou Gestionnaire de fichiers) &gt; Téléchargements &gt; cahier-instituteur.apk.</span>
+          </div>
         </div>
       </section>
 
