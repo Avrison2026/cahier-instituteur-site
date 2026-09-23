@@ -4,25 +4,38 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Le Cahier de l'instituteur — Télécharger l'application</title>
+<meta name="description" content="Générez des fiches pédagogiques conformes aux programmes officiels, du CP1 au CM2, directement depuis votre téléphone. Dictionnaire, conjugueur et générateur d'exercices inclus, sans connexion internet.">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Le Cahier de l'instituteur">
+<meta property="og:description" content="Des fiches pédagogiques prêtes, pour tous les niveaux et toutes les matières du primaire. Application Android, installable hors Play Store.">
+<meta property="og:image" content="images/header_instituteur.png">
+<meta name="theme-color" content="#0F1F4D">
+
 <link rel="icon" href="images/icon_full.png">
+<link rel="apple-touch-icon" href="images/icon_full.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --papier: #faf6ea;
-    --papier-fonce: #f1ead4;
-    --encre: #20201a;
-    --encre-douce: #5b5647;
-    --marine: #14265c;
+    --fond: #f6f7fb;
+    --carte: #ffffff;
+    --texte: #171a2b;
+    --texte-doux: #5c6178;
+    --marine: #0F1F4D;
     --marine-clair: #1c3277;
+    --bleu-vif: #2f6fd1;
     --orange: #ef7f1a;
     --orange-sombre: #c1660f;
-    --vert: #1f7a46;
-    --jaune: #f6c948;
-    --ligne: rgba(32, 32, 26, 0.10);
-    --marge: #d6467b;
-    --rayon: 4px;
+    --vert: #1f9d5c;
+    --violet: #7a4fb5;
+    --rose: #d6467b;
+    --bordure: rgba(15, 31, 77, 0.09);
+    --ombre: 0 1px 2px rgba(15,31,77,0.04), 0 8px 24px rgba(15,31,77,0.07);
+    --ombre-hover: 0 4px 10px rgba(15,31,77,0.06), 0 16px 32px rgba(15,31,77,0.11);
+    --rayon: 16px;
+    --rayon-sm: 10px;
   }
 
   * { box-sizing: border-box; }
@@ -30,206 +43,236 @@
 
   body {
     margin: 0;
-    background: var(--papier);
-    color: var(--encre);
-    font-family: 'Work Sans', -apple-system, sans-serif;
-    font-size: 17px;
-    line-height: 1.6;
+    background: var(--fond);
+    color: var(--texte);
+    font-family: 'Poppins', -apple-system, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
   }
 
-  h1, h2, .marque {
-    font-family: 'Arvo', Georgia, serif;
-    font-weight: 700;
-    margin: 0;
-  }
-
+  h1, h2 { font-family: 'Poppins', sans-serif; font-weight: 700; margin: 0; letter-spacing: -0.02em; }
   a { color: inherit; }
+  svg { display: block; }
+  img { max-width: 100%; }
 
-  .wrap {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 0 24px;
-  }
+  .wrap { max-width: 1060px; margin: 0 auto; padding: 0 24px; }
 
-  /* ---------- bande d'en-tête ---------- */
+  /* ---------- bandeau ---------- */
   .bandeau {
     background: var(--marine);
     color: #cdd6ec;
-    padding: 10px 0;
-    font-size: 14px;
+    padding: 9px 0;
+    font-size: 13.5px;
+    font-weight: 500;
   }
-  .bandeau .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
-  .bandeau a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .bandeau .wrap { display: flex; align-items: center; justify-content: center; }
+  .bandeau-texte { display: flex; align-items: center; gap: 8px; }
+  .bandeau svg { opacity: 0.85; }
 
   /* ---------- héros ---------- */
-  .hero { padding: 56px 0 48px; }
-  .hero .wrap {
-    display: flex;
-    align-items: center;
-    gap: 48px;
-    flex-wrap: wrap;
+  .hero {
+    position: relative;
+    background: linear-gradient(150deg, var(--marine) 0%, #1a3170 55%, #24418f 100%);
+    padding: 64px 0 90px;
+    overflow: hidden;
   }
-  .hero-texte { flex: 1 1 380px; }
-  .hero-image { flex: 1 1 260px; text-align: center; }
-  .hero-image img {
-    max-width: 300px;
+  .hero::before, .hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(60px);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .hero::before { width: 380px; height: 380px; background: var(--orange); top: -140px; right: -80px; }
+  .hero::after { width: 320px; height: 320px; background: var(--vert); bottom: -160px; left: -100px; opacity: 0.25; }
+
+  .hero .wrap { position: relative; display: flex; align-items: center; gap: 52px; flex-wrap: wrap; }
+  .hero-texte { flex: 1 1 400px; }
+  .hero-image { flex: 1 1 280px; text-align: center; }
+
+  .hero-image-cadre {
+    position: relative;
+    display: inline-block;
+    max-width: 320px;
     width: 100%;
-    height: auto;
     animation: apparaitre 0.7s ease-out both;
   }
+  .hero-image-cadre img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    display: block;
+  }
   @keyframes apparaitre {
-    0%   { opacity: 0; transform: translateY(14px); }
+    0%   { opacity: 0; transform: translateY(16px); }
     100% { opacity: 1; transform: translateY(0); }
   }
-  @media (prefers-reduced-motion: reduce) {
-    .hero-image img { animation: none; }
-  }
+  @media (prefers-reduced-motion: reduce) { .hero-image-cadre { animation: none; } }
 
-  .marque-ligne {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-  .marque-ligne img {
-    width: 56px;
-    height: 56px;
-    border-radius: 12px;
-    flex-shrink: 0;
-  }
-  .marque-ligne h1 { font-size: clamp(24px, 3.6vw, 32px); color: var(--marine); line-height: 1.2; }
+  .marque-ligne { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .marque-ligne img { width: 52px; height: 52px; border-radius: 13px; flex-shrink: 0; box-shadow: 0 6px 16px rgba(0,0,0,0.25); }
+  .marque-ligne h1 { font-size: clamp(24px, 3.4vw, 31px); color: #fff; line-height: 1.15; }
 
   .sous-titre {
-    font-family: 'Work Sans', sans-serif;
     font-weight: 500;
-    font-size: 17px;
-    color: var(--encre-douce);
-    margin-bottom: 18px;
-    max-width: 46ch;
+    font-size: 18px;
+    color: #dfe6fa;
+    margin-bottom: 16px;
+    max-width: 44ch;
   }
+  .hero-texte p { max-width: 48ch; color: #b9c4e6; margin: 0 0 22px; }
 
-  .hero-texte p { max-width: 48ch; color: var(--encre-douce); }
-
-  .pilules {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 18px 0 26px;
-  }
+  .pilules { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 26px; }
   .pilule {
-    font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12.5px;
     color: #fff;
-    padding: 5px 12px;
+    padding: 6px 13px;
     border-radius: 20px;
   }
 
   .btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     background: var(--orange);
     color: #fff;
-    font-family: 'Work Sans', sans-serif;
     font-weight: 600;
-    font-size: 17px;
-    padding: 15px 28px;
-    border-radius: var(--rayon);
+    font-size: 16.5px;
+    padding: 15px 27px;
+    border-radius: var(--rayon-sm);
     text-decoration: none;
-    box-shadow: 0 4px 0 var(--orange-sombre);
+    box-shadow: 0 10px 24px rgba(239,127,26,0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
-  .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--orange-sombre); }
+  .btn svg { flex-shrink: 0; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(239,127,26,0.48); }
+  .btn:active { transform: translateY(0); }
 
   .cta-meta {
-    margin-top: 12px;
-    font-size: 14px;
-    color: var(--encre-douce);
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 13.5px;
+    color: #aab6dd;
   }
-  .cta-meta a { text-decoration: underline; text-underline-offset: 3px; color: var(--marine); }
+  .cta-meta span { display: inline-flex; align-items: center; gap: 6px; }
+  .cta-meta svg { flex-shrink: 0; opacity: 0.8; }
+  .cta-meta a { text-decoration: underline; text-underline-offset: 3px; color: #fff; }
 
-  /* ---------- page cahier ---------- */
-  .page { padding: 20px 0 70px; }
-
-  .colonne {
-    position: relative;
-    padding-left: 30px;
-    background-image: repeating-linear-gradient(
-      to bottom,
-      transparent, transparent 37px,
-      var(--ligne) 37px, var(--ligne) 38px
-    );
-  }
-  .colonne::before {
-    content: "";
-    position: absolute;
-    left: 6px; top: 0; bottom: 0;
-    width: 2px;
-    background: var(--marge);
-    opacity: 0.5;
-  }
-
-  section { margin-bottom: 48px; }
+  /* ---------- corps de page ---------- */
+  .page { padding: 64px 0 80px; }
+  section { margin-bottom: 64px; }
   section:last-child { margin-bottom: 0; }
 
-  h2 { font-size: 21px; margin-bottom: 14px; color: var(--marine); }
+  .titre-section { display: flex; align-items: center; gap: 12px; margin-bottom: 18px; }
+  .titre-section .icone-titre {
+    width: 38px; height: 38px; border-radius: 11px;
+    background: var(--marine); color: #fff;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  h2 { font-size: 24px; color: var(--texte); }
+  p { margin: 0 0 12px; max-width: 62ch; color: var(--texte-doux); }
 
-  p { margin: 0 0 12px; max-width: 62ch; }
+  /* ---------- grille de fonctionnalités ---------- */
+  .grille-fonctions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 14px;
+    margin-top: 20px;
+  }
+  .carte-fonction {
+    display: flex;
+    gap: 13px;
+    align-items: flex-start;
+    background: var(--carte);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    padding: 18px;
+    box-shadow: var(--ombre);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .carte-fonction:hover { box-shadow: var(--ombre-hover); transform: translateY(-2px); }
+  .carte-fonction .icone {
+    width: 38px; height: 38px; border-radius: 11px;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; flex-shrink: 0;
+  }
+  .carte-fonction strong { display: block; font-size: 15.5px; margin-bottom: 3px; color: var(--texte); }
+  .carte-fonction span { font-size: 13.5px; color: var(--texte-doux); }
 
-  ul.liste, ol.etapes {
-    margin: 0;
-    padding-left: 20px;
+  /* ---------- captures d'écran ---------- */
+  .galerie-captures {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding: 8px 2px 16px;
+    margin-top: 20px;
+    scroll-snap-type: x proximity;
   }
-  ul.liste li, ol.etapes li {
-    margin-bottom: 10px;
-    max-width: 60ch;
+  .galerie-captures::-webkit-scrollbar { height: 6px; }
+  .galerie-captures::-webkit-scrollbar-thumb { background: var(--bordure); border-radius: 3px; }
+  .capture { flex: 0 0 auto; scroll-snap-align: start; width: 172px; }
+  .capture img {
+    width: 100%; height: auto; display: block;
+    border-radius: var(--rayon); box-shadow: var(--ombre);
+    border: 1px solid var(--bordure);
   }
-  ol.etapes li::marker {
-    font-family: 'Arvo', serif;
-    font-weight: 700;
-    color: var(--marge);
+  .capture span { display: block; margin-top: 10px; font-size: 13px; font-weight: 600; color: var(--texte-doux); text-align: center; }
+
+  /* ---------- étapes ---------- */
+  .etapes { list-style: none; margin: 20px 0 0; padding: 0; counter-reset: etape; }
+  .etapes li { counter-increment: etape; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 18px; max-width: 60ch; }
+  .etapes li::before {
+    content: counter(etape);
+    flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--marine); color: #fff;
+    font-weight: 700; font-size: 14px;
+    display: flex; align-items: center; justify-content: center;
   }
+  .etapes li .texte-etape { padding-top: 4px; color: var(--texte); }
 
   .avertissement {
-    margin-top: 16px;
-    padding: 14px 16px;
-    background: var(--papier-fonce);
-    border-left: 3px solid var(--jaune);
-    border-radius: var(--rayon);
-    font-size: 15px;
+    margin-top: 20px;
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 16px 18px;
+    background: #fff7e8;
+    border: 1px solid #f6dfa8;
+    border-radius: var(--rayon-sm);
+    font-size: 14.5px;
     max-width: 58ch;
   }
+  .avertissement svg { flex-shrink: 0; margin-top: 2px; color: var(--orange-sombre); }
+  .avertissement p { margin: 0; color: var(--texte); }
 
   table {
-    border-collapse: collapse;
-    width: 100%;
-    font-size: 15px;
+    border-collapse: collapse; width: 100%; font-size: 14.5px;
+    background: var(--carte); border-radius: var(--rayon); overflow: hidden;
+    box-shadow: var(--ombre); border: 1px solid var(--bordure);
   }
-  th, td {
-    text-align: left;
-    padding: 10px 12px;
-    border-bottom: 1px solid var(--ligne);
-  }
-  th {
-    font-family: 'Arvo', serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--encre-douce);
-  }
-  td a { color: var(--marge); text-decoration: underline; text-underline-offset: 3px; }
+  th, td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--bordure); }
+  tr:last-child td { border-bottom: none; }
+  th { font-weight: 600; font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--texte-doux); background: #fafbff; }
+  td a { color: var(--bleu-vif); text-decoration: none; font-weight: 500; display: inline-flex; align-items: center; gap: 5px; }
+  td a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
-  footer {
-    background: var(--marine);
-    color: #b7c1e0;
-    padding: 30px 0;
-    font-size: 14px;
-  }
-  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
-  footer strong { color: #fff; }
+  footer { background: var(--marine); color: #b7c1e0; padding: 32px 0; font-size: 14px; }
+  footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+  footer strong { color: #fff; font-weight: 600; }
+  footer .contact { display: inline-flex; align-items: center; gap: 8px; }
+  footer a { text-decoration: none; color: #dfe6fa; }
+  footer a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
   @media (max-width: 560px) {
-    .hero { padding: 40px 0 36px; }
-    .colonne { padding-left: 22px; }
-    .btn { width: 100%; text-align: center; }
+    .hero { padding: 44px 0 64px; }
+    .btn { width: 100%; justify-content: center; text-align: center; }
+    .page { padding: 44px 0 56px; }
+    section { margin-bottom: 48px; }
   }
 </style>
 </head>
@@ -237,7 +280,10 @@
 
   <div class="bandeau">
     <div class="wrap">
-      <span>Fiches pédagogiques du CP1 au CM2, pour les instituteurs de Côte d'Ivoire</span>
+      <span class="bandeau-texte">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Fiches pédagogiques du CP1 au CM2, pour les instituteurs de Côte d'Ivoire
+      </span>
     </div>
   </div>
 
@@ -267,103 +313,172 @@
           <span class="pilule" style="background:#d6467b">CM2</span>
         </div>
 
-        <!-- Ce lien pointe vers les releases du dépôt PUBLIC cahier-instituteur-site.
-             Les fichiers de release d'un dépôt privé ne sont pas téléchargeables publiquement :
-             c'est pourquoi l'APK doit être publié ici, pas sur le dépôt privé du code. -->
         <a class="btn" href="https://github.com/Avrison2026/cahier-instituteur-site/releases/latest/download/cahier-instituteur.apk" download>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Télécharger l'APK
         </a>
         <div class="cta-meta">
-          <span id="version-info">Version 1.0</span> · Android 8.0 ou plus récent ·
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg><span id="version-info">Version 1.0</span></span>
+          <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>Android 8.0 ou plus récent</span>
           <span id="download-count"></span>
           <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">toutes les versions</a>
         </div>
       </div>
 
       <div class="hero-image">
-        <img src="images/header_instituteur.png" alt="Instituteur écrivant au tableau : une bonne fiche, c'est une leçon réussie">
+        <div class="hero-image-cadre">
+          <img src="images/header_instituteur.png" alt="Instituteur écrivant au tableau : une bonne fiche, c'est une leçon réussie">
+        </div>
       </div>
     </div>
   </header>
 
   <div class="page">
     <div class="wrap">
-      <div class="colonne">
 
-        <section>
+      <section>
+        <div class="titre-section">
+          <span class="icone-titre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+          </span>
           <h2>Ce que fait l'application</h2>
-          <p>
-            Toutes les classes du primaire sont couvertes, du CP1 au CM2, dans toutes les
-            matières au programme :
-          </p>
-          <div class="pilules">
-            <span class="pilule" style="background:#2f6fd1">Français</span>
-            <span class="pilule" style="background:#ef7f1a">Mathématiques</span>
-            <span class="pilule" style="background:#1f7a46">Histoire-Géographie</span>
-            <span class="pilule" style="background:#7a4fb5">Sciences</span>
-            <span class="pilule" style="background:#d6467b">EDHC / AEC</span>
-            <span class="pilule" style="background:#159e8a">EPS</span>
-          </div>
-          <ul class="liste">
-            <li>Génération de fiches conformes aux guides pédagogiques officiels, exportées en Word prêt à imprimer.</li>
-            <li>Dictionnaire français hors ligne, pour vérifier une définition en un instant.</li>
-            <li>Conjugueur donnant toutes les formes d'un verbe, à tous les temps.</li>
-            <li>Générateur d'exercices : QCM, textes à trous, exercices d'appariement.</li>
-            <li>Fonctionne sans connexion internet une fois installée.</li>
-          </ul>
-        </section>
+        </div>
+        <p>Toutes les classes du primaire sont couvertes, du CP1 au CM2, dans toutes les matières au programme :</p>
+        <div class="pilules">
+          <span class="pilule" style="background:#2f6fd1">Français</span>
+          <span class="pilule" style="background:#ef7f1a">Mathématiques</span>
+          <span class="pilule" style="background:#1f7a46">Histoire-Géographie</span>
+          <span class="pilule" style="background:#7a4fb5">Sciences</span>
+          <span class="pilule" style="background:#d6467b">EDHC / AEC</span>
+          <span class="pilule" style="background:#159e8a">EPS</span>
+        </div>
 
-        <section>
+        <div class="grille-fonctions">
+          <div class="carte-fonction">
+            <span class="icone" style="background:#2f6fd1">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </span>
+            <div><strong>Fiches conformes</strong><span>Générées d'après les guides pédagogiques officiels, exportées en Word prêt à imprimer.</span></div>
+          </div>
+          <div class="carte-fonction">
+            <span class="icone" style="background:#7a4fb5">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </span>
+            <div><strong>Dictionnaire hors ligne</strong><span>Vérifier une définition en un instant, sans connexion.</span></div>
+          </div>
+          <div class="carte-fonction">
+            <span class="icone" style="background:#ef7f1a">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"/></svg>
+            </span>
+            <div><strong>Conjugueur</strong><span>Toutes les formes d'un verbe français, à tous les temps.</span></div>
+          </div>
+          <div class="carte-fonction">
+            <span class="icone" style="background:#159e8a">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 11 3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            </span>
+            <div><strong>Générateur d'exercices</strong><span>QCM, textes à trous, exercices d'appariement.</span></div>
+          </div>
+          <div class="carte-fonction">
+            <span class="icone" style="background:#3f9142">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 1l22 22"/><path d="M16.72 11.06A10.94 10.94 0 0 1 19 12.55"/><path d="M5 12.55a10.94 10.94 0 0 1 5.17-2.39"/><path d="M10.71 5.05A16 16 0 0 1 22.58 9"/><path d="M1.42 9a15.91 15.91 0 0 1 4.7-2.88"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            </span>
+            <div><strong>Fonctionne hors connexion</strong><span>Une fois installée, plus besoin d'internet au quotidien.</span></div>
+          </div>
+          <div class="carte-fonction">
+            <span class="icone" style="background:#d6467b">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </span>
+            <div><strong>Gestion de classe</strong><span>Listes d'élèves et suivi par niveau, en plus des fiches.</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="titre-section">
+          <span class="icone-titre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          </span>
+          <h2>Captures d'écran</h2>
+        </div>
+        <p>L'application telle qu'elle est aujourd'hui, en usage réel.</p>
+        <div class="galerie-captures">
+          <div class="capture">
+            <img src="images/capture-accueil.jpg" alt="Écran d'accueil de l'application, avec les raccourcis Préparer une fiche, Mes fiches, Dictionnaire, Mes classes, Conjugaison, Exercices" loading="lazy">
+            <span>Accueil</span>
+          </div>
+          <div class="capture">
+            <img src="images/capture-menu.jpg" alt="Menu latéral avec le profil de l'enseignant et les niveaux activés" loading="lazy">
+            <span>Menu</span>
+          </div>
+          <div class="capture">
+            <img src="images/capture-mes-fiches.jpg" alt="Liste des fiches déjà générées, filtrable par matière" loading="lazy">
+            <span>Mes fiches</span>
+          </div>
+          <div class="capture">
+            <img src="images/capture-classe.jpg" alt="Détail d'une classe : effectif, notes, gestion des élèves" loading="lazy">
+            <span>Gestion de classe</span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="titre-section">
+          <span class="icone-titre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="10" y1="19" x2="14" y2="19"/></svg>
+          </span>
           <h2>Installer l'application</h2>
-          <p>
-            L'application n'est pas sur le Play Store : elle est distribuée directement
-            en fichier APK, ici même. L'installation prend deux minutes.
-          </p>
-          <ol class="etapes">
-            <li>Toucher le bouton « Télécharger l'APK » ci-dessus, depuis le téléphone.</li>
-            <li>Ouvrir le fichier téléchargé, depuis les notifications ou le dossier Téléchargements.</li>
-            <li>Si le téléphone le demande, autoriser « Installer les applications inconnues » pour le navigateur utilisé.</li>
-            <li>Toucher Installer, puis ouvrir Le Cahier de l'instituteur.</li>
-          </ol>
-          <div class="avertissement">
-            Un message peut avertir que l'application vient d'une source inconnue de Google.
-            C'est normal pour toute application installée hors Play Store — cela ne signifie
-            pas qu'elle est dangereuse. Toucher « Installer quand même » pour continuer.
-          </div>
-        </section>
+        </div>
+        <p>L'application n'est pas sur le Play Store : elle est distribuée directement en fichier APK, ici même. L'installation prend deux minutes.</p>
+        <ol class="etapes">
+          <li><span class="texte-etape">Toucher le bouton « Télécharger l'APK » ci-dessus, depuis le téléphone.</span></li>
+          <li><span class="texte-etape">Ouvrir le fichier téléchargé, depuis les notifications ou le dossier Téléchargements.</span></li>
+          <li><span class="texte-etape">Si le téléphone le demande, autoriser « Installer les applications inconnues » pour le navigateur utilisé.</span></li>
+          <li><span class="texte-etape">Toucher Installer, puis ouvrir Le Cahier de l'instituteur.</span></li>
+        </ol>
+        <div class="avertissement">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          <p>Un message peut avertir que l'application vient d'une source inconnue de Google. C'est normal pour toute application installée hors Play Store — cela ne signifie pas qu'elle est dangereuse. Toucher « Installer quand même » pour continuer.</p>
+        </div>
+      </section>
 
-        <section>
+      <section>
+        <div class="titre-section">
+          <span class="icone-titre">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </span>
           <h2>Versions disponibles</h2>
-          <table>
-            <thead>
-              <tr><th>Version</th><th>Date</th><th>Notes</th></tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1.0</td>
-                <td>Publiée</td>
-                <td><a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">Voir sur GitHub</a></td>
-              </tr>
-            </tbody>
-          </table>
-        </section>
+        </div>
+        <table>
+          <thead><tr><th>Version</th><th>Date</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>1.0</td>
+              <td>Publiée</td>
+              <td>
+                <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  Voir sur GitHub
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
 
-      </div>
     </div>
   </div>
 
   <footer>
     <div class="wrap">
       <span><strong>Le Cahier de l'instituteur</strong></span>
-      <span>Questions ou problème d'installation : contacter Avrison Allah</span>
+      <span class="contact">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.83 1h.02a7.94 7.94 0 0 0 5.55-13.58ZM12.05 18.4h-.01a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.62 6.62 0 0 1 10.24-8.2 6.58 6.58 0 0 1-4.63 11.3Zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.14-.42.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.29-.34.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6 0 .95.7 1.87.79 2 .1.13 1.37 2.09 3.32 2.93.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+        <a href="https://wa.me/2250778806575?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Le%20Cahier%20de%20l%27instituteur">Questions ou problème d'installation : WhatsApp</a>
+      </span>
     </div>
   </footer>
 
   <script>
-    // Interroge l'API publique de GitHub (aucune clé nécessaire) pour afficher
-    // la version réelle et le nombre de téléchargements de l'APK en ligne.
-    // En cas d'échec (pas de réseau, API indisponible), le texte statique
-    // défini plus haut dans la page reste affiché, sans erreur visible.
     (async () => {
       try {
         const res = await fetch(
