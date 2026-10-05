@@ -525,7 +525,7 @@
           <h3>En cas de souci</h3>
           <details><summary>Le bouton Installer reste grisé</summary><div class="reponse">L'interrupteur de l'étape 3 n'est pas activé. Revenez en arrière et activez-le.</div></details>
           <details><summary>Je ne trouve pas le fichier</summary><div class="reponse">Ouvrez Fichiers (ou Gestionnaire de fichiers), puis Téléchargements, puis cahier-instituteur.apk.</div></details>
-          <details><summary>« Application non installée »</summary><div class="reponse">Le téléchargement a sans doute été interrompu. Supprimez le fichier, retéléchargez-le avec une bonne connexion, puis recommencez.</div></details>
+          <details><summary>« Application non installée »</summary><div class="reponse">Souvent, le téléchargement a été interrompu ou le téléphone manque d'espace. Supprimez le fichier, libérez de la place (au moins 300 Mo), retéléchargez-le avec une bonne connexion, puis recommencez.</div></details>
           <details><summary>Toujours bloqué ?</summary><div class="reponse">Écrivez-nous sur <a href="https://wa.me/2250778806575?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20d%27installation%20du%20Cahier%20de%20l%27instituteur">WhatsApp</a> avec une capture de l'écran : nous vous aidons à finir l'installation.</div></details>
         </div>
       </div>
@@ -614,16 +614,24 @@
   // Version, taille et nouveautés, lues depuis GitHub. Sans réseau, le texte statique reste affiché.
   (async () => {
     try {
-      const res = await fetch(`https://api.github.com/repos/${DEPOT}/releases?per_page=5`, { headers: { Accept: 'application/vnd.github+json' } });
-      if (!res.ok) return;
-      const versions = (await res.json()).filter(r => !r.draft && !r.prerelease);
-      if (!versions.length) return;
-
-      const derniere = versions[0];
-      const num = (derniere.tag_name || '').replace(/^v/i, '');
+      const entetes = { headers: { Accept: 'application/vnd.github+json' } };
+      // La version affichée est celle que télécharge le bouton : la Release marquée « Latest ».
+      const [resDerniere, resListe] = await Promise.all([
+        fetch(`https://api.github.com/repos/${DEPOT}/releases/latest`, entetes),
+        fetch(`https://api.github.com/repos/${DEPOT}/releases?per_page=5`, entetes)
+      ]);
+      if (!resDerniere.ok) return;
+      const derniere = await resDerniere.json();
+      const versions = resListe.ok ? (await resListe.json()).filter(r => !r.draft && !r.prerelease) : [derniere];
+      const num = (derniere.tag_name || '').replace(/^v\.?/i, '');
       if (num) document.getElementById('info-version').textContent = `Version ${num}`;
 
-      const apk = (derniere.assets || []).find(a => a.name === NOM_APK);
+      const assets = derniere.assets || [];
+      const apk = assets.find(a => a.name === NOM_APK) || assets.find(a => /\.apk$/i.test(a.name));
+      // Si le fichier porte un autre nom, les boutons pointent quand même vers le bon APK.
+      if (apk && apk.name !== NOM_APK) {
+        document.querySelectorAll('a[href$="/' + NOM_APK + '"]').forEach(a => { a.href = apk.browser_download_url; });
+      }
       if (apk) {
         const mo = Math.max(1, Math.round(apk.size / 1048576));
         const taille = document.getElementById('info-taille');
@@ -637,10 +645,10 @@
         d.hidden = false;
       }
 
-      document.getElementById('liste-versions').innerHTML = versions.map((r, i) => {
-        const v = echapper((r.tag_name || '').replace(/^v/i, ''));
+      document.getElementById('liste-versions').innerHTML = versions.map(r => {
+        const v = echapper((r.tag_name || '').replace(/^v\.?/i, ''));
         const lignes = nettoyerNotes(r.body).map(echapper).join('<br>');
-        return `<li><span class="num">${v}</span><span class="date">${r.published_at ? dateFr(r.published_at) : ''}${i === 0 ? '<span class="actuelle">Version actuelle</span>' : ''}</span>${lignes ? `<span class="notes">${lignes}</span>` : ''}</li>`;
+        return `<li><span class="num">${v}</span><span class="date">${r.published_at ? dateFr(r.published_at) : ''}${r.id === derniere.id ? '<span class="actuelle">Version actuelle</span>' : ''}</span>${lignes ? `<span class="notes">${lignes}</span>` : ''}</li>`;
       }).join('');
     } catch (e) { /* hors ligne ou API indisponible */ }
   })();
