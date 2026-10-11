@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Modération des avis — Le Cahier de l'instituteur</title>
+<style>
+  :root { --encre:#0F1F4D; --fond:#F3F5FA; --bordure:#E1E5EF; --orange:#EF7F1A; --texte:#1A2033; --doux:#4F5670; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--fond); color:var(--texte); font:17px/1.55 system-ui,'Segoe UI',Roboto,Arial,sans-serif; }
+  main { max-width: 760px; margin: 0 auto; padding: 24px 18px 60px; }
+  h1 { font-size: 24px; color: var(--encre); margin: 0 0 4px; }
+  p.aide { color: var(--doux); margin: 0 0 18px; }
+  .carte { background:#fff; border:1px solid var(--bordure); border-radius:12px; padding:16px 18px; margin-bottom:14px; }
+  label { font-weight:700; display:block; margin-bottom:4px; }
+  input { width:100%; font:inherit; padding:11px 13px; border-radius:10px; border:1px solid #B9C2DA; }
+  button { font:inherit; font-weight:700; border:0; border-radius:10px; padding:11px 16px; cursor:pointer; color:#fff; background:var(--encre); }
+  button.publier { background:#17713F; } button.masquer { background:#8A5A12; } button.supprimer { background:#B3261E; }
+  button:disabled { opacity:.55; cursor:default; }
+  .actions { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .meta { color:var(--doux); font-size:14.5px; }
+  .etoiles { color: var(--orange); letter-spacing: 2px; font-size: 18px; }
+  .texte { white-space: pre-wrap; margin: 8px 0 0; }
+  .msg { margin: 12px 0; font-weight:700; } .msg.erreur { color:#B3261E; } .msg.ok { color:#17713F; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Modération des avis</h1>
+  <p class="aide">Réservé au concepteur. Le code n'est jamais enregistré : il reste dans cette page jusqu'à sa fermeture.</p>
+
+  <form id="entree" class="carte">
+    <label for="code">Code de modération</label>
+    <input id="code" type="password" autocomplete="current-password" required>
+    <div class="actions"><button type="submit">Voir les avis en attente</button></div>
+  </form>
+
+  <p class="msg" id="msg" role="status"></p>
+  <div id="liste"></div>
+</main>
+
+<script>
+  // Même adresse que dans index.html (serveur Railway, sans « / » final).
+  const URL_SERVEUR = 'https://cahier-de-l-instituteur-production.up.railway.app';
+
+  const msg = document.getElementById('msg');
+  const liste = document.getElementById('liste');
+  const echapper = s => String(s).replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
+  let code = '';
+
+  function afficher(texte, ok) { msg.textContent = texte; msg.className = 'msg ' + (ok ? 'ok' : 'erreur'); }
+
+  async function appeler(chemin, corps) {
+    const rep = await fetch(URL_SERVEUR + chemin, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(corps) });
+    const d = await rep.json().catch(() => ({}));
+    return { ok: rep.ok, d };
+  }
+
+  async function charger() {
+    if (!/^https?:\/\//.test(URL_SERVEUR) || URL_SERVEUR.includes('REMPLACER')) { afficher("L'adresse du serveur n'est pas renseignée dans cette page.", false); return; }
+    afficher('Chargement…', true);
+    try {
+      const { ok, d } = await appeler('/avis/moderation/liste', { code });
+      if (!ok) { liste.innerHTML = ''; afficher(d.message || 'Accès refusé.', false); return; }
+      const avis = (d.data && d.data.avis) || [];
+      afficher(avis.length ? avis.length + ' avis en attente.' : 'Aucun avis en attente.', true);
+      liste.innerHTML = avis.map(a =>
+        '<div class="carte" data-id="' + echapper(a.id) + '">' +
+        '<div class="etoiles">' + '★'.repeat(a.note || 0) + '<span style="color:#D5DAE8">' + '★'.repeat(5 - (a.note || 0)) + '</span></div>' +
+        '<div class="meta">' + echapper(a.prenom || 'Sans prénom') + ' · ' + echapper(a.date) + ' · ' + (a.source === 'app' ? 'application' : 'site') + '</div>' +
+        '<p class="texte">' + echapper(a.commentaire || '(note seule)') + '</p>' +
+        '<div class="actions"><button class="publier" data-a="publier">Publier</button>' +
+        '<button class="masquer" data-a="masquer">Masquer</button>' +
+        '<button class="supprimer" data-a="supprimer">Supprimer</button></div></div>').join('');
+    } catch (e) { afficher('Pas de connexion au serveur.', false); }
+  }
+
+  document.getElementById('entree').addEventListener('submit', e => { e.preventDefault(); code = document.getElementById('code').value; charger(); });
+
+  liste.addEventListener('click', async e => {
+    const b = e.target.closest('button[data-a]'); if (!b) return;
+    const carte = b.closest('.carte');
+    if (b.dataset.a === 'supprimer' && !confirm('Supprimer définitivement cet avis ?')) return;
+    carte.querySelectorAll('button').forEach(x => x.disabled = true);
+    try {
+      const { ok, d } = await appeler('/avis/moderation/action', { code, id: carte.dataset.id, action: b.dataset.a });
+      if (ok) { carte.remove(); afficher('Fait.', true); } else { afficher(d.message || 'Échec.', false); carte.querySelectorAll('button').forEach(x => x.disabled = false); }
+    } catch (err) { afficher('Pas de connexion au serveur.', false); carte.querySelectorAll('button').forEach(x => x.disabled = false); }
+  });
+</script>
+</body>
+</html>
