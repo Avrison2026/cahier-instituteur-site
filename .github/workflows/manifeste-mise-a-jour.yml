@@ -1,0 +1,97 @@
+# Met a jour mise-a-jour.json (manifeste des mises a jour integrees de l'application) a chaque
+# publication d'une Release contenant cahier-instituteur.apk. Toutes les valeurs sont lues dans l'APK
+# (outils/generer_manifeste.py) ; la signature est verifiee et doit etre celle du concepteur.
+# Les brouillons et pre-versions sont ignores : seule une Release publiee est proposee aux enseignants.
+name: Manifeste de mise a jour
+
+"on":
+  release:
+    types: [published, edited]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Tag de la Release a decrire (ex. v1.5.1)"
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manifeste-mise-a-jour
+  cancel-in-progress: false
+
+jobs:
+  manifeste:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' || (github.event.release.draft == false && github.event.release.prerelease == false)
+    steps:
+      - name: Recuperer le depot (branche principale)
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Lire la Release
+        id: release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name || inputs.tag }}
+        run: |
+          set -euo pipefail
+          gh api "repos/${GITHUB_REPOSITORY}/releases/tags/${TAG}" > release.json
+          python3 - <<'EOF'
+          import json, os
+          r = json.load(open("release.json", encoding="utf-8"))
+          if r.get("draft") or r.get("prerelease"):
+              raise SystemExit("Release brouillon ou pre-version : manifeste inchange")
+          assets = [a for a in r["assets"] if a["name"] == "cahier-instituteur.apk"]
+          if not assets:
+              raise SystemExit("Aucun asset cahier-instituteur.apk dans cette Release")
+          open("notes.md", "w", encoding="utf-8").write(r.get("body") or "")
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as f:
+              f.write(f"tag={r['tag_name']}\n")
+              f.write(f"date={r['published_at']}\n")
+              f.write(f"digest={assets[0].get('digest') or ''}\n")
+          EOF
+
+      - name: Telecharger l'APK de la Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.release.outputs.tag }}
+        run: gh release download "$TAG" --pattern cahier-instituteur.apk --dir "$RUNNER_TEMP/apk"
+
+      - name: Verifier les outils Android (aapt2, apksigner)
+        run: |
+          set -euo pipefail
+          if ! ls "$ANDROID_HOME"/build-tools/*/apksigner >/dev/null 2>&1; then
+            yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "build-tools;36.0.0" >/dev/null
+          fi
+
+      - name: Generer le manifeste
+        env:
+          TAG: ${{ steps.release.outputs.tag }}
+          DATE_PUBLICATION: ${{ steps.release.outputs.date }}
+          DIGEST: ${{ steps.release.outputs.digest }}
+        run: |
+          set -euo pipefail
+          ARGS=(--apk "$RUNNER_TEMP/apk/cahier-instituteur.apk" --tag "$TAG" --date "$DATE_PUBLICATION" --notes-fichier notes.md)
+          if [ -n "$DIGEST" ]; then
+            ARGS+=(--sha256-github "$DIGEST")
+          fi
+          python3 -I outils/generer_manifeste.py "${ARGS[@]}"
+          python3 -c "import json; json.load(open('mise-a-jour.json', encoding='utf-8'))"
+
+      - name: Publier le manifeste
+        env:
+          TAG: ${{ steps.release.outputs.tag }}
+          BRANCHE: ${{ github.event.repository.default_branch }}
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- mise-a-jour.json; then
+            echo "Manifeste deja a jour."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add mise-a-jour.json
+          git commit -m "Manifeste de mise a jour : $TAG"
+          git push origin "HEAD:$BRANCHE"

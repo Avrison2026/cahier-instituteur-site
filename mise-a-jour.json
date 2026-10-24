@@ -1,0 +1,16 @@
+{
+  "format": 1,
+  "application": "com.avrison.cahierinstituteur.cahier_instituteur",
+  "version_code": 14,
+  "version": "1.4.1",
+  "tag": "v1.4.1",
+  "date_publication": "2026-10-20T23:23:17Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.4.1/cahier-instituteur.apk",
+  "taille_octets": 108070981,
+  "sha256": "e974563efc3a5039460c24d7d9e5eb0530c378f3f3cb1b276e1578b66bc7fa51",
+  "certificats_sha256": [
+    "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
+  ],
+  "min_sdk": 24,
+  "nouveautes": []
+}

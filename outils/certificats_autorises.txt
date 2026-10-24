@@ -1,0 +1,3 @@
+# Certificats de signature autorises pour l'APK (SHA-256 du certificat, apksigner --print-certs).
+# Cle de publication du concepteur (CN=KONAN AVRISON ALLAH, OU=AVRISON, O=AVRISON, L=TIASSALE, C=CI).
+39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563
