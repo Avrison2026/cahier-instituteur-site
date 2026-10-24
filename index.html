@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Le Cahier de l'instituteur — Fiches de leçon du CP1 au CM2</title>
+<title>Le Cahier de l'instituteur — Le compagnon des enseignants du primaire</title>
 <meta name="description" content="Préparez vos fiches de leçon en quelques minutes, du CP1 au CM2, selon les programmes officiels de Côte d'Ivoire. Application Android gratuite à l'essai : 5 fiches offertes.">
 
 <meta property="og:type" content="website">
@@ -380,6 +380,85 @@
   .barre-bas .btn { padding: 11px 16px; font-size: 15.5px; }
   @media (max-width: 720px) { .barre-bas { display: flex; } footer { padding-bottom: 96px; } }
   @media (prefers-reduced-motion: reduce) { .barre-bas { transition: none; } }
+
+/* === Refonte vitrine 2026 : captures réelles, identité émeraude-ivoire === */
+:root { --encre:#07543f; --encre-2:#0b7656; --fond:#f7f6f0; --papier:#fffefa; --texte:#20352c; --texte-doux:#69776f; --bordure:#e6e9df; --orange:#ef9e39; --orange-texte:#8f4b10; --ombre-douce:0 12px 34px rgba(25,56,42,.07); --ombre-forte:0 24px 60px rgba(16,46,34,.20); }
+body { overflow-x:hidden; background:var(--fond); }
+.wrap { max-width:1200px; padding:0 28px; }
+.barre { background:rgba(255,254,250,.93); border-bottom:1px solid rgba(7,84,63,.08); }
+.barre .wrap { height:76px; }
+.marque { font-size:17px; letter-spacing:-.025em; }
+.marque img { height:44px; width:44px; border-radius:14px; }
+.barre nav { gap:22px; }
+.barre nav a { font-size:13.5px; font-weight:700; }
+.barre .mini-btn { background:var(--encre); border-radius:999px; padding:12px 20px; }
+.hero { padding:100px 0 100px; min-height:700px; background:#073e31; background-image: radial-gradient(circle at 72% 32%,rgba(60,165,117,.3),transparent 40%),radial-gradient(circle at 5% 85%,rgba(248,187,91,.1),transparent 35%),linear-gradient(135deg,#073e31 0%,#07543f 55%,#0c664e 100%); }
+.hero::after { background:var(--fond); bottom:-29px; height:54px; transform:skewY(-1.2deg); }
+.hero .wrap { grid-template-columns:1fr 1.08fr; gap:38px; }
+.hero-eyebrow { display:inline-flex; align-items:center; gap:9px; border:1px solid rgba(255,255,255,.2); background:rgba(255,255,255,.085); padding:8px 15px; border-radius:99px; font-size:13px; letter-spacing:.04em; font-weight:700; color:#e0f1e8; margin-bottom:26px; }
+.eyebrow-spark { color:#ffd18a; font-size:19px; }
+.hero h1 { font-size:clamp(42px,5.3vw,73px); max-width:12ch; line-height:1.06; letter-spacing:-.055em; }
+.hero h1 em { color:#ffcc89; font-style:normal; }
+.hero .accroche { font-size:18px; line-height:1.75; max-width:47ch; color:#cbe2d6; margin:26px 0; }
+.niveaux { gap:7px; margin-bottom:30px; }
+.compteur-telechargements { display:inline-flex; align-items:center; gap:12px; margin-top:23px; padding:13px 17px; border:1px solid rgba(255,255,255,.2); border-radius:16px; background:rgba(255,255,255,.09); color:#fff; }
+.compteur-telechargements .compteur-icone { width:40px; height:40px; display:grid; place-items:center; border-radius:12px; background:rgba(255,204,137,.17); color:#ffcc89; font-size:22px; }
+.compteur-telechargements strong { font-family:var(--titre); font-size:25px; line-height:1.1; display:block; font-variant-numeric:tabular-nums; }
+.compteur-telechargements small { color:#cbe2d6; font-size:12px; display:block; }
+.compteur-telechargements[hidden] { display:none; }
+
+.niveaux li { box-shadow:none; font-size:12px; padding:5px 12px; }
+.btn { border-radius:13px; font-size:15.5px; padding:15px 23px; }
+.btn-principal { background:#f49b30; color:#172a20; box-shadow:0 12px 32px rgba(239,158,57,.2); }
+.btn-principal:hover { background:#ffb456; color:#172a20; }
+.btn-secondaire { background:rgba(255,255,255,.08); }
+.infos-apk { color:#bad9cc; }
+.essai { margin-top:24px; border-radius:12px; background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.13); color:#e4e9d6; }
+.showcase { height:590px; max-width:580px; padding:0; isolation:isolate; }
+.showcase-glow { position:absolute; width:480px; height:480px; border-radius:50%; background:radial-gradient(circle,#43a98044,transparent 68%); left:7%; top:5%; }
+.showcase-label { position:absolute; top:7px; right:16px; border-radius:30px; font-size:12px; font-weight:800; background:rgba(255,255,255,.14); padding:9px 15px; color:#fff; }
+.live-dot { display:inline-block; margin-right:6px; width:8px; height:8px; border-radius:50%; background:#9ae8bb; }
+.showcase-phone { position:absolute; border:7px solid #1b2828; background:#1b2828; border-radius:37px; overflow:hidden; box-shadow:0 30px 70px rgba(0,20,14,.42), inset 0 1px 2px #fff3; }
+.showcase-phone img { display:block; width:100%; height:100%; object-fit:cover; object-position:top; border-radius:29px; }
+.showcase-main { width:266px; height:550px; left:16%; top:15px; transform:rotate(-8deg); z-index:2; }
+.showcase-secondary { width:224px; height:465px; right:5%; top:75px; transform:rotate(9deg); z-index:1; opacity:.97; }
+.showcase-float { position:absolute; z-index:3; display:flex; align-items:center; gap:11px; padding:13px 16px; color:#213a2e; background:rgba(255,254,250,.97); border:1px solid #fff; border-radius:16px; box-shadow:0 20px 40px rgba(0,23,15,.2); }
+.showcase-float strong,.showcase-float small { display:block; white-space:nowrap; }
+.showcase-float strong { font-size:13px; line-height:1.4; }
+.showcase-float small { font-size:11px; color:#738177; }
+.float-icon { display:grid; place-items:center; background:#e0f5e9; color:#187a4f; width:34px; height:34px; border-radius:11px; font-weight:900; }
+.float-icon.orange { background:#fff2da; color:#b96813; }
+.float-one { top:125px; left:-24px; }
+.float-two { bottom:39px; right:-5px; }
+.section { padding:94px 0; }
+.section h2 { color:#154b39; letter-spacing:-.045em; max-width:23ch; font-size:clamp(32px,3.5vw,46px); }
+.section-kicker { color:#b66c1b; font-size:12px; letter-spacing:.15em; font-weight:800; margin-bottom:14px; }
+.section.blanc { background:#fffefa; }
+.chapeau { font-size:17px; max-width:62ch; }
+.etapes { gap:18px; }
+.etapes li { background:#fff; border:1px solid #e9eae4; padding:76px 22px 18px; border-radius:19px; box-shadow:0 9px 20px rgba(11,65,44,.045); }
+.etapes li::before { top:20px; left:22px; color:#dda15b; font-size:40px; }
+.etapes h3 { font-size:19px; }
+.etapes p { font-size:15px; }
+.usage { border-top:0; border-left:5px solid var(--c); background:#fffefa; border-radius:19px; padding:30px; }
+.usage h3 { font-size:25px; }
+.disciplines li { background:#fff; border-color:#e2e7dc; }
+#captures { background:linear-gradient(180deg,#f3f7f0,#fffefa); }
+.galerie { gap:22px; padding:22px 4px 45px; margin-top:28px; }
+.galerie figure { flex-basis:218px; transition:transform .25s ease; }
+.galerie figure:hover { transform:translateY(-7px); }
+.galerie .cadre { border:7px solid #1d302b; border-radius:31px; background:#1d302b; box-shadow:0 15px 33px rgba(22,69,44,.15); }
+.galerie img { border-radius:24px; }
+.galerie figcaption { color:#254b38; font-size:14px; }
+.formule { border-radius:22px; padding:38px; }
+.formule.niveau { background:linear-gradient(135deg,#064534,#0e7054); }
+.formule.essai-gratuit { background:#fffefa; }
+.faq details { background:rgba(255,255,255,.65); border:1px solid #e7eae1; border-radius:12px; margin-bottom:9px; padding:0 17px; }
+.contact,footer { background:#063b30; }
+@media (max-width:1000px) { .hero .wrap { grid-template-columns:1fr; } .hero h1 { max-width:16ch; } .showcase { margin-top:10px; } }
+@media (max-width:720px) { .wrap { padding:0 20px; } .barre .wrap { height:64px; } .marque { font-size:13px; gap:7px; } .marque img { width:35px; height:35px; border-radius:10px; } .barre .mini-btn { font-size:12px; padding:10px 13px; } .hero { padding:54px 0 58px; } .hero h1 { font-size:clamp(39px,10.5vw,54px); } .hero .accroche { font-size:16px; } .showcase { height:475px; width:100%; max-width:410px; margin:20px auto 0; } .showcase-main { width:210px; height:436px; left:8%; top:8px; } .showcase-secondary { width:172px; height:354px; right:2%; top:56px; } .showcase-label { right:0; top:-12px; font-size:10px; } .showcase-float { padding:10px; gap:6px; } .showcase-float strong { font-size:11px; } .showcase-float small { font-size:9px; } .float-icon { width:27px; height:27px; } .float-one { top:105px; left:-4px; } .float-two { bottom:10px; right:-2px; } .section { padding:65px 0; } .etapes { grid-template-columns:1fr 1fr; gap:12px; } .etapes li { padding:60px 14px 12px; } .etapes li::before { top:13px; left:14px; } .etapes h3 { font-size:17px; } .etapes p { font-size:14px; } .galerie figure { flex-basis:190px; } }
+@media (max-width:390px) { .showcase-main { left:4%; width:190px; height:395px; } .showcase-secondary { right:0; width:150px; height:311px; } .showcase { height:440px; } .marque { font-size:12px; } .etapes { grid-template-columns:1fr; } }
+@media (prefers-reduced-motion:reduce) { .galerie figure,.showcase-phone { transition:none; } }
 </style>
 </head>
 <body>
@@ -407,8 +486,9 @@
   <section class="hero">
     <div class="wrap">
       <div>
-        <h1>Vos fiches de leçon prêtes en quelques minutes</h1>
-        <p class="accroche">Choisissez la classe, la matière et la séance : l'application rédige la fiche complète selon les programmes officiels de Côte d'Ivoire. Vous la relisez, la corrigez si besoin, puis l'imprimez.</p>
+        <div class="hero-eyebrow"><span class="eyebrow-spark">✳</span> L’allié des instituteurs ivoiriens</div>
+        <h1>Enseignez l’esprit <em>plus libre.</em></h1>
+        <p class="accroche">Préparez vos fiches de leçon, organisez votre classe et suivez vos élèves depuis une seule application, pensée pour les enseignants du primaire en Côte d’Ivoire.</p>
 
         <ul class="niveaux" aria-label="Niveaux couverts">
           <li style="background:#EF7F1A">CP1</li>
@@ -431,11 +511,16 @@
         </div>
 
         <ul class="infos-apk" aria-live="polite">
-          <li id="info-version">Version 1.3.4</li>
+          <li id="info-version">Version disponible sur GitHub</li>
           <li>Android 8.0 ou plus récent</li>
           <li id="info-taille" hidden></li>
           <li id="info-date" hidden></li>
         </ul>
+
+        <div class="compteur-telechargements" id="compteur-telechargements" hidden aria-live="polite" title="Nombre de téléchargements des fichiers APK sur les publications GitHub ; ne correspond pas au nombre d’installations ou d’utilisateurs uniques.">
+          <span class="compteur-icone" aria-hidden="true">↓</span>
+          <span><strong id="compteur-valeur"></strong><small>Téléchargements APK sur GitHub</small></span>
+        </div>
 
         <div class="essai">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
@@ -443,40 +528,24 @@
         </div>
       </div>
 
-      <div class="scene" role="img" aria-label="Exemple de fiche de leçon générée par l'application, avec l'écran d'accueil du téléphone">
-        <div class="fiche" aria-hidden="true">
-          <span class="tampon">Prête à imprimer</span>
-          <div class="fiche-titre">Fiche de leçon</div>
-          <div class="fiche-entete">
-            <span><b>Classe :</b> CM2</span>
-            <span><b>Durée :</b> 45 min</span>
-            <span><b>Discipline :</b> Sciences</span>
-            <span><b>Semaine :</b> 5</span>
-            <span style="grid-column:1 / -1"><b>Leçon :</b> Les états de l'eau — séance 1/3</span>
-          </div>
-          <table>
-            <thead><tr><th style="width:24%">Étapes</th><th>Activités de l'enseignant</th><th>Activités des élèves</th></tr></thead>
-            <tbody>
-              <tr class="bande"><td colspan="3">I. Présentation</td></tr>
-              <tr><td>Rappel</td><td>Pose des questions sur la leçon précédente.</td><td>Répondent.</td></tr>
-              <tr class="bande"><td colspan="3">II. Développement</td></tr>
-              <tr><td>Observation</td><td><span class="trait"></span><span class="trait c"></span></td><td><span class="trait m"></span></td></tr>
-              <tr><td>Analyse</td><td><span class="trait m"></span><span class="trait"></span></td><td><span class="trait c"></span></td></tr>
-              <tr class="bande"><td colspan="3">III. Évaluation</td></tr>
-              <tr><td>Exercice</td><td><span class="trait"></span></td><td><span class="trait c"></span></td></tr>
-            </tbody>
-          </table>
+      <div class="scene showcase" aria-label="Aperçu des vrais écrans de l’application">
+        <div class="showcase-glow" aria-hidden="true"></div>
+        <div class="showcase-label"><span class="live-dot"></span> Découvrez l’application</div>
+        <div class="showcase-phone showcase-main">
+          <img src="images/capture-accueil.jpg" alt="Capture réelle de l’écran d’accueil du Cahier de l’instituteur" width="709" height="1536" fetchpriority="high">
         </div>
-        <div class="telephone">
-          <img src="images/capture-accueil.jpg" alt="">
+        <div class="showcase-phone showcase-secondary">
+          <img src="images/capture-preparer.jpg" alt="Capture réelle de la préparation d’une fiche" width="709" height="1536">
         </div>
+        <div class="showcase-float float-one"><span class="float-icon">✓</span><span><strong>CP1 → CM2</strong><small>Six niveaux couverts</small></span></div>
+        <div class="showcase-float float-two"><span class="float-icon orange">✦</span><span><strong>Vos outils réunis</strong><small>Préparer • Évaluer • Gérer</small></span></div>
       </div>
     </div>
   </section>
 
   <section class="section blanc" id="comment">
     <div class="wrap">
-      <h2>Une fiche en quatre gestes</h2>
+      <div class="section-kicker">SIMPLE ET PRATIQUE</div><h2>De l’idée à la fiche, en quatre gestes</h2>
       <p class="chapeau">Le déroulement suit les guides pédagogiques officiels et les manuels en usage dans les écoles.</p>
       <ol class="etapes">
         <li><h3>Choisir la classe</h3><p>Du CP1 au CM2, et l'édition du manuel que vous utilisez.</p></li>
@@ -489,7 +558,7 @@
 
   <section class="section" id="fonctions">
     <div class="wrap">
-      <h2>Tout le travail de préparation, au même endroit</h2>
+      <div class="section-kicker">VOTRE ESPACE DE TRAVAIL</div><h2>Tous vos outils. Une seule application.</h2>
       <p class="chapeau">Toutes les matières au programme sont couvertes :</p>
       <ul class="disciplines">
         <li>Français</li><li>Mathématiques</li><li>Sciences et technologie</li><li>Histoire</li><li>Géographie</li><li>EDHC</li><li>AEC</li><li>EPS</li>
@@ -526,24 +595,23 @@
 
   <section class="section blanc" id="captures">
     <div class="wrap">
-      <h2>L'application, telle que vous l'aurez</h2>
-      <p class="chapeau">Faites glisser pour parcourir les écrans.</p>
-      <div class="galerie">
-        <figure><div class="cadre"><img src="images/capture-accueil.jpg" alt="Écran d'accueil : Bonjour, niveau actif, bouton Préparer une fiche, travail récent et outils pédagogiques" width="540" height="1122" loading="lazy"></div><figcaption>Accueil</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-preparer.jpg" alt="Choix du niveau, de la discipline puis de la leçon" width="540" height="1122" loading="lazy"></div><figcaption>Préparer une fiche</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-fiche.jpg" alt="Fiche de mathématiques CM1 affichée en tableau, avec zoom, avant validation" width="540" height="1122" loading="lazy"></div><figcaption>La fiche, modifiable</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-mes-fiches.jpg" alt="Bibliothèque des fiches préparées, avec recherche et filtre par matière" width="540" height="1122" loading="lazy"></div><figcaption>Mes fiches</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-sujet.jpg" alt="Composition d'un sujet : niveau, leçons à évaluer, exercices par rubrique" width="540" height="1122" loading="lazy"></div><figcaption>Sujet d'évaluation</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-emploi-du-temps.jpg" alt="Emploi du temps du lundi en CM1, séance par séance avec les horaires" width="540" height="1122" loading="lazy"></div><figcaption>Emploi du temps</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-repartition.jpg" alt="Répartition mensuelle : niveau, mois, semaines et dates, export PDF ou Word" width="540" height="1122" loading="lazy"></div><figcaption>Répartition mensuelle</figcaption></figure>
-        <figure><div class="cadre"><img src="images/capture-classe.jpg" alt="Détail d'une classe : effectif, élèves, statistiques, groupes d'EPS, import Excel" width="540" height="1122" loading="lazy"></div><figcaption>Ma classe</figcaption></figure>
+      <div class="section-kicker">EN IMAGES</div><h2>Une application conçue pour votre quotidien</h2>
+      <p class="chapeau">Découvrez les véritables écrans de vos outils pédagogiques. Faites glisser les captures pour les explorer.</p>
+      <div class="galerie" aria-label="Captures d’écran de l’application">
+        <figure><div class="cadre"><img src="images/capture-accueil.jpg" alt="Écran d’accueil : classe du jour, préparation et outils pédagogiques" width="709" height="1536" loading="eager" decoding="async"></div><figcaption>Accueil</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-preparer.jpg" alt="Préparer une fiche : choix du niveau, de la discipline, de la leçon et de la séance" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Préparer une fiche</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-mes-classes.jpg" alt="Mes classes : élèves, registres, résultats et progression" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Mes classes</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-menu-navigation.jpg" alt="Menu de navigation donnant accès aux principaux outils de l’application" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Menu de navigation</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-resultat-fiche.jpg" alt="Résultat d’une fiche avec aperçu du document, impression, partage et export Word" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Résultat de fiche</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-profil-eleve.jpg" alt="Modification des informations d’un élève" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Profil élève</figcaption></figure>
+        <figure><div class="cadre"><img src="images/capture-detail-classe.jpg" alt="Détail de la classe : documents, listes et import Excel" width="709" height="1536" loading="lazy" decoding="async"></div><figcaption>Détail de la classe</figcaption></figure>
       </div>
     </div>
   </section>
 
   <section class="section" id="activation">
     <div class="wrap">
-      <h2>Essayez d'abord, activez ensuite</h2>
+      <div class="section-kicker">UNE OFFRE TRANSPARENTE</div><h2>Découvrez librement, activez selon vos besoins</h2>
       <p class="chapeau">Vous ne payez que pour les niveaux que vous enseignez.</p>
       <div class="activation">
         <div class="formule essai-gratuit">
@@ -570,7 +638,7 @@
 
   <section class="section blanc" id="installer">
     <div class="wrap">
-      <h2>Installer en deux minutes</h2>
+      <div class="section-kicker">PRISE EN MAIN</div><h2>À vos côtés, en quelques étapes</h2>
       <p class="chapeau">L'application est distribuée directement ici, sous forme de fichier APK. Elle fonctionne sur tous les téléphones Android récents : Tecno, Infinix, itel, Samsung et les autres.</p>
       <div class="install">
         <div>
@@ -598,7 +666,7 @@
 
   <section class="section" id="questions">
     <div class="wrap">
-      <h2>Questions fréquentes</h2>
+      <div class="section-kicker">BESOIN D’AIDE ?</div><h2>Les réponses à vos questions</h2>
       <div class="faq">
         <details><summary>Faut-il une connexion internet ?</summary><div class="reponse">Oui pour préparer une fiche : l'application la rédige en ligne, une connexion mobile ordinaire suffit. Le dictionnaire et le conjugueur fonctionnent sans internet.</div></details>
         <details><summary>Les fiches respectent-elles les programmes officiels ?</summary><div class="reponse">Oui. Elles sont construites à partir des guides pédagogiques et des manuels utilisés en Côte d'Ivoire, avec le déroulement attendu à chaque niveau.</div></details>
@@ -614,7 +682,7 @@
     <div class="wrap">
       <h2>Nouveautés</h2>
       <ul class="versions" id="liste-versions">
-        <li><span class="num">1.3.4</span><span class="date">Octobre 2026<span class="actuelle">Version actuelle</span></span></li>
+        <li><span class="num">Dernière version</span><span class="date">Détails chargés depuis GitHub</span></li>
       </ul>
       <a class="lien-fleche" href="https://github.com/Avrison2026/cahier-instituteur-site/releases">Toutes les versions</a>
     </div>
@@ -717,11 +785,13 @@
       // La version affichée est celle que télécharge le bouton : la Release marquée « Latest ».
       const [resDerniere, resListe] = await Promise.all([
         fetch(`https://api.github.com/repos/${DEPOT}/releases/latest`, entetes),
-        fetch(`https://api.github.com/repos/${DEPOT}/releases?per_page=5`, entetes)
+        fetch(`https://api.github.com/repos/${DEPOT}/releases?per_page=100&page=1`, entetes)
       ]);
       if (!resDerniere.ok) return;
       const derniere = await resDerniere.json();
-      const versions = resListe.ok ? (await resListe.json()).filter(r => !r.draft && !r.prerelease) : [derniere];
+      const premieresReleases = resListe.ok ? await resListe.json() : [];
+      const versions = (premieresReleases.length ? premieresReleases : [derniere])
+        .filter(r => !r.draft && !r.prerelease).slice(0, 5);
       const num = (derniere.tag_name || '').replace(/^v\.?/i, '');
       if (num) document.getElementById('info-version').textContent = `Version ${num}`;
 
@@ -742,6 +812,31 @@
         const d = document.getElementById('info-date');
         d.textContent = `Mise à jour le ${dateFr(derniere.published_at)}`;
         d.hidden = false;
+      }
+
+      // Le compteur additionne les téléchargements des APK de toutes les releases publiques.
+      // On ne montre pas de chiffre si une page GitHub est inaccessible (pas de faux total).
+      if (resListe.ok && Array.isArray(premieresReleases)) {
+        (async () => {
+          try {
+            let releases = premieresReleases;
+            let page = 1;
+            let lot = premieresReleases;
+            while (lot.length === 100) {
+              page += 1;
+              const reponse = await fetch(`https://api.github.com/repos/${DEPOT}/releases?per_page=100&page=${page}`, entetes);
+              if (!reponse.ok) throw new Error('Liste GitHub incomplète');
+              lot = await reponse.json();
+              if (!Array.isArray(lot)) throw new Error('Données GitHub invalides');
+              releases = releases.concat(lot);
+            }
+            const total = releases.filter(r => !r.draft).reduce((somme, r) =>
+              somme + (r.assets || []).filter(a => /\.apk$/i.test(a.name || '')).reduce((n, a) => n + (Number(a.download_count) || 0), 0), 0);
+            const compteur = document.getElementById('compteur-telechargements');
+            document.getElementById('compteur-valeur').textContent = new Intl.NumberFormat('fr-FR').format(total);
+            compteur.hidden = false;
+          } catch (e) { /* Compteur masqué si le total ne peut pas être calculé. */ }
+        })();
       }
 
       document.getElementById('liste-versions').innerHTML = versions.map(r => {

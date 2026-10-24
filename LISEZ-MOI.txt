@@ -1,0 +1,12 @@
+SITE LE CAHIER DE L’INSTITUTEUR — 7 CAPTURES INTÉGRÉES
+
+Contenu : index.html et images/ (7 captures réelles).
+
+Pour intégrer au site existant :
+1. Sauvegarder le dossier actuel du site.
+2. Copier index.html et les 7 nouveaux fichiers de images/ à la racine de votre site.
+3. Conserver TOUS les autres fichiers existants : notamment images/icon_full.png, images/apercu-partage.jpg, confidentialite.html et d’éventuelles autres ressources. Ces fichiers ne sont pas fournis dans ce ZIP.
+4. Vérifier les images et les liens en local avant de faire commit/push.
+
+Le compteur GitHub des téléchargements est conservé. Aucun déploiement n’a été effectué.
+Attention : les captures comprennent des noms et informations scolaires réelles; vérifier le droit de les publier et masquer les données personnelles si nécessaire.
