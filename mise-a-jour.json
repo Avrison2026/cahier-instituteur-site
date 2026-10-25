@@ -1,0 +1,21 @@
+{
+  "format": 1,
+  "application": "com.avrison.cahierinstituteur.cahier_instituteur",
+  "version_code": 16,
+  "version": "1.5.1",
+  "tag": "v1.5.1",
+  "date_publication": "2026-10-25T01:11:40Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.1/cahier-instituteur.apk",
+  "taille_octets": 113466097,
+  "sha256": "03c672736e3a1d74bee7db10301dcb8cb9cfa87d83d9bbc96de69e76689cdef2",
+  "certificats_sha256": [
+    "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
+  ],
+  "min_sdk": 24,
+  "nouveautes": [
+    "Mise à jour de l'application en un seul appui, sans passer par le navigateur",
+    "Nouvelles présentations des documents PDF (résultats, relevé de notes, etc.)",
+    "Moyennes arrondies au centième, identiques partout dans l'application",
+    "Export des résultats et du relevé de notes directement sur le téléphone"
+  ]
+}
