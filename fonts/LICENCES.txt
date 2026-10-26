@@ -1,0 +1,5 @@
+Polices de l'application « Le Cahier de l'instituteur », servies par le site lui-même (aucune requête vers un
+service tiers) :
+- Lora (Cyreal) : SIL Open Font License 1.1 — https://openfontlicense.org
+- Nunito Sans (Vernon Adams, Jacques Le Bailly, Manvel Shmavonyan, Alexei Vanyashin) : SIL Open Font License 1.1
+Fichiers identiques à ceux embarqués dans l'application (assets/fonts).

@@ -1,0 +1,124 @@
+/* Page de parrainage (26/10/2026) : THEME DE L'APPLICATION (ecrans valides : StyleEcrans, CouleursApp, StyleAccueil).
+   Fond ivoire chaud, cartes blanches a ombre douce, texte vert profond, action emeraude mate, surfaces sauge et
+   menthe, accents miel. Polices de l'application (Lora pour les titres, Nunito Sans pour le texte), servies par le
+   site lui-meme. Mobile d'abord. */
+@font-face { font-family: "Lora"; src: url("fonts/Lora-Medium.ttf") format("truetype"); font-weight: 500 700; font-display: swap; }
+@font-face { font-family: "Nunito Sans"; src: url("fonts/NunitoSans-Regular.ttf") format("truetype"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Nunito Sans"; src: url("fonts/NunitoSans-SemiBold.ttf") format("truetype"); font-weight: 600 700; font-display: swap; }
+
+:root {
+  --fond: #F6F3EC;          /* ivoire chaud des ecrans */
+  --carte: #FFFFFF;
+  --texte: #0F3F37;         /* vert profond tirant vers le teal */
+  --texte-doux: #5D6B66;
+  --action: #0E6656;        /* emeraude mat (boutons principaux) */
+  --action-fonce: #0F514B;  /* petrole fonce */
+  --petrole: #176B63;
+  --sauge: #E7F1EB;
+  --menthe: #E4F1EA;
+  --bordure: #C9D4CE;
+  --separateur: #E6EAE6;
+  --miel: #DDA23C;
+  --miel-clair: #FBEBCB;
+  --miel-texte: #8A5A12;
+  --alerte: #A3271D;
+  --alerte-fond: #FBE8E6;
+  --titre: "Lora", Georgia, "Times New Roman", serif;
+  --corps: "Nunito Sans", "Segoe UI", Roboto, Arial, sans-serif;
+  --ombre: 0 4px 16px rgba(79, 90, 80, 0.08);
+  --ombre-legere: 0 2px 10px rgba(79, 90, 80, 0.06);
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fond); color: var(--texte); font-family: var(--corps); font-size: 16.5px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+h1, h2, h3 { font-family: var(--titre); font-weight: 500; margin: 0; line-height: 1.2; color: var(--texte); }
+p { margin: 0; }
+a { color: var(--action); }
+img { max-width: 100%; height: auto; display: block; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 18px; }
+
+/* barre */
+.barre { position: sticky; top: 0; z-index: 10; background: rgba(246, 243, 236, 0.95); border-bottom: 1px solid var(--separateur); padding-top: env(safe-area-inset-top); }
+.barre-interieur { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 60px; }
+.marque { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--texte); font-family: var(--titre); font-weight: 500; font-size: 17px; }
+.marque img { width: 36px; height: 36px; border-radius: 10px; }
+.lien-site { color: var(--action); font-weight: 600; font-size: 15px; text-decoration: none; }
+
+/* bandeau d'accueil (meme degrade que la carte « Preparer une fiche » de l'application) */
+.hero { background: linear-gradient(150deg, var(--petrole) 0%, var(--action) 45%, var(--action-fonce) 100%); color: #fff; padding: 32px 0 40px; }
+.hero-grille { display: grid; gap: 26px; align-items: center; }
+.logo-hero { width: 92px; height: 92px; border-radius: 24px; box-shadow: 0 12px 28px -10px rgba(0, 0, 0, 0.45); margin-bottom: 16px; }
+.eyebrow { display: inline-block; font-size: 14px; font-weight: 600; color: var(--texte); background: var(--miel-clair); padding: 5px 13px; border-radius: 999px; margin-bottom: 14px; }
+.hero h1 { color: #fff; font-size: clamp(28px, 7vw, 46px); max-width: 18ch; }
+.accroche { color: #DCEFE7; font-size: 17.5px; margin: 14px 0 18px; max-width: 46ch; }
+.niveaux { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+.niveaux li { font-weight: 600; font-size: 14px; padding: 5px 13px; border-radius: 999px; color: var(--texte); background: rgba(255, 255, 255, 0.92); }
+
+/* carte du code */
+.carte-code { background: var(--carte); color: var(--texte); border-radius: 18px; padding: 20px; box-shadow: 0 18px 40px -16px rgba(0, 0, 0, 0.35); display: grid; gap: 14px; }
+.carte-etiquette { font-family: var(--titre); font-size: 18px; color: var(--texte); }
+.carte-etiquette.alerte { color: var(--alerte); }
+.carte-texte { color: var(--texte-doux); font-size: 15.5px; margin-top: 6px; }
+.code { font-family: ui-monospace, "Roboto Mono", "Cascadia Mono", Consolas, monospace; font-weight: 700; font-size: clamp(30px, 10.5vw, 44px); letter-spacing: 0.08em; color: var(--action); background: var(--menthe); border: 2px dashed var(--bordure); border-radius: 16px; padding: 12px 10px; text-align: center; margin: 10px 0 14px; user-select: all; word-break: break-all; }
+.boutons-copie { display: grid; gap: 10px; }
+.retour-copie { min-height: 1.4em; font-weight: 600; font-size: 15px; margin-top: 8px; }
+.retour-copie.ok { color: var(--action); }
+.retour-copie.echec { color: var(--alerte); }
+.petit { font-size: 13.5px; color: var(--texte-doux); }
+.centre { text-align: center; }
+
+/* boutons (BoutonPrincipal de l'application : emeraude mat, rayon 16, hauteur 52) */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 18px; border-radius: 16px; font-family: var(--corps); font-weight: 600; font-size: 16px; text-decoration: none; border: 0; cursor: pointer; width: 100%; text-align: center; }
+.btn:focus-visible { outline: 3px solid var(--miel); outline-offset: 2px; }
+.btn-principal, .btn-telecharger { background: var(--action); color: #fff; }
+.btn-principal:active, .btn-telecharger:active { background: var(--action-fonce); }
+.btn-secondaire { background: var(--sauge); color: var(--action); }
+
+/* sections */
+.section { padding: 42px 0; }
+.section.blanc { background: #FBFAF6; }
+.kicker { font-size: 12.5px; font-weight: 700; letter-spacing: 0.12em; color: var(--miel-texte); margin-bottom: 8px; }
+.section h2 { font-size: clamp(25px, 5.5vw, 34px); max-width: 24ch; }
+.chapeau { color: var(--texte-doux); font-size: 16.5px; max-width: 60ch; margin-top: 10px; }
+.note { margin-top: 18px; background: var(--miel-clair); color: var(--miel-texte); border-radius: 14px; padding: 13px 15px; font-size: 15px; font-weight: 600; }
+
+.etapes { counter-reset: etape; list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+.etapes li { counter-increment: etape; position: relative; background: var(--carte); border-radius: 18px; padding: 16px 16px 16px 64px; box-shadow: var(--ombre); }
+.etapes li::before { content: counter(etape); position: absolute; left: 16px; top: 16px; width: 34px; height: 34px; border-radius: 50%; background: var(--menthe); color: var(--action); font-weight: 700; display: grid; place-items: center; }
+.etapes h3 { font-size: 17px; margin-bottom: 3px; }
+.etapes p { color: var(--texte-doux); font-size: 15.5px; }
+.touche { display: inline-block; font-weight: 700; color: var(--action); background: var(--sauge); border-radius: 6px; padding: 0 6px; }
+
+.fonctions { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+.fonctions li { background: var(--carte); border-radius: 18px; padding: 16px; box-shadow: var(--ombre-legere); }
+.fonctions h3 { font-size: 17px; margin-bottom: 3px; }
+.fonctions p { color: var(--texte-doux); font-size: 15.5px; }
+
+.galerie { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(200px, 62%); gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 22px 2px 8px; }
+.galerie figure { margin: 0; scroll-snap-align: start; }
+.galerie img { border-radius: 20px; border: 5px solid var(--carte); box-shadow: var(--ombre); aspect-ratio: 709 / 1536; object-fit: cover; }
+.galerie figcaption { text-align: center; font-weight: 600; color: var(--texte-doux); margin-top: 10px; font-size: 14.5px; }
+
+.tarif { display: grid; gap: 22px; align-items: center; }
+.prix { background: var(--carte); border-radius: 18px; padding: 22px; box-shadow: var(--ombre); }
+.prix-montant { font-family: var(--titre); font-size: clamp(42px, 12vw, 56px); color: var(--action); line-height: 1; }
+.prix-montant span { font-size: 0.42em; color: var(--miel-texte); }
+.prix-unite { font-weight: 600; color: var(--texte); margin: 6px 0 12px; }
+.prix-detail { color: var(--texte-doux); font-size: 15.5px; }
+.prix-note { margin-top: 12px; font-size: 13.5px; font-weight: 600; color: var(--texte-doux); }
+
+.pied { background: var(--action-fonce); color: #DCEFE7; padding: 26px 0 calc(26px + env(safe-area-inset-bottom)); font-size: 14.5px; }
+.pied a { color: #fff; }
+.pied-interieur { display: grid; gap: 8px; }
+
+@media (min-width: 760px) {
+  .hero { padding: 56px 0 64px; }
+  .hero-grille { grid-template-columns: 1.15fr 1fr; gap: 44px; }
+  .boutons-copie { grid-template-columns: 1fr 1fr; }
+  .etapes { grid-template-columns: 1fr 1fr; }
+  .fonctions { grid-template-columns: repeat(3, 1fr); }
+  .galerie { grid-auto-flow: row; grid-template-columns: repeat(3, 1fr); overflow: visible; }
+  .tarif { grid-template-columns: 1fr 1fr; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
