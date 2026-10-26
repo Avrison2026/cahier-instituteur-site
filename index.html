@@ -4,11 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Le Cahier de l'instituteur — Le compagnon des enseignants du primaire</title>
-<meta name="description" content="Préparez vos fiches de leçon en quelques minutes, du CP1 au CM2, selon les programmes officiels de Côte d'Ivoire. Application Android gratuite à l'essai : 5 fiches offertes.">
+<meta name="description" content="Préparez vos fiches de leçon en quelques minutes, du CP1 au CM2, selon les programmes officiels de Côte d'Ivoire. Application Android gratuite à l'essai : 6 fiches gratuites.">
 
 <meta property="og:type" content="website">
 <meta property="og:title" content="Le Cahier de l'instituteur">
-<meta property="og:description" content="Vos fiches de leçon prêtes en quelques minutes, du CP1 au CM2. 5 fiches offertes pour essayer.">
+<meta property="og:description" content="Vos fiches de leçon prêtes en quelques minutes, du CP1 au CM2. 6 fiches gratuites pour essayer.">
 <meta property="og:url" content="https://avrison2026.github.io/cahier-instituteur-site/">
 <meta property="og:image" content="https://avrison2026.github.io/cahier-instituteur-site/images/apercu-partage.jpg">
 <meta property="og:image:width" content="1200">
@@ -524,7 +524,7 @@ body { overflow-x:hidden; background:var(--fond); }
 
         <div class="essai">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>
-          <span><strong>5 fiches offertes</strong> pour essayer, sans engagement.</span>
+          <span><strong>6 fiches gratuites</strong> pour essayer, sans engagement.</span>
         </div>
       </div>
 
@@ -616,7 +616,7 @@ body { overflow-x:hidden; background:var(--fond); }
       <div class="activation">
         <div class="formule essai-gratuit">
           <h3>Essai gratuit</h3>
-          <div class="grand">5 fiches</div>
+          <div class="grand">6 fiches</div>
           <p>Offertes dès l'installation, dans le niveau et la matière de votre choix. De quoi juger sur pièce avant de décider.</p>
         </div>
         <div class="formule niveau">
@@ -850,7 +850,7 @@ body { overflow-x:hidden; background:var(--fond); }
   // Envoyer la page à un collègue : partage natif du téléphone, sinon WhatsApp.
   document.getElementById('btn-partager').addEventListener('click', async () => {
     const url = location.href.split('#')[0];
-    const texte = "Le Cahier de l'instituteur : nos fiches de leçon prêtes en quelques minutes, du CP1 au CM2. 5 fiches offertes pour essayer.";
+    const texte = "Le Cahier de l'instituteur : nos fiches de leçon prêtes en quelques minutes, du CP1 au CM2. 6 fiches gratuites pour essayer.";
     if (navigator.share) {
       try { await navigator.share({ title: "Le Cahier de l'instituteur", text: texte, url }); } catch (e) {}
     } else {
