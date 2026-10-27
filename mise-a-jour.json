@@ -1,21 +1,21 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 16,
-  "version": "1.5.1",
-  "tag": "v1.5.1",
-  "date_publication": "2026-10-25T01:11:40Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.1/cahier-instituteur.apk",
-  "taille_octets": 113466097,
-  "sha256": "03c672736e3a1d74bee7db10301dcb8cb9cfa87d83d9bbc96de69e76689cdef2",
+  "version_code": 18,
+  "version": "1.5.3",
+  "tag": "v1.5.3",
+  "date_publication": "2026-10-27T15:46:45Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.3/cahier-instituteur.apk",
+  "taille_octets": 119511527,
+  "sha256": "56fdd49f315f8c7c169b1f715640a2a9044c41d340ab9812a793377fda28ce6a",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Mise à jour de l'application en un seul appui, sans passer par le navigateur",
-    "Nouvelles présentations des documents PDF (résultats, relevé de notes, etc.)",
-    "Moyennes arrondies au centième, identiques partout dans l'application",
-    "Export des résultats et du relevé de notes directement sur le téléphone"
+    "Nouveaux écrans : menu latéral et parrainage",
+    "Profil enseignant enregistré sur le serveur, avec votre accord",
+    "Contact de l'équipe par e-mail : contact@cahier-de-l-instituteur.com",
+    "Le Cahier de l'instituteur est aussi disponible sur ordinateur : app.cahier-de-l-instituteur.com"
   ]
 }
