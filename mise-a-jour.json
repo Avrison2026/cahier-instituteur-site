@@ -1,21 +1,22 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 18,
-  "version": "1.5.3",
-  "tag": "v1.5.3",
-  "date_publication": "2026-10-27T15:46:45Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.3/cahier-instituteur.apk",
-  "taille_octets": 119511527,
-  "sha256": "56fdd49f315f8c7c169b1f715640a2a9044c41d340ab9812a793377fda28ce6a",
+  "version_code": 19,
+  "version": "1.5.4",
+  "tag": "v1.5.4",
+  "date_publication": "2026-10-28T17:30:13Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.4/cahier-instituteur.apk",
+  "taille_octets": 119606431,
+  "sha256": "a15fe42750d36fe49deee42d08d8116e534981704ead6ccf24529bcfb8a52e6a",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
+    "Déconnecter / Connecter cet appareil dans Réglages (compte commun)",
+    "Mises à jour intégrées plus fiables sur certains téléphones",
     "Nouveaux écrans : menu latéral et parrainage",
     "Profil enseignant enregistré sur le serveur, avec votre accord",
-    "Contact de l'équipe par e-mail : contact@cahier-de-l-instituteur.com",
     "Le Cahier de l'instituteur est aussi disponible sur ordinateur : app.cahier-de-l-instituteur.com"
   ]
 }
