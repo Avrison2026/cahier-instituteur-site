@@ -17,8 +17,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#064E3B">
 
-<link rel="icon" href="images/icon_full.png">
-<link rel="apple-touch-icon" href="images/icon_full.png">
+<link rel="icon" href="images/logo-officiel-192.png" type="image/png">
+<link rel="apple-touch-icon" href="images/logo-officiel-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&display=swap" rel="stylesheet">
@@ -540,7 +540,7 @@ dialog p { font-size:16px; }
 <header class="barre">
   <div class="wrap">
     <a class="marque" href="#haut">
-      <img src="images/icon_full.png" alt="">
+      <img src="images/logo-officiel-192.png" alt="">
       Le Cahier de l'instituteur
     </a>
     <nav aria-label="Navigation principale">
@@ -627,8 +627,8 @@ dialog p { font-size:16px; }
           <h3>L’application Web · PWA</h3>
           <p>Ouvrez votre cahier dans le navigateur et ajoutez-le à votre écran d’accueil.</p>
           <ul class="platform-benefits"><li>Accès depuis un téléphone ou un ordinateur</li><li>Aucun fichier APK à télécharger</li><li>Installation selon votre navigateur</li></ul>
-          <button class="btn btn-pwa" id="btn-pwa" type="button">Télécharger la PWA <span aria-hidden="true">↗</span></button>
-          <p class="pwa-caption">La PWA s’installe depuis son adresse Web.</p>
+          <a class="btn btn-pwa" id="btn-pwa" href="https://app.cahier-de-l-instituteur.com/">Télécharger la PWA <span aria-hidden="true">↗</span></a>
+          <p class="pwa-caption">Adresse : <a href="https://app.cahier-de-l-instituteur.com/">app.cahier-de-l-instituteur.com</a></p>
           <a class="install-link" href="#guide-pwa">Comment installer la PWA ? <span aria-hidden="true">↗</span></a>
         </article>
       </div>
@@ -729,11 +729,11 @@ dialog p { font-size:16px; }
           <p>Un code débloque un niveau (par exemple CM2) sur votre téléphone. Pour l'obtenir :</p>
           <ol>
             <li>Ouvrez l'écran Activation dans l'application.</li>
-            <li>Envoyez par WhatsApp votre numéro d'appareil et le niveau voulu.</li>
+            <li>Envoyez par e-mail votre numéro d'appareil et le niveau voulu.</li>
             <li>Saisissez le code reçu : le niveau est débloqué.</li>
           </ol>
-          <a class="btn btn-wa" href="https://wa.me/2250778806575?text=Bonjour%2C%20je%20souhaite%20activer%20Le%20Cahier%20de%20l%27instituteur.%0ANiveau%20%3A%20%0ANum%C3%A9ro%20d%27appareil%20%3A%20">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.83 1h.02a7.94 7.94 0 0 0 5.55-13.58ZM12.05 18.4h-.01a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.62 6.62 0 0 1 10.24-8.2 6.58 6.58 0 0 1-4.63 11.3Zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.14-.42.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.29-.34.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6 0 .95.7 1.87.79 2 .1.13 1.37 2.09 3.32 2.93.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
+          <a class="btn btn-principal" href="mailto:contact@cahier-de-l-instituteur.com?subject=Activation%20d%27un%20niveau&amp;body=Bonjour%2C%20je%20souhaite%20activer%20Le%20Cahier%20de%20l%27instituteur.%0ANiveau%20%3A%20%0ANum%C3%A9ro%20d%27appareil%20%3A%20">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
             Demander un code
           </a>
         </div>
@@ -763,11 +763,11 @@ dialog p { font-size:16px; }
           <details><summary>Le bouton Installer reste grisé</summary><div class="reponse">L'interrupteur de l'étape 3 n'est pas activé. Revenez en arrière et activez-le.</div></details>
           <details><summary>Je ne trouve pas le fichier</summary><div class="reponse">Ouvrez Fichiers (ou Gestionnaire de fichiers), puis Téléchargements, puis cahier-instituteur.apk.</div></details>
           <details><summary>« Application non installée »</summary><div class="reponse">Souvent, le téléchargement a été interrompu ou le téléphone manque d'espace. Supprimez le fichier, libérez de la place (au moins 300 Mo), retéléchargez-le avec une bonne connexion, puis recommencez.</div></details>
-          <details><summary>Toujours bloqué ?</summary><div class="reponse">Écrivez-nous sur <a href="https://wa.me/2250778806575?text=Bonjour%2C%20j%27ai%20un%20probl%C3%A8me%20d%27installation%20du%20Cahier%20de%20l%27instituteur">WhatsApp</a> avec une capture de l'écran : nous vous aidons à finir l'installation.</div></details>
+          <details><summary>Toujours bloqué ?</summary><div class="reponse">Écrivez-nous à <a href="mailto:contact@cahier-de-l-instituteur.com?subject=Probl%C3%A8me%20d%27installation">contact@cahier-de-l-instituteur.com</a> avec une capture de l'écran : nous vous aidons à finir l'installation.</div></details>
         </div>
       </div>
       <div class="pwa-guide" id="guide-pwa">
-        <div><div class="section-kicker">APPLICATION WEB</div><h3 class="guide-title">02 · Installer la PWA</h3><p>Ouvrez d’abord la PWA dans votre navigateur. L’installation se fait depuis l’application Web.</p></div>
+        <div><div class="section-kicker">APPLICATION WEB</div><h3 class="guide-title">02 · Installer la PWA</h3><p>Ouvrez d’abord la PWA dans votre navigateur : <a href="https://app.cahier-de-l-instituteur.com/"><b>app.cahier-de-l-instituteur.com</b></a>. L’installation se fait depuis l’application Web.</p></div>
         <div class="pwa-guide-options">
           <div><h4>Android ou ordinateur</h4><p>Dans Chrome ou Edge, ouvrez le menu et choisissez <b>Installer l’application</b> ou <b>Ajouter à l’écran d’accueil</b>, si l’option est proposée.</p></div>
           <div><h4>iPhone ou iPad</h4><p>Dans Safari, touchez <b>Partager</b>, puis <b>Sur l’écran d’accueil</b> et <b>Ajouter</b>.</p></div>
@@ -840,17 +840,13 @@ dialog p { font-size:16px; }
     <div class="wrap">
       <div>
         <h2>Une question ? Parlons-en</h2>
-        <p>Installation, activation d'un niveau, suggestion pour une fiche : écrivez ou appelez directement.</p>
-        <a class="numero" href="tel:+2250778806575">+225 07 78 80 65 75</a>
+        <p>Installation, activation d'un niveau, suggestion pour une fiche : écrivez-nous directement.</p>
+        <a class="numero" href="mailto:contact@cahier-de-l-instituteur.com">contact@cahier-de-l-instituteur.com</a>
       </div>
       <div class="actions">
-        <a class="btn btn-wa" href="https://wa.me/2250778806575?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Le%20Cahier%20de%20l%27instituteur" target="_blank" rel="noopener">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.83 1h.02a7.94 7.94 0 0 0 5.55-13.58ZM12.05 18.4h-.01a6.6 6.6 0 0 1-3.37-.92l-.24-.14-2.5.65.67-2.44-.16-.25a6.62 6.62 0 0 1 10.24-8.2 6.58 6.58 0 0 1-4.63 11.3Zm3.62-4.94c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.5.64-.62.77-.11.13-.23.14-.42.05a5.4 5.4 0 0 1-1.6-.98 6 6 0 0 1-1.1-1.37c-.12-.2 0-.3.09-.4.09-.1.2-.23.29-.34.1-.11.13-.2.2-.32.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24-.18.2-.68.66-.68 1.6 0 .95.7 1.87.79 2 .1.13 1.37 2.09 3.32 2.93.46.2.83.32 1.11.41.47.15.9.13 1.24.08.38-.06 1.17-.48 1.34-.94.16-.46.16-.86.11-.94-.05-.09-.18-.14-.38-.24Z"/></svg>
-          Écrire sur WhatsApp
-        </a>
-        <a class="btn btn-secondaire" href="tel:+2250778806575">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          Appeler
+        <a class="btn btn-principal" href="mailto:contact@cahier-de-l-instituteur.com?subject=Question%20sur%20Le%20Cahier%20de%20l%27instituteur">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+          Écrire un e-mail
         </a>
       </div>
     </div>
@@ -865,7 +861,7 @@ dialog p { font-size:16px; }
       Conçu par un instituteur ivoirien, pour ses collègues du primaire.
     </div>
     <nav aria-label="Liens utiles">
-      <a href="https://wa.me/2250778806575?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20Le%20Cahier%20de%20l%27instituteur">Assistance WhatsApp : 07 78 80 65 75</a>
+      <a href="mailto:contact@cahier-de-l-instituteur.com">Assistance : contact@cahier-de-l-instituteur.com</a>
       <a href="confidentialite.html">Politique de confidentialité</a>
       <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">Toutes les versions</a>
     </nav>
@@ -873,7 +869,7 @@ dialog p { font-size:16px; }
 </footer>
 
 <div class="barre-bas" id="barre-bas" aria-hidden="true">
-  <img src="images/icon_full.png" alt="">
+  <img src="images/logo-officiel-192.png" alt="">
   <div class="t"><b>Le Cahier de l'instituteur</b><span>APK Android ou PWA</span></div>
   <a class="btn btn-principal" tabindex="-1" href="#telecharger">Choisir ma version</a>
 </div>
@@ -888,14 +884,10 @@ dialog p { font-size:16px; }
 <script>
   // RENSEIGNER ICI l’adresse publique exacte de la PWA destinée aux enseignants.
   // Ne pas utiliser l’adresse de la PWA d’administration.
-  const URL_PWA = '';
+  const URL_PWA = 'https://app.cahier-de-l-instituteur.com/';
   const pwaDialog = document.getElementById('pwa-dialog');
-  document.getElementById('btn-pwa').addEventListener('click', () => {
-    if (URL_PWA && /^https:\/\//i.test(URL_PWA)) {
-      window.location.assign(URL_PWA);
-    } else {
-      pwaDialog.showModal();
-    }
+  document.getElementById('btn-pwa').addEventListener('click', (e) => {
+    if (!(URL_PWA && /^https:\/\//i.test(URL_PWA))) { e.preventDefault(); pwaDialog.showModal(); }
   });
   document.getElementById('pwa-guide-link').addEventListener('click', () => pwaDialog.close());
   pwaDialog.addEventListener('click', e => { if (e.target === pwaDialog) {
