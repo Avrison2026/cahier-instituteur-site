@@ -27,7 +27,7 @@
 
   function messageComplet(code) {
     return "Je te recommande « Le Cahier de l'instituteur » pour préparer tes fiches et suivre ta classe. " +
-      "Pour t'abonner (6 000 F CFA par niveau et par année scolaire), saisis mon code de parrainage " + code +
+      "Pour t'abonner (6 500 F CFA par niveau et par année scolaire), saisis mon code de parrainage " + code +
       " dans « Je veux m'abonner ». Télécharger l'application : " + PAGE + "?ref=" + code;
   }
 
