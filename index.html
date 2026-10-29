@@ -487,6 +487,15 @@ body { overflow-x:hidden; background:var(--fond); }
 .download-card .btn { width:100%; justify-content:space-between; padding:17px 20px; }
 .btn-pwa { background:#0d6149; color:white; }
 .btn-pwa:hover { background:#084c39; transform:translateY(-2px); }
+/* 29/10/2026 : invitation de parrainage */
+.invitation { background:#eef6f1; border:1px solid #bcd9cb; border-radius:18px; padding:18px 20px; margin:0 0 22px; color:#17352d; }
+.invitation p { margin:6px 0; line-height:1.5; }
+.invitation-titre { font-size:17px; }
+.invitation-titre strong { letter-spacing:1px; }
+.invitation-actions { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0 4px; }
+.invitation-retour:empty { display:none; }
+.invitation-note { font-size:13px; color:#4c6158; }
+.invitation .btn-secondaire { background:#fff; color:#0d6149; border:1px solid #0d6149; backdrop-filter:none; }
 .download-card .infos-apk { font-size:12px; gap:5px 12px; color:#6b756e; margin:14px 0 0; }
 .download-card .pwa-caption { font-size:12px; margin:14px 0 0; color:#6b756e; }
 .install-link { color:#17664e; font-size:13px; font-weight:700; text-underline-offset:4px; margin-top:18px; }
@@ -605,6 +614,18 @@ dialog p { font-size:16px; }
       <div class="download-heading"><div><div class="section-kicker">À CHACUN SA FAÇON DE TRAVAILLER</div>
       <h2 id="download-title">Votre cahier, sur l’écran de votre choix.</h2></div>
       <p class="chapeau">Choisissez la version qui vous convient, puis suivez le guide pour l’installer.</p></div>
+      <!-- 29/10/2026 : invitation d'un collegue (lien ?ref=CODE), affichee par invitation.js. -->
+      <div class="invitation" id="invitation" hidden>
+        <p class="invitation-titre">Un collègue vous invite. Code de parrainage : <strong id="code-invitation"></strong></p>
+        <p><b>PWA</b> : ouvrez-la avec le bouton ci-dessous ; le code vous sera proposé dans « Je veux m'abonner ».</p>
+        <p><b>Android</b> : téléchargez et installez l’APK, puis revenez sur cette page et touchez « Ouvrir l’application avec ce code » : il vous sera proposé dans « Je veux m'abonner ». Si l’application ne s’ouvre pas, copiez le code puis touchez « Coller » au champ « Code de parrainage ».</p>
+        <div class="invitation-actions">
+          <a class="btn btn-principal" id="ouvrir-app" href="#telecharger">Ouvrir l’application avec ce code</a>
+          <button class="btn btn-secondaire" id="copier-invitation" type="button">Copier le code</button>
+        </div>
+        <p class="invitation-retour" id="retour-invitation" aria-live="polite"></p>
+        <p class="invitation-note">Rien n’est attribué au téléchargement : le code compte seulement si votre abonnement est payé et validé.</p>
+      </div>
       <div class="download-grid">
         <article class="download-card android-card">
           <div class="download-card-top"><span class="platform-icon"><svg width="25" height="25" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m7 4-2-3m12 3 2-3M4 10a8 8 0 0 1 16 0v9H4zM8 19v3m8-3v3M1 11v6m22-6v6"/><path d="M8 7h.01M16 7h.01"/></svg></span><span class="platform-tag">TÉLÉPHONE ANDROID</span></div>
@@ -881,10 +902,11 @@ dialog p { font-size:16px; }
   <p id="pwa-dialog-message">Le lien de la PWA sera disponible prochainement. Vous pouvez déjà consulter le guide d’installation.</p>
   <a class="btn btn-pwa" href="#guide-pwa" id="pwa-guide-link">Voir le guide</a>
 </dialog>
+<script src="invitation.js"></script>
 <script>
   // RENSEIGNER ICI l’adresse publique exacte de la PWA destinée aux enseignants.
   // Ne pas utiliser l’adresse de la PWA d’administration.
-  const URL_PWA = 'https://app.cahier-de-l-instituteur.com/';
+  const URL_PWA = window.URL_PWA_INVITATION || 'https://app.cahier-de-l-instituteur.com/'; // 29/10/2026 : ?ref= d'une invitation
   const pwaDialog = document.getElementById('pwa-dialog');
   document.getElementById('btn-pwa').addEventListener('click', (e) => {
     if (!(URL_PWA && /^https:\/\//i.test(URL_PWA))) { e.preventDefault(); pwaDialog.showModal(); }

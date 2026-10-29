@@ -1,17 +1,18 @@
 /*
  * Page de parrainage (26/10/2026) - Le Cahier de l'instituteur.
  *
- * Lien attendu, tel que genere par le serveur (commerce/config.py) :
- *   https://avrison2026.github.io/cahier-instituteur-site/parrainage.html?code=XXXX-XXXX
+ * 29/10/2026 : le serveur genere desormais https://cahier-de-l-instituteur.com/?ref=XXXX-XXXX (accueil, invitation.js).
+ * Cette page reste valable pour les liens deja partages (parrainage.html?code=XXXX-XXXX, « ?ref= » accepte).
  * Code : 8 caracteres de l'alphabet 23456789ABCDEFGHJKMNPQRSTUVWXYZ (sans 0, O, 1, I, L), presentes « XXXX-XXXX ».
  * Tout autre contenu est refuse. Le code est affiche avec textContent uniquement (jamais d'insertion HTML) ; la page
  * ne fait aucune requete reseau et ne connait rien du parrain (aucune donnee personnelle).
- * Une APK installee hors Play Store ne recoit pas ce lien : la transmission du code est EXPLICITE (copie, collage).
+ * Une APK installee hors Play Store ne recoit pas ce lien : une fois installee, « Ouvrir l'application avec ce code »
+ * (cahierinstituteur://parrainage?ref=CODE) le lui transmet ; a defaut, copie puis collage.
  */
 "use strict";
 (function () {
   var ALPHABET = "23456789ABCDEFGHJKMNPQRSTUVWXYZ";
-  var PAGE = "https://avrison2026.github.io/cahier-instituteur-site/parrainage.html";
+  var PAGE = "https://cahier-de-l-instituteur.com/";
 
   /** « abcd efgh », « ABCD-EFGH » -> « ABCD-EFGH » ; null si ce n'est pas un code du systeme. */
   function normaliser(brut) {
@@ -27,7 +28,7 @@
   function messageComplet(code) {
     return "Je te recommande « Le Cahier de l'instituteur » pour préparer tes fiches et suivre ta classe. " +
       "Pour t'abonner (6 000 F CFA par niveau et par année scolaire), saisis mon code de parrainage " + code +
-      " dans « Je veux m'abonner ». Télécharger l'application : " + PAGE + "?code=" + code;
+      " dans « Je veux m'abonner ». Télécharger l'application : " + PAGE + "?ref=" + code;
   }
 
   function copier(texte) {
@@ -64,12 +65,17 @@
     document.getElementById("bloc-invalide").hidden = etat !== "invalide";
   }
 
-  var brut = new URLSearchParams(window.location.search).get("code");
+  var parametres = new URLSearchParams(window.location.search);
+  var brut = parametres.get("code") !== null ? parametres.get("code") : parametres.get("ref");
   var code = brut === null ? null : normaliser(brut);
 
   if (code) {
     afficher("valide");
     document.getElementById("code-valeur").textContent = code;
+    var ouvrir = document.getElementById("ouvrir-app");
+    if (ouvrir) ouvrir.href = "cahierinstituteur://parrainage?ref=" + code;
+    var pwa = document.getElementById("lien-pwa");
+    if (pwa) pwa.href = "https://app.cahier-de-l-instituteur.com/?ref=" + code;
     document.getElementById("eyebrow-texte").textContent = "Un collègue vous recommande l'application";
     document.getElementById("titre-principal").textContent = "Un collègue vous recommande Le Cahier de l'instituteur.";
     if (brut !== code && window.history && history.replaceState) {
