@@ -1,22 +1,22 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 19,
-  "version": "1.5.4",
-  "tag": "v1.5.4",
-  "date_publication": "2026-10-28T17:30:13Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.5.4/cahier-instituteur.apk",
-  "taille_octets": 119606431,
-  "sha256": "a15fe42750d36fe49deee42d08d8116e534981704ead6ccf24529bcfb8a52e6a",
+  "version_code": 20,
+  "version": "1.6.0",
+  "tag": "v1.6.0",
+  "date_publication": "2026-10-30T02:22:39Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.6.0/cahier-instituteur.apk",
+  "taille_octets": 122238840,
+  "sha256": "e83d10a8cebf18ba1915a7c2f1c74bc486299a19bd4c70f0bbecd472287db15b",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Déconnecter / Connecter cet appareil dans Réglages (compte commun)",
-    "Mises à jour intégrées plus fiables sur certains téléphones",
-    "Nouveaux écrans : menu latéral et parrainage",
-    "Profil enseignant enregistré sur le serveur, avec votre accord",
-    "Le Cahier de l'instituteur est aussi disponible sur ordinateur : app.cahier-de-l-instituteur.com"
+    "Nouveau module PNAPAS (remédiation) pour les niveaux auxquels vous êtes abonné, utilisable hors connexion",
+    "Programme de cours officiel mis à jour (CP1, CP2, CE1, CE2, CM2) : préparer une fiche depuis une leçon",
+    "Éditeur de fiche : réorganisation des intitulés par glisser-déposer",
+    "Profil et école active réunis, sans école en double",
+    "Parrainage : lien officiel avec votre code, proposé automatiquement"
   ]
 }
