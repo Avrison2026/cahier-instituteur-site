@@ -61,7 +61,7 @@
 </header>
 
 <div class="wrap">
-  <p class="maj">Dernière mise à jour : 26 octobre 2026</p>
+  <p class="maj">Dernière mise à jour : 31 octobre 2026</p>
 
   <p>Cahier de l'instituteur est une application destinée aux enseignants du primaire en Côte d'Ivoire, qui génère des fiches pédagogiques conformes aux programmes officiels et aide à la gestion de classe. Cette page explique simplement quelles données l'application utilise, pourquoi, qui peut les voir, combien de temps elles sont gardées et quels sont vos droits.</p>
 
@@ -105,6 +105,11 @@
       <td>Le concepteur ; le parrain voit ses propres gains et retraits</td>
     </tr>
     <tr>
+      <td>Identifiant de notification (jeton Firebase Cloud Messaging) et type d'appareil</td>
+      <td>Recevoir les messages du concepteur sur le téléphone, même application fermée</td>
+      <td>Le concepteur ; Google (Firebase), qui achemine les notifications</td>
+    </tr>
+    <tr>
       <td>Avis sur l'application : note, commentaire, prénom facultatif</td>
       <td>Afficher les avis sur la page de téléchargement, après validation</td>
       <td>Public, une fois l'avis validé (seuls le prénom, la note et le commentaire sont affichés)</td>
@@ -117,7 +122,10 @@
   </div>
 
   <h2>Paiements</h2>
-  <p>Le paiement de l'abonnement (6 500 F CFA par niveau et par année scolaire) se fait par <b>Wave</b>. L'application et le serveur ne reçoivent <b>jamais</b> votre code secret Wave ni vos identifiants Wave. Le serveur ne garde que les informations nécessaires pour prouver le paiement (montant, date, statut, référence de la transaction). Le traitement du paiement lui-même relève de Wave et de ses propres conditions.</p>
+  <p>Le paiement de l'abonnement (6 500 F CFA par niveau et par année scolaire) se fait dans l'application via <b>Genius Pay</b> (Wave, Orange Money, MTN MoMo, Moov Money) ou, à défaut, directement par <b>Wave</b>. Le numéro saisi est transmis à Genius Pay pour le paiement. L'application et le serveur ne reçoivent <b>jamais</b> votre code secret Mobile Money ni vos identifiants. Le serveur ne garde que les informations nécessaires pour prouver le paiement (référence, opérateur, montant, date, statut). Le traitement du paiement lui-même relève de Genius Pay, de l'opérateur choisi et de leurs propres conditions.</p>
+
+  <h2>Messages du concepteur</h2>
+  <p>Le concepteur peut envoyer des messages d'information (nouveautés, abonnements, conseils) à tous les enseignants ou à un groupe (abonnés, niveau, DREN, IEPP). Ils s'affichent dans la cloche de l'accueil et, si vous l'avez autorisé, en notification. Vous pouvez refuser ou désactiver les notifications dans les réglages d'Android ; les messages restent alors consultables dans la cloche. Les liens d'un message ne mènent qu'au site officiel cahier-de-l-instituteur.com.</p>
 
   <h2>Où sont stockées les données</h2>
   <p>Les données sont stockées sur le serveur dédié à l'application, hébergé chez Railway. Les données d'abonnement, de paiement et de parrainage sont rangées dans une base séparée des données scolaires. Elles ne sont ni publiques, ni consultables par d'autres enseignants. Les sauvegardes de ces données sont chiffrées.</p>
@@ -132,7 +140,7 @@
   </ul>
 
   <h2>Destinataires</h2>
-  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Wave</b> pour le traitement des paiements et des versements aux parrains, et à <b>Railway</b>, qui héberge le serveur. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
+  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Genius Pay</b> pour le traitement des paiements d'abonnement, à <b>Wave</b> pour les paiements directs et les versements aux parrains, à <b>Google (Firebase)</b> pour l'acheminement des notifications, et à <b>Railway</b>, qui héberge le serveur. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
 
   <h2>Durées de conservation</h2>
   <ul>

@@ -1,22 +1,21 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 20,
-  "version": "1.6.0",
-  "tag": "v1.6.0",
-  "date_publication": "2026-10-30T02:22:39Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.6.0/cahier-instituteur.apk",
-  "taille_octets": 122238840,
-  "sha256": "e83d10a8cebf18ba1915a7c2f1c74bc486299a19bd4c70f0bbecd472287db15b",
+  "version_code": 21,
+  "version": "1.6.1",
+  "tag": "v1.6.1",
+  "date_publication": "2026-10-30T22:50:04Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.6.1/cahier-instituteur.apk",
+  "taille_octets": 122505499,
+  "sha256": "c62c11b8dab89fd1c40169bc13c1e62febddda423259f83f3191e57f46470b5a",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Nouveau module PNAPAS (remédiation) pour les niveaux auxquels vous êtes abonné, utilisable hors connexion",
-    "Programme de cours officiel mis à jour (CP1, CP2, CE1, CE2, CM2) : préparer une fiche depuis une leçon",
-    "Éditeur de fiche : réorganisation des intitulés par glisser-déposer",
-    "Profil et école active réunis, sans école en double",
-    "Parrainage : lien officiel avec votre code, proposé automatiquement"
+    "Messages du concepteur : notifications sur le téléphone, même application fermée, et messages dans la cloche de l’accueil",
+    "Programme de cours officiel mis à jour (CM1 complété)",
+    "Abonnement payé directement dans l’application : Wave, Orange Money, MTN MoMo, Moov Money",
+    "Écran « À propos » et liens vers le site officiel cahier-de-l-instituteur.com"
   ]
 }
