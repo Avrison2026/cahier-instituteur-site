@@ -1,21 +1,22 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 23,
-  "version": "1.7.0",
-  "tag": "v1.7.0",
-  "date_publication": "2026-10-31T21:12:38Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.7.0/cahier-instituteur.apk",
-  "taille_octets": 122571427,
-  "sha256": "e8b589600d0f1f1af73913c46b94c6fe42af9b5c456bf880816fd3fb284fcca2",
+  "version_code": 24,
+  "version": "1.8.0",
+  "tag": "v1.8.0",
+  "date_publication": "2026-11-01T21:54:24Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.8.0/cahier-instituteur.apk",
+  "taille_octets": 123169715,
+  "sha256": "127fad9df7d209714fc49dbc2cbb5d8cbbe67bb879dfaaf5699c75fd20924907",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Accueil Découverte / PRO : fiches gratuites restantes et carte « Mon abonnement »",
-    "Module PNAPAS ouvert aux abonnés",
-    "« Écrire au concepteur » dans l’application",
-    "Nouvelles fiches : Poésie en 4 séances (CP1, CP2, CM1, CM2) ; Français CE2 : dictées du manuel et activités d’évaluation"
+    "Compositions mensuelles du CE1 : nouveau barème (Mathématiques, Éveil au milieu, Exploitation de texte /30, Dictée /10)",
+    "Programme de cours corrigé (CE2, CE1, CP1, CM1) et pages du livret reconnues",
+    "Civilités sur les documents (La directrice, La maîtresse…)",
+    "Documents imprimables agrandis et pied de page des fiches toujours imprimé",
+    "Traitement : plus de décalage des habiletés et contenus PNAPAS"
   ]
 }
