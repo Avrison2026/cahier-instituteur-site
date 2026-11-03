@@ -632,7 +632,7 @@ dialog p { font-size:16px; }
           <h3>L’application Android</h3>
           <p>Retrouvez votre cahier directement sur votre téléphone avec le fichier APK.</p>
           <ul class="platform-benefits"><li>Installation sur votre téléphone</li><li>Accès depuis votre liste d’applications</li><li>Android 8.0 ou version ultérieure</li></ul>
-          <a class="btn btn-principal" id="btn-telecharger" href="https://github.com/Avrison2026/cahier-instituteur-site/releases/latest/download/cahier-instituteur.apk">Télécharger l’APK Android <span aria-hidden="true">↓</span></a>
+          <a class="btn btn-principal" id="btn-telecharger" href="https://telechargement.cahier-de-l-instituteur.com/cahier-instituteur-1.8.0.apk">Télécharger l’APK Android <span aria-hidden="true">↓</span></a>
         <ul class="infos-apk" aria-live="polite">
           <li id="info-version">Version disponible sur GitHub</li>
           <li>Android 8.0 ou plus récent</li>
@@ -641,6 +641,7 @@ dialog p { font-size:16px; }
         </ul>
 
 
+          <p class="pwa-caption">Téléchargement interrompu ? Relancez-le depuis le même lien : il reprend où il s’était arrêté. Lien de secours : <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases/latest/download/cahier-instituteur.apk">GitHub</a>.</p>
           <a class="install-link" href="#guide-android">Comment installer l’APK ? <span aria-hidden="true">↗</span></a>
         </article>
         <article class="download-card pwa-card">
@@ -782,7 +783,7 @@ dialog p { font-size:16px; }
         <div class="depannage">
           <h3>En cas de souci</h3>
           <details><summary>Le bouton Installer reste grisé</summary><div class="reponse">L'interrupteur de l'étape 3 n'est pas activé. Revenez en arrière et activez-le.</div></details>
-          <details><summary>Je ne trouve pas le fichier</summary><div class="reponse">Ouvrez Fichiers (ou Gestionnaire de fichiers), puis Téléchargements, puis cahier-instituteur.apk.</div></details>
+          <details><summary>Je ne trouve pas le fichier</summary><div class="reponse">Ouvrez Fichiers (ou Gestionnaire de fichiers), puis Téléchargements, puis le fichier cahier-instituteur (.apk).</div></details>
           <details><summary>« Application non installée »</summary><div class="reponse">Souvent, le téléchargement a été interrompu ou le téléphone manque d'espace. Supprimez le fichier, libérez de la place (au moins 300 Mo), retéléchargez-le avec une bonne connexion, puis recommencez.</div></details>
           <details><summary>Toujours bloqué ?</summary><div class="reponse">Écrivez-nous à <a href="mailto:contact@cahier-de-l-instituteur.com?subject=Probl%C3%A8me%20d%27installation">contact@cahier-de-l-instituteur.com</a> avec une capture de l'écran : nous vous aidons à finir l'installation.</div></details>
         </div>
@@ -919,6 +920,8 @@ dialog p { font-size:16px; }
 
   const DEPOT = 'Avrison2026/cahier-instituteur-site';
   const NOM_APK = 'cahier-instituteur.apk';
+  // 03/11/2026 : le bouton principal télécharge depuis Cloudflare R2 (lien stable, reprise après coupure) ;
+  // à chaque publication, déposer cahier-instituteur-<version>.apk dans le bucket et changer son adresse ici.
 
   const dateFr = iso => new Date(iso).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
   const echapper = s => s.replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
