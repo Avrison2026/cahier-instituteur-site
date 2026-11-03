@@ -1,22 +1,23 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 24,
-  "version": "1.8.0",
-  "tag": "v1.8.0",
-  "date_publication": "2026-11-01T21:54:24Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.8.0/cahier-instituteur.apk",
-  "taille_octets": 123169715,
-  "sha256": "127fad9df7d209714fc49dbc2cbb5d8cbbe67bb879dfaaf5699c75fd20924907",
+  "version_code": 25,
+  "version": "1.9.0",
+  "tag": "v1.9.0",
+  "date_publication": "2026-11-03T16:50:02Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.0/cahier-instituteur.apk",
+  "taille_octets": 85110248,
+  "sha256": "7bbe01f2dc32593c015060fabc85865d1a3d961325f9da88c1acf962568aadb8",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Compositions mensuelles du CE1 : nouveau barème (Mathématiques, Éveil au milieu, Exploitation de texte /30, Dictée /10)",
-    "Programme de cours corrigé (CE2, CE1, CP1, CM1) et pages du livret reconnues",
-    "Civilités sur les documents (La directrice, La maîtresse…)",
-    "Documents imprimables agrandis et pied de page des fiches toujours imprimé",
-    "Traitement : plus de décalage des habiletés et contenus PNAPAS"
+    "Études surveillées CM2 : 347 exercices corrigés, export Word et PDF, disponibles hors connexion",
+    "Textes de dictée CM1 et CM2",
+    "« Mes documents » : documents et fiches consultables hors connexion",
+    "Accueil personnalisable : choisissez vos outils ; « Bon à savoir » rejoint les outils pédagogiques",
+    "Réinstallation sans perte : niveau, classe du jour et profil repris automatiquement",
+    "Abonnement, paiement et parrainage simplifiés ; application plus légère (85 Mo)"
   ]
 }
