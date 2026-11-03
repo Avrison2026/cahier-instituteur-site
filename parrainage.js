@@ -3,6 +3,9 @@
  *
  * 29/10/2026 : le serveur genere desormais https://cahier-de-l-instituteur.com/?ref=XXXX-XXXX (accueil, invitation.js).
  * Cette page reste valable pour les liens deja partages (parrainage.html?code=XXXX-XXXX, « ?ref= » accepte).
+ * 03/11/2026 : le bouton « Télécharger l'APK » mène à https://telechargement.cahier-de-l-instituteur.com/p/CODE.apk :
+ *   le Worker Cloudflare y glisse le code (hors signature) et l'application (build 25 et suivants) le lit seule au
+ *   premier lancement. Code invalide : le Worker renvoie l'APK normale.
  * Code : 8 caracteres de l'alphabet 23456789ABCDEFGHJKMNPQRSTUVWXYZ (sans 0, O, 1, I, L), presentes « XXXX-XXXX ».
  * Tout autre contenu est refuse. Le code est affiche avec textContent uniquement (jamais d'insertion HTML) ; la page
  * ne fait aucune requete reseau et ne connait rien du parrain (aucune donnee personnelle).
@@ -74,6 +77,8 @@
     document.getElementById("code-valeur").textContent = code;
     var ouvrir = document.getElementById("ouvrir-app");
     if (ouvrir) ouvrir.href = "cahierinstituteur://parrainage?ref=" + code;
+    var apk = document.getElementById("btn-telecharger");
+    if (apk) apk.href = "https://telechargement.cahier-de-l-instituteur.com/p/" + code + ".apk";
     var pwa = document.getElementById("lien-pwa");
     if (pwa) pwa.href = "https://app.cahier-de-l-instituteur.com/?ref=" + code;
     document.getElementById("eyebrow-texte").textContent = "Un collègue vous recommande l'application";

@@ -7,6 +7,9 @@
  *    APK : un navigateur ne transmet rien a une APK installee. Une fois l'application installee, le bouton
  *          « Ouvrir l'application avec ce code » (cahierinstituteur://parrainage?ref=CODE) la lui transmet ;
  *          a defaut, « Copier le code », puis « Coller » dans « Je veux m'abonner ».
+ *  - 03/11/2026 : le bouton « Télécharger l'APK » mène à https://telechargement.cahier-de-l-instituteur.com/p/CODE.apk :
+ *    le Worker Cloudflare y glisse le code (hors signature) et l'application (build 25 et suivants) le lit seule au
+ *    premier lancement. Code invalide : le Worker renvoie l'APK normale.
  *  - Rien n'est attribue ici : le serveur revalide le code et ne cree une commission qu'apres paiement valide.
  * Affichage par textContent uniquement ; aucune requete reseau ; aucune donnee sur le parrain.
  */
@@ -16,6 +19,7 @@
   var CLE = "cahier_invitation_v1";
   var DUREE_MS = 30 * 24 * 3600 * 1000;
   var PWA = "https://app.cahier-de-l-instituteur.com/";
+  var APK_PARRAINAGE = "https://telechargement.cahier-de-l-instituteur.com/p/";
 
   function normaliser(brut) {
     if (typeof brut !== "string" || brut.length > 24) return null;
@@ -55,6 +59,8 @@
   var liensPwa = document.querySelectorAll('a[href^="' + PWA + '"]');
   for (var i = 0; i < liensPwa.length; i++) liensPwa[i].href = PWA + "?ref=" + code;
   if (typeof window.URL_PWA_INVITATION === "undefined") window.URL_PWA_INVITATION = PWA + "?ref=" + code;
+  var boutonApk = document.getElementById("btn-telecharger");
+  if (boutonApk) boutonApk.href = APK_PARRAINAGE + code + ".apk";
 
   var bloc = document.getElementById("invitation");
   if (!bloc) return;
