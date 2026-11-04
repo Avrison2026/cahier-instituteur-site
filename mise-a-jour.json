@@ -1,23 +1,21 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 25,
-  "version": "1.9.0",
-  "tag": "v1.9.0",
-  "date_publication": "2026-11-03T16:50:02Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.0/cahier-instituteur.apk",
-  "taille_octets": 85110248,
-  "sha256": "7bbe01f2dc32593c015060fabc85865d1a3d961325f9da88c1acf962568aadb8",
+  "version_code": 26,
+  "version": "1.9.1",
+  "tag": "v1.9.1",
+  "date_publication": "2026-11-04T10:34:16Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.1/cahier-instituteur.apk",
+  "taille_octets": 85727580,
+  "sha256": "2b504f5a9b4e1adf19988b6d8bbbdf0cb3d07ac071581f5e76982032b580caac",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Études surveillées CM2 : 347 exercices corrigés, export Word et PDF, disponibles hors connexion",
-    "Textes de dictée CM1 et CM2",
-    "« Mes documents » : documents et fiches consultables hors connexion",
-    "Accueil personnalisable : choisissez vos outils ; « Bon à savoir » rejoint les outils pédagogiques",
-    "Réinstallation sans perte : niveau, classe du jour et profil repris automatiquement",
-    "Abonnement, paiement et parrainage simplifiés ; application plus légère (85 Mo)"
+    "Plans de session PNAPAS : séances de mathématiques du Cahier, programmées automatiquement et modifiables ; PDF du plan de la semaine",
+    "Études surveillées CM2 : 3 000 exercices corrigés, disponibles hors connexion",
+    "Propositions de sujets : 808 nouveaux exercices CM1 et CM2, sujets en moins de pages, en-tête élève avec case NOTE",
+    "Fiches PNAPAS : en-tête aligné, ligne MATÉRIELS/SUPPORT"
   ]
 }
