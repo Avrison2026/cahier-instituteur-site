@@ -1,22 +1,21 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 27,
-  "version": "1.9.2",
-  "tag": "v1.9.2",
-  "date_publication": "2026-11-05T16:42:26Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.2/cahier-instituteur.apk",
-  "taille_octets": 86022220,
-  "sha256": "cf334f5a250971949f2acbda4314df2a4accbc9c1174768b20f32bcc03a9a72c",
+  "version_code": 28,
+  "version": "1.9.3",
+  "tag": "v1.9.3",
+  "date_publication": "2026-11-05T19:12:30Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.3/cahier-instituteur.apk",
+  "taille_octets": 86038604,
+  "sha256": "f9ffbba0b587a4c2aca337e3e53bb255f00049ccb13d63eb436a8f8b96864e28",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Exercices : tirés de la banque d'exercices corrigés, pour chaque leçon (Word et PDF, corrigé à part)",
-    "Signatures : choix des signataires pour tous les documents signés, dernier choix retenu",
-    "Maternelle : préparer une fiche en choisissant la séance, répartition proposée semaine par semaine",
-    "Maternelle : observation rapide de toute la classe et bilan par trimestre, imprimables et signés",
-    "Registre d'appel et résultats de composition en A4 paysage, encre noire"
+    "Mathématiques : fiches d'approfondissement (plage 2) et d'exercices (après-midi), avec les exercices corrigés de la banque",
+    "Évaluations et remédiations présentées selon les canevas officiels (énoncé, consignes notées, corrigé et barème)",
+    "Maternelle : préparation en un choix, répartition proposée, observation rapide de la classe, bilan par période",
+    "Choix des signataires sur tous les documents signés"
   ]
 }
