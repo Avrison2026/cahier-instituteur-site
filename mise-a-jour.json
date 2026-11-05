@@ -1,21 +1,22 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 26,
-  "version": "1.9.1",
-  "tag": "v1.9.1",
-  "date_publication": "2026-11-04T10:34:16Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.1/cahier-instituteur.apk",
-  "taille_octets": 85727580,
-  "sha256": "2b504f5a9b4e1adf19988b6d8bbbdf0cb3d07ac071581f5e76982032b580caac",
+  "version_code": 27,
+  "version": "1.9.2",
+  "tag": "v1.9.2",
+  "date_publication": "2026-11-05T16:42:26Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.2/cahier-instituteur.apk",
+  "taille_octets": 86022220,
+  "sha256": "cf334f5a250971949f2acbda4314df2a4accbc9c1174768b20f32bcc03a9a72c",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Plans de session PNAPAS : séances de mathématiques du Cahier, programmées automatiquement et modifiables ; PDF du plan de la semaine",
-    "Études surveillées CM2 : 3 000 exercices corrigés, disponibles hors connexion",
-    "Propositions de sujets : 808 nouveaux exercices CM1 et CM2, sujets en moins de pages, en-tête élève avec case NOTE",
-    "Fiches PNAPAS : en-tête aligné, ligne MATÉRIELS/SUPPORT"
+    "Exercices : tirés de la banque d'exercices corrigés, pour chaque leçon (Word et PDF, corrigé à part)",
+    "Signatures : choix des signataires pour tous les documents signés, dernier choix retenu",
+    "Maternelle : préparer une fiche en choisissant la séance, répartition proposée semaine par semaine",
+    "Maternelle : observation rapide de toute la classe et bilan par trimestre, imprimables et signés",
+    "Registre d'appel et résultats de composition en A4 paysage, encre noire"
   ]
 }
