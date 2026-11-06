@@ -1,21 +1,19 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 29,
-  "version": "1.9.4",
-  "tag": "v1.9.4",
-  "date_publication": "2026-11-06T15:47:07Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.4/cahier-instituteur.apk",
-  "taille_octets": 86202600,
-  "sha256": "8fbc8c867ecdce695f08224c3f9a80b562d2bea51410ab97daff860230cdcb52",
+  "version_code": 30,
+  "version": "1.9.5",
+  "tag": "v1.9.5",
+  "date_publication": "2026-11-06T18:28:21Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.5/cahier-instituteur.apk",
+  "taille_octets": 86300904,
+  "sha256": "9bfa3f791a2ee61323240653d5c3f07176117e8634e30e87209f5e61cb5412c7",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Paiement : votre adresse e-mail est désormais demandée pour chaque paiement par Genius Pay",
-    "Espace Directeur : tableau de bord par période, suivi de la saisie et couverture des classes",
-    "Journal de classe : envoi volontaire de la semaine à la direction, visa imprimé sur le PDF",
-    "Écran de paiement mieux adapté aux petits téléphones"
+    "Paiement : confirmation des informations demandées par Genius Pay pour les clients concernés",
+    "Amélioration de l'affichage sur les petits téléphones"
   ]
 }
