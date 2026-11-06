@@ -87,7 +87,12 @@
     <tr>
       <td>Nom et prénoms, IEPP (demande d'abonnement « Je veux m'abonner »)</td>
       <td>Identifier la demande, vérifier le paiement et activer le niveau demandé</td>
-      <td>Le concepteur, pour valider la demande</td>
+      <td>Le concepteur, pour valider la demande ; Genius Pay reçoit le nom et les prénoms (pas l'IEPP) si vous payez par Genius Pay</td>
+    </tr>
+    <tr>
+      <td>Adresse e-mail et numéro de téléphone saisis à l'écran de paiement Genius Pay</td>
+      <td>Traiter le paiement et permettre les vérifications de conformité des paiements. L'adresse est obligatoire pour payer par Genius Pay ; le numéro reçoit la demande de paiement</td>
+      <td>Genius Pay et l'opérateur choisi. Ils transitent par le serveur de l'application, qui ne les enregistre pas et ne les inscrit pas dans ses journaux ; l'adresse reste sur votre appareil pour préremplir votre prochain paiement</td>
     </tr>
     <tr>
       <td>Informations de paiement : montant, date, statut, référence de la transaction Wave et, lorsque Wave la transmet, le numéro qui a payé</td>
@@ -147,7 +152,7 @@
   </ul>
 
   <h2>Paiements</h2>
-  <p>Le paiement de l'abonnement (6 500 F CFA par niveau et par année scolaire) se fait dans l'application via <b>Genius Pay</b> (Wave, Orange Money, MTN MoMo, Moov Money) ou, à défaut, directement par <b>Wave</b>. Le numéro saisi est transmis à Genius Pay pour le paiement. L'application et le serveur ne reçoivent <b>jamais</b> votre code secret Mobile Money ni vos identifiants. Le serveur ne garde que les informations nécessaires pour prouver le paiement (référence, opérateur, montant, date, statut). Le traitement du paiement lui-même relève de Genius Pay, de l'opérateur choisi et de leurs propres conditions.</p>
+  <p>Le paiement de l'abonnement (6 500 F CFA par niveau et par année scolaire) se fait dans l'application via <b>Genius Pay</b> (Wave, Orange Money, MTN MoMo, Moov Money) ou, à défaut, directement par <b>Wave</b>. Pour chaque paiement par Genius Pay, <b>votre nom et vos prénoms, votre adresse e-mail et votre numéro de téléphone sont transmis à Genius Pay</b> pour le traitement et les vérifications de conformité du paiement ; ils ne servent ni à la publicité ni à aucune autre fin de la part de l'application. Cette adresse est saisie sur l'écran de paiement : celle que vous donnez pour écrire au concepteur n'est jamais reprise pour un paiement. L'application et le serveur ne reçoivent <b>jamais</b> votre code secret Mobile Money ni vos identifiants. Le serveur ne garde que les informations nécessaires pour prouver le paiement (référence, opérateur, montant, date, statut). Le traitement du paiement lui-même relève de Genius Pay, de l'opérateur choisi et de leurs propres conditions.</p>
 
   <h2>Messages du concepteur</h2>
   <p>Le concepteur peut envoyer des messages d'information (nouveautés, abonnements, conseils) à tous les enseignants ou à un groupe (abonnés, niveau, DREN, IEPP). Ils s'affichent dans la cloche de l'accueil et, si vous l'avez autorisé, en notification. Vous pouvez refuser ou désactiver les notifications dans les réglages d'Android ; les messages restent alors consultables dans la cloche. Les liens d'un message ne mènent qu'au site officiel cahier-de-l-instituteur.com.</p>
@@ -168,7 +173,7 @@
   </ul>
 
   <h2>Destinataires</h2>
-  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Genius Pay</b> pour le traitement des paiements d'abonnement, à <b>Wave</b> pour les paiements directs et les versements aux parrains, à <b>Google (Firebase)</b> pour l'acheminement des notifications, à <b>Brevo</b> pour l'envoi des e-mails (messages au concepteur et réponses), à <b>Railway</b>, qui héberge le serveur, et, pour les classes rattachées par l'enseignant, à la <b>direction de son établissement</b>. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
+  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Genius Pay</b> pour le traitement et les vérifications de conformité des paiements d'abonnement (nom et prénoms, adresse e-mail, numéro de téléphone), à <b>Wave</b> pour les paiements directs et les versements aux parrains, à <b>Google (Firebase)</b> pour l'acheminement des notifications, à <b>Brevo</b> pour l'envoi des e-mails (messages au concepteur et réponses), à <b>Railway</b>, qui héberge le serveur, et, pour les classes rattachées par l'enseignant, à la <b>direction de son établissement</b>. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
 
   <h2>Durées de conservation</h2>
   <ul>
