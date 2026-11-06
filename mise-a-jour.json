@@ -1,21 +1,21 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 28,
-  "version": "1.9.3",
-  "tag": "v1.9.3",
-  "date_publication": "2026-11-05T19:12:30Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.3/cahier-instituteur.apk",
-  "taille_octets": 86038604,
-  "sha256": "f9ffbba0b587a4c2aca337e3e53bb255f00049ccb13d63eb436a8f8b96864e28",
+  "version_code": 29,
+  "version": "1.9.4",
+  "tag": "v1.9.4",
+  "date_publication": "2026-11-06T15:47:07Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.4/cahier-instituteur.apk",
+  "taille_octets": 86202600,
+  "sha256": "8fbc8c867ecdce695f08224c3f9a80b562d2bea51410ab97daff860230cdcb52",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Mathématiques : fiches d'approfondissement (plage 2) et d'exercices (après-midi), avec les exercices corrigés de la banque",
-    "Évaluations et remédiations présentées selon les canevas officiels (énoncé, consignes notées, corrigé et barème)",
-    "Maternelle : préparation en un choix, répartition proposée, observation rapide de la classe, bilan par période",
-    "Choix des signataires sur tous les documents signés"
+    "Paiement : votre adresse e-mail est désormais demandée pour chaque paiement par Genius Pay",
+    "Espace Directeur : tableau de bord par période, suivi de la saisie et couverture des classes",
+    "Journal de classe : envoi volontaire de la semaine à la direction, visa imprimé sur le PDF",
+    "Écran de paiement mieux adapté aux petits téléphones"
   ]
 }
