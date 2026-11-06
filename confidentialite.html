@@ -61,7 +61,7 @@
 </header>
 
 <div class="wrap">
-  <p class="maj">Dernière mise à jour : 31 octobre 2026</p>
+  <p class="maj">Dernière mise à jour : 6 novembre 2026</p>
 
   <p>Cahier de l'instituteur est une application destinée aux enseignants du primaire en Côte d'Ivoire, qui génère des fiches pédagogiques conformes aux programmes officiels et aide à la gestion de classe. Cette page explique simplement quelles données l'application utilise, pourquoi, qui peut les voir, combien de temps elles sont gardées et quels sont vos droits.</p>
 
@@ -77,7 +77,12 @@
     <tr>
       <td>Nom de l'école, classes, noms et notes des élèves</td>
       <td>Gestion de classe et personnalisation des fiches, saisis volontairement par l'enseignant</td>
-      <td>L'enseignant concerné uniquement</td>
+      <td>L'enseignant concerné ; la direction de son établissement seulement s'il y rattache sa classe (voir « Espace Directeur »)</td>
+    </tr>
+    <tr>
+      <td>Demande du rôle Directeur : civilité, nom et prénoms, établissement, DRENA, IEPP, localité, justificatif</td>
+      <td>Vérifier que le demandeur dirige bien l'établissement avant d'accorder le rôle</td>
+      <td>Le concepteur</td>
     </tr>
     <tr>
       <td>Nom et prénoms, IEPP (demande d'abonnement « Je veux m'abonner »)</td>
@@ -126,6 +131,19 @@
     <p style="margin:0;"><b>L'application n'affiche aucune publicité et n'intègre aucun outil de suivi publicitaire ou statistique tiers.</b> Aucune donnée n'est vendue ni utilisée pour de la publicité.</p>
   </div>
 
+  <h2>Espace Directeur</h2>
+  <p>L'Espace Directeur permet à la direction d'une école de suivre les effectifs et les résultats de son établissement. Il fonctionne ainsi :</p>
+  <ul>
+    <li><b>Le rôle est vérifié :</b> le concepteur n'accorde le rôle de directeur qu'après vérification, et peut le retirer.</li>
+    <li><b>Le rattachement vient de l'enseignant :</b> rien n'est partagé tant qu'il n'a pas demandé à rattacher sa classe, avec le code de l'établissement, et que la direction n'a pas confirmé.</li>
+    <li><b>Ce que la direction peut voir avec l'accord de l'enseignant :</b> le nom qu'il indique, le nom et le niveau de la classe, la liste des élèves (nom, prénoms, sexe, redoublement), leurs notes, moyennes, rangs et observations, et la date des dernières données.</li>
+    <li><b>Ce qu'elle ne voit jamais :</b> les contacts des parents, les dates et lieux de naissance, le profil des apprenants, la nationalité, l'extrait de naissance et les photos.</li>
+    <li><b>Lecture seule :</b> la direction ne peut modifier ni les notes, ni les élèves, ni les classes.</li>
+    <li><b>L'enseignant garde la main :</b> il peut retirer son accord ou quitter l'établissement à tout moment. La direction ne voit alors plus que des chiffres globaux de la classe, ou plus rien. Sans accord, aucun chiffre portant sur moins de 5 élèves n'est affiché.</li>
+    <li><b>Copie sur l'appareil de la direction :</b> pour fonctionner sans réseau, l'application peut garder une copie des données consultées, utilisable 72 heures au plus sans reconnexion. Elle est effacée à la reconnexion si l'accord, la classe ou le rôle ont été retirés. Les documents que la direction a déjà téléchargés restent sous sa responsabilité.</li>
+    <li><b>Assistance par le concepteur :</b> le concepteur peut consulter un établissement en lecture seule, pour l'assistance et le contrôle, dans les mêmes limites d'accord. Chaque consultation et chaque document produit sont enregistrés dans un journal, sans nom d'élève ni note.</li>
+  </ul>
+
   <h2>Paiements</h2>
   <p>Le paiement de l'abonnement (6 500 F CFA par niveau et par année scolaire) se fait dans l'application via <b>Genius Pay</b> (Wave, Orange Money, MTN MoMo, Moov Money) ou, à défaut, directement par <b>Wave</b>. Le numéro saisi est transmis à Genius Pay pour le paiement. L'application et le serveur ne reçoivent <b>jamais</b> votre code secret Mobile Money ni vos identifiants. Le serveur ne garde que les informations nécessaires pour prouver le paiement (référence, opérateur, montant, date, statut). Le traitement du paiement lui-même relève de Genius Pay, de l'opérateur choisi et de leurs propres conditions.</p>
 
@@ -136,7 +154,7 @@
   <p>Depuis l'application, vous pouvez écrire au concepteur (aide, abonnement, accès à rétablir). Votre adresse e-mail est demandée uniquement pour vous répondre. Le message et la réponse sont envoyés par <b>Brevo</b>, prestataire d'envoi d'e-mails ; la réponse s'affiche aussi dans la cloche de l'application. Votre adresse n'est utilisée à aucune autre fin : ni publicité, ni lettre d'information.</p>
 
   <h2>Où sont stockées les données</h2>
-  <p>Les données sont stockées sur le serveur dédié à l'application, hébergé chez Railway. Les données d'abonnement, de paiement et de parrainage sont rangées dans une base séparée des données scolaires. Elles ne sont ni publiques, ni consultables par d'autres enseignants. Les sauvegardes de ces données sont chiffrées.</p>
+  <p>Les données sont stockées sur le serveur dédié à l'application, hébergé chez Railway. Les données d'abonnement, de paiement et de parrainage sont rangées dans une base séparée des données scolaires. Elles ne sont ni publiques, ni consultables par d'autres enseignants ; seule la direction d'un établissement peut voir les classes qui y sont rattachées, dans les conditions décrites plus haut. Les sauvegardes de ces données sont chiffrées.</p>
 
   <h2>Protection des données</h2>
   <ul>
@@ -148,11 +166,12 @@
   </ul>
 
   <h2>Destinataires</h2>
-  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Genius Pay</b> pour le traitement des paiements d'abonnement, à <b>Wave</b> pour les paiements directs et les versements aux parrains, à <b>Google (Firebase)</b> pour l'acheminement des notifications, à <b>Brevo</b> pour l'envoi des e-mails (messages au concepteur et réponses), et à <b>Railway</b>, qui héberge le serveur. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
+  <p>Les données ne sont communiquées qu'au <b>concepteur de l'application</b>, à <b>Genius Pay</b> pour le traitement des paiements d'abonnement, à <b>Wave</b> pour les paiements directs et les versements aux parrains, à <b>Google (Firebase)</b> pour l'acheminement des notifications, à <b>Brevo</b> pour l'envoi des e-mails (messages au concepteur et réponses), à <b>Railway</b>, qui héberge le serveur, et, pour les classes rattachées par l'enseignant, à la <b>direction de son établissement</b>. Elles ne sont ni vendues ni cédées à d'autres tiers.</p>
 
   <h2>Durées de conservation</h2>
   <ul>
     <li><b>Données scolaires</b> (école, classes, élèves) : tant que l'enseignant utilise l'application, ou jusqu'à sa demande de suppression.</li>
+    <li><b>Espace Directeur</b> (demandes du rôle, rattachements, accords et journal des consultations) : conservés pour prouver qui a eu accès à quoi, y compris après la fin d'un rattachement ou d'un rôle. Ce journal ne contient ni nom d'élève ni note. Un rattachement terminé ne donne plus aucun accès aux données de la classe.</li>
     <li><b>Demandes d'abonnement</b> : pendant l'année scolaire concernée (l'abonnement se termine le 30 juin), puis aussi longtemps que nécessaire pour justifier les paiements reçus.</li>
     <li><b>Paiements, commissions, retraits et registre financier</b> : conservés pour justifier les sommes reçues et versées ; ces enregistrements ne peuvent pas être effacés un par un, car ils garantissent l'exactitude des gains de chacun.</li>
     <li><b>Parrains</b> : tant que le compte de parrainage existe, puis le temps nécessaire au règlement des gains restants et à la justification des versements.</li>
@@ -161,7 +180,7 @@
   </ul>
 
   <h2>Données concernant les élèves</h2>
-  <p>Les noms d'élèves éventuellement saisis dans l'application le sont uniquement par l'enseignant, pour son propre usage de gestion de classe (listes, notes). Ces informations ne sont jamais utilisées à des fins publicitaires, ne sont jamais partagées avec des tiers, et restent sous le contrôle de l'enseignant qui peut les modifier ou les supprimer depuis l'application (y compris via la fonction Corbeille, qui permet de restaurer un élément supprimé par erreur).</p>
+  <p>Les noms d'élèves éventuellement saisis dans l'application le sont uniquement par l'enseignant, pour son usage de gestion de classe (listes, notes). Ces informations ne sont jamais utilisées à des fins publicitaires. Elles ne sont partagées qu'avec la direction de l'établissement, si l'enseignant rattache sa classe et donne son accord (voir « Espace Directeur »), et restent sous le contrôle de l'enseignant qui peut les modifier ou les supprimer depuis l'application (y compris via la fonction Corbeille, qui permet de restaurer un élément supprimé par erreur).</p>
 
   <h2>Vos droits</h2>
   <p>Vous pouvez demander à <b>consulter</b> les données qui vous concernent, à les faire <b>corriger</b> si elles sont inexactes (par exemple un nom mal écrit ou un numéro Wave à changer), ou à les faire <b>supprimer</b>. Les données financières nécessaires pour justifier un paiement, une commission ou un versement peuvent être conservées malgré une demande de suppression ; elles ne sont alors plus utilisées à d'autres fins. Pour exercer ces droits, contactez le concepteur (coordonnées ci-dessous) depuis le téléphone concerné, afin que nous puissions vérifier que la demande vient bien de vous.</p>
