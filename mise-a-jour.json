@@ -1,19 +1,23 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 30,
-  "version": "1.9.5",
-  "tag": "v1.9.5",
-  "date_publication": "2026-11-06T18:28:21Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.5/cahier-instituteur.apk",
-  "taille_octets": 86300904,
-  "sha256": "9bfa3f791a2ee61323240653d5c3f07176117e8634e30e87209f5e61cb5412c7",
+  "version_code": 31,
+  "version": "1.9.6",
+  "tag": "v1.9.6",
+  "date_publication": "2026-11-08T18:36:49Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.6/cahier-instituteur.apk",
+  "taille_octets": 86593732,
+  "sha256": "9b86b3c0219f4e985971c03838b56157c9f1f8fed2d37cc5d855a2c3e8dd87d0",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Paiement : confirmation des informations demandées par Genius Pay pour les clients concernés",
-    "Amélioration de l'affichage sur les petits téléphones"
+    "Proposition de sujet au modèle de composition du CM, modifiable avant l'impression",
+    "Nouveau style de l'accueil, de Mes fiches et de Mes classes",
+    "Paiement : confirmation du niveau avant de payer et changement d'opérateur sans double paiement",
+    "Fiches d'approfondissement et d'exercices en français, sciences, histoire-géographie et EDHC",
+    "Numéro de fiche proposé automatiquement",
+    "Textes de dictée du CP1 au CM2, dont les dictées complémentaires"
   ]
 }
