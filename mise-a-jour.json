@@ -1,23 +1,22 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 31,
-  "version": "1.9.6",
-  "tag": "v1.9.6",
-  "date_publication": "2026-11-08T18:36:49Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.6/cahier-instituteur.apk",
-  "taille_octets": 86593732,
-  "sha256": "9b86b3c0219f4e985971c03838b56157c9f1f8fed2d37cc5d855a2c3e8dd87d0",
+  "version_code": 32,
+  "version": "1.9.7",
+  "tag": "v1.9.7",
+  "date_publication": "2026-11-10T16:56:05Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.7/cahier-instituteur.apk",
+  "taille_octets": 86728164,
+  "sha256": "1d7c468022e5720e316e51f0d2f32c4adc82f63bd63a766e715c2d8273c12a7a",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Proposition de sujet au modèle de composition du CM, modifiable avant l'impression",
-    "Nouveau style de l'accueil, de Mes fiches et de Mes classes",
-    "Paiement : confirmation du niveau avant de payer et changement d'opérateur sans double paiement",
-    "Fiches d'approfondissement et d'exercices en français, sciences, histoire-géographie et EDHC",
-    "Numéro de fiche proposé automatiquement",
-    "Textes de dictée du CP1 au CM2, dont les dictées complémentaires"
+    "Nouvelle formule Pro Max : 100 fiches par semaine, export Word, téléphone et navigateur en même temps",
+    "Passage du Pro au Pro Max en payant seulement la différence",
+    "Accueil Pro Max : fiches et Word de la semaine en un coup d'œil",
+    "Word en un toucher sur votre dernière fiche (Pro Max)",
+    "Dictées du livre CE1 dans les textes de dictée"
   ]
 }
