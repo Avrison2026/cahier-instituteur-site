@@ -1,22 +1,38 @@
 {
   "format": 1,
   "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 32,
-  "version": "1.9.7",
-  "tag": "v1.9.7",
-  "date_publication": "2026-11-10T16:56:05Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v1.9.7/cahier-instituteur.apk",
-  "taille_octets": 86728164,
-  "sha256": "1d7c468022e5720e316e51f0d2f32c4adc82f63bd63a766e715c2d8273c12a7a",
+  "version_code": 33,
+  "version": "2.0.0",
+  "tag": "v2.0.0",
+  "date_publication": "2026-11-12T20:43:25Z",
+  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur.apk",
+  "taille_octets": 88047852,
+  "sha256": "b915cbb6a71f6e4d0c36ad6f20581ea023b49981a8f250ec3e12dd25d82ede6c",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
   "min_sdk": 24,
   "nouveautes": [
-    "Nouvelle formule Pro Max : 100 fiches par semaine, export Word, téléphone et navigateur en même temps",
-    "Passage du Pro au Pro Max en payant seulement la différence",
-    "Accueil Pro Max : fiches et Word de la semaine en un coup d'œil",
-    "Word en un toucher sur votre dernière fiche (Pro Max)",
-    "Dictées du livre CE1 dans les textes de dictée"
-  ]
+    "Version 2.0 : nouvelle icône, carte « Aujourd'hui » (séances du jour, appel, journal) et recherche unique sur l'accueil",
+    "Mises à jour presque automatiques : téléchargement à l'avance, installation en un toucher",
+    "Maternelle (PS, MS, GS) : fiches avec le nom de votre école",
+    "Remédiation PNAPAS en groupes de niveau, plan de session modifiable comme la feuille imprimée",
+    "Classe de remédiation et « Ajouter une classe » directement depuis la préparation",
+    "Cantine et activités extra-scolaires (coopérative, culture, mères-filles), bureaux à envoyer au directeur",
+    "Espace Directeur : rapport mensuel, liste nominative du personnel, documents reçus des enseignants",
+    "Français du CM aligné sur le livre ; APC et guides d'exécution au CM",
+    "Mes fiches, Réglages et barre de navigation plus clairs"
+  ],
+  "apks_architectures": {
+    "arm64-v8a": {
+      "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-arm64-v8a.apk",
+      "taille_octets": 50249735,
+      "sha256": "f06f266ec05a76664d4bb2cb4b2d2c756abe055cde0937decc72d10a1f153647"
+    },
+    "armeabi-v7a": {
+      "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-armeabi-v7a.apk",
+      "taille_octets": 48775177,
+      "sha256": "b9b7459f684c35e18ce5de1273aea53307f63fffdbbbf20e2d31559bd2970f29"
+    }
+  }
 }
