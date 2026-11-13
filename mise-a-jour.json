@@ -6,8 +6,8 @@
   "tag": "v2.0.0",
   "date_publication": "2026-11-12T20:43:25Z",
   "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur.apk",
-  "taille_octets": 88047852,
-  "sha256": "b915cbb6a71f6e4d0c36ad6f20581ea023b49981a8f250ec3e12dd25d82ede6c",
+  "taille_octets": 88096920,
+  "sha256": "4c7e8ab84a3ba3465f9a1fce5c49f11138fb3350335da072ccd37f6aef1f0778",
   "certificats_sha256": [
     "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
   ],
@@ -21,18 +21,19 @@
     "Cantine et activités extra-scolaires (coopérative, culture, mères-filles), bureaux à envoyer au directeur",
     "Espace Directeur : rapport mensuel, liste nominative du personnel, documents reçus des enseignants",
     "Français du CM aligné sur le livre ; APC et guides d'exécution au CM",
-    "Mes fiches, Réglages et barre de navigation plus clairs"
+    "Bouton d'aide « ? » sur chaque écran, liste des élèves plus compacte avec recherche rapide",
+    "Mes fiches, Réglages, préparation d'une fiche (étapes numérotées) et barre de navigation plus clairs"
   ],
   "apks_architectures": {
     "arm64-v8a": {
       "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-arm64-v8a.apk",
-      "taille_octets": 50249735,
-      "sha256": "f06f266ec05a76664d4bb2cb4b2d2c756abe055cde0937decc72d10a1f153647"
+      "taille_octets": 50249651,
+      "sha256": "b3e9030d3c84992433c9a51c3ed8b0336be72170c916bea06acfaa4dc62181e6"
     },
     "armeabi-v7a": {
       "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-armeabi-v7a.apk",
-      "taille_octets": 48775177,
-      "sha256": "b9b7459f684c35e18ce5de1273aea53307f63fffdbbbf20e2d31559bd2970f29"
+      "taille_octets": 48824245,
+      "sha256": "bfe1c5f934856fbe172d4861f19cf285fe9b5d7ab6a4ef3d0f52840842f2e204"
     }
   }
 }
