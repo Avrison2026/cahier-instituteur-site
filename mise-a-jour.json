@@ -1,39 +1,40 @@
 {
-  "format": 1,
-  "application": "com.avrison.cahierinstituteur.cahier_instituteur",
-  "version_code": 33,
-  "version": "2.0.0",
-  "tag": "v2.0.0",
-  "date_publication": "2026-11-12T20:43:25Z",
-  "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur.apk",
-  "taille_octets": 88096920,
-  "sha256": "4c7e8ab84a3ba3465f9a1fce5c49f11138fb3350335da072ccd37f6aef1f0778",
-  "certificats_sha256": [
-    "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
-  ],
-  "min_sdk": 24,
-  "nouveautes": [
-    "Version 2.0 : nouvelle icône, carte « Aujourd'hui » (séances du jour, appel, journal) et recherche unique sur l'accueil",
-    "Mises à jour presque automatiques : téléchargement à l'avance, installation en un toucher",
-    "Maternelle (PS, MS, GS) : fiches avec le nom de votre école",
-    "Remédiation PNAPAS en groupes de niveau, plan de session modifiable comme la feuille imprimée",
-    "Classe de remédiation et « Ajouter une classe » directement depuis la préparation",
-    "Cantine et activités extra-scolaires (coopérative, culture, mères-filles), bureaux à envoyer au directeur",
-    "Espace Directeur : rapport mensuel, liste nominative du personnel, documents reçus des enseignants",
-    "Français du CM aligné sur le livre ; APC et guides d'exécution au CM",
-    "Bouton d'aide « ? » sur chaque écran, liste des élèves plus compacte avec recherche rapide",
-    "Mes fiches, Réglages, préparation d'une fiche (étapes numérotées) et barre de navigation plus clairs"
-  ],
-  "apks_architectures": {
-    "arm64-v8a": {
-      "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-arm64-v8a.apk",
-      "taille_octets": 50249651,
-      "sha256": "b3e9030d3c84992433c9a51c3ed8b0336be72170c916bea06acfaa4dc62181e6"
-    },
-    "armeabi-v7a": {
-      "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.0/cahier-instituteur-armeabi-v7a.apk",
-      "taille_octets": 48824245,
-      "sha256": "bfe1c5f934856fbe172d4861f19cf285fe9b5d7ab6a4ef3d0f52840842f2e204"
-    }
+ "format": 1,
+ "application": "com.avrison.cahierinstituteur.cahier_instituteur",
+ "version_code": 34,
+ "version": "2.0.1",
+ "tag": "v2.0.1",
+ "date_publication": "2026-11-20T17:19:59Z",
+ "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.1/cahier-instituteur.apk",
+ "taille_octets": 90546712,
+ "sha256": "4637378f2da9026748d2226871ecece9b093672f56898b96dd95c5f9f77d8942",
+ "certificats_sha256": [
+  "39c6bb9d23fa1470a470b1dd906e6935ae145ce199f847285819bc57c587d563"
+ ],
+ "min_sdk": 24,
+ "nouveautes": [
+  "Calendrier scolaire officiel 2026-2027 : congés, dates des compositions et des examens blancs, semaine de classe sur l'accueil",
+  "« Composition du mois » : compositions mensuelles toutes faites du CP1 au CM2, modifiables avant impression",
+  "Documents de chaque classe : kits et manuels PNAPAS à cocher à l'écran, en PDF, Word ou Excel",
+  "Espace Directeur : Fiche 4 et PACC ; demande du rôle avec l'avis de nomination ou le contact du conseiller pédagogique",
+  "Notes : composition en cours proposée d'office, matières et barèmes propres à chaque classe, Orthographe au CP2",
+  "Fiches : modèle noir et blanc, colonnes Activités-maître / Activités-élèves, cadre Observations, lignes modifiables",
+  "Exercices du CP1 au CM2 et préparation au CEPE (dictées, révisions, sujets)",
+  "Programmes enrichis : maths CP1 à CE2 (renforcement, évaluation, récupération), CM1 rangé sur le guide, chants et récitations",
+  "Nouveau style : police Inter, accueil, Mes classes, outils pédagogiques et Exercices redessinés",
+  "Registre d'appel : congés marqués d'office, bouton « Valider l'appel » toujours visible",
+  "Corrections : première fiche gratuite qui ne se bloque plus, relevé de notes sur une seule page, paiement à relancer"
+ ],
+ "apks_architectures": {
+  "arm64-v8a": {
+   "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.1/cahier-instituteur-arm64-v8a.apk",
+   "taille_octets": 52289843,
+   "sha256": "5ca7763808cb0586e6764f40bfc75a06b3ef469ac9cb5a65f82709eab10cbce4"
+  },
+  "armeabi-v7a": {
+   "url_apk": "https://github.com/Avrison2026/cahier-instituteur-site/releases/download/v2.0.1/cahier-instituteur-armeabi-v7a.apk",
+   "taille_octets": 50880821,
+   "sha256": "7f0730533aa5bcf475e78a227f73d01dfab470b0ae8fb4ab804c5a3267a814ca"
   }
+ }
 }
