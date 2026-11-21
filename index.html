@@ -542,6 +542,14 @@ dialog p { font-size:16px; }
 .fonctions-completes li span { font-size:14px; }
 @media(min-width:621px) and (max-width:1000px) { .fonctions-completes { grid-template-columns:1fr 1fr; } }
 @media(max-width:620px) { .fonctions-completes { grid-template-columns:1fr; } }
+/* 21/11/2026 : tutoriels pas à pas (pages aide/) */
+.tutoriels { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:24px; }
+.tutoriel { display:flex; flex-direction:column; gap:6px; background:var(--papier); border:1px solid var(--bordure); border-radius:16px; padding:18px 20px; text-decoration:none; color:var(--texte); box-shadow:var(--ombre-douce); }
+.tutoriel:hover, .tutoriel:focus-visible { border-color:var(--encre); }
+.tutoriel b { font-family:var(--titre); font-size:18px; color:var(--encre); }
+.tutoriel span { font-size:15px; color:var(--texte-doux); line-height:1.5; }
+.tutoriel em { font-style:normal; font-weight:700; color:var(--orange-texte); margin-top:auto; padding-top:6px; }
+@media(max-width:860px) { .tutoriels { grid-template-columns:1fr; } }
 </style>
 </head>
 <body>
@@ -858,6 +866,31 @@ dialog p { font-size:16px; }
     </div>
   </section>
 
+  <section class="section" id="tutoriels" aria-labelledby="tutoriels-titre">
+    <div class="wrap">
+      <div class="section-kicker">TUTORIELS PAS À PAS</div>
+      <h2 id="tutoriels-titre">Apprenez à utiliser l’application</h2>
+      <p class="chapeau">Chaque tutoriel explique les étapes une par une, bouton par bouton. Lisibles sur téléphone et imprimables.</p>
+      <div class="tutoriels">
+        <a class="tutoriel" href="aide/gerer-sa-classe/">
+          <b>Gérer sa classe</b>
+          <span>Créer sa classe, inscrire les élèves, faire l’appel, saisir les notes, imprimer et envoyer les résultats.</span>
+          <em>Lire le tutoriel →</em>
+        </a>
+        <a class="tutoriel" href="aide/pnapas-groupes-de-niveau/">
+          <b>Remédiation PNAPAS en groupe de niveau</b>
+          <span>CE1 et CE2 : niveaux ASER, groupes GH1, GH2 et GH3, plans de séance de la semaine et suivi des élèves.</span>
+          <em>Lire le tutoriel →</em>
+        </a>
+        <a class="tutoriel" href="aide/espace-directeur/">
+          <b>L’Espace Directeur</b>
+          <span>Pour les directeurs et les enseignants : rattacher les classes, tableau de bord, journaux, rapport mensuel, Fiche 4, PACC.</span>
+          <em>Lire le tutoriel →</em>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <section class="contact" id="contact">
     <div class="wrap">
       <div>
@@ -884,6 +917,7 @@ dialog p { font-size:16px; }
     </div>
     <nav aria-label="Liens utiles">
       <a href="mailto:contact@cahier-de-l-instituteur.com">Assistance : contact@cahier-de-l-instituteur.com</a>
+      <a href="#tutoriels">Tutoriels pas à pas</a>
       <a href="confidentialite.html">Politique de confidentialité</a>
       <a href="https://github.com/Avrison2026/cahier-instituteur-site/releases">Toutes les versions</a>
     </nav>
