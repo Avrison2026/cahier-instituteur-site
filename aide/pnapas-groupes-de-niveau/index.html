@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remédiation PNAPAS en groupe de niveau — Cahier de l'instituteur</title>
+<meta name="description" content="Tutoriel pas à pas : organiser la remédiation PNAPAS en groupes de niveau (GH1, GH2, GH3) au CE1 et au CE2 avec le Cahier de l'instituteur.">
+<style>
+  :root{
+    --marine:#0F1F4D;
+    --orange:#ef7f1a;
+    --vert:#176B63;
+    --texte:#1F2A44;
+    --texte-doux:#5A6478;
+    --carte:#FFFFFF;
+    --bordure:#E3E8EF;
+    --fond:#F5F7FA;
+    --note:#FFF6EA;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--fond);color:var(--texte);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px 70px;}
+  header{background:var(--marine);color:#fff;padding:40px 16px 28px;}
+  header .inner{max-width:720px;margin:0 auto;}
+  header h1{font-size:1.55rem;margin:0 0 8px;line-height:1.3;}
+  header p{color:rgba(255,255,255,.8);margin:0;font-size:.95rem;}
+  h2{font-size:1.18rem;color:var(--marine);margin:38px 0 10px;padding-top:6px;border-top:3px solid var(--orange);}
+  h3{font-size:1rem;color:var(--vert);margin:22px 0 6px;}
+  p,li{font-size:.98rem;}
+  .maj{color:var(--texte-doux);font-size:.85rem;margin-top:14px;}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem;background:var(--carte);}
+  th,td{text-align:left;padding:9px 10px;border:1px solid var(--bordure);vertical-align:top;}
+  th{background:#EEF2F8;color:var(--marine);font-size:.85rem;}
+  .defilement{overflow-x:auto;}
+  ol,ul{padding-left:22px;}
+  li{margin:6px 0;}
+  .note{background:var(--note);border-left:4px solid var(--orange);border-radius:6px;padding:10px 14px;margin:14px 0;}
+  .sommaire{background:var(--carte);border:1px solid var(--bordure);border-radius:10px;padding:12px 18px;margin:18px 0;}
+  .sommaire ol{margin:6px 0;}
+  .faq dt{font-weight:700;margin-top:16px;color:var(--marine);}
+  .faq dd{margin:4px 0 0 0;}
+  .case{list-style:none;padding-left:4px;}
+  .case li::before{content:"☐ ";color:var(--vert);font-weight:700;}
+  a{color:var(--marine);}
+  footer{padding:30px 16px 50px;color:var(--texte-doux);font-size:.88rem;text-align:center;}
+  @media print{
+    header{background:none;color:#000;padding:0 0 10px;}
+    header p{color:#333;}
+    body{background:#fff;}
+    h2{break-after:avoid;}
+    table,.note{break-inside:avoid;}
+    .sommaire,footer{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Remédiation PNAPAS en groupe de niveau</h1>
+    <p>Tutoriel pas à pas · CE1 et CE2 · Cahier de l'instituteur</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="maj">Mis à jour le 21 novembre 2026</p>
+
+  <div class="sommaire">
+    <b>Sommaire</b>
+    <ol>
+      <li><a href="#principe">C'est quoi, un « groupe de niveau » ?</a></li>
+      <li><a href="#avant">Avant de commencer</a></li>
+      <li><a href="#etape1">Étape 1 : ouvrir le module</a></li>
+      <li><a href="#etape2">Étape 2 : noter le niveau ASER</a></li>
+      <li><a href="#etape3">Étape 3 : choisir la date de début</a></li>
+      <li><a href="#etape4">Étape 4 : choisir votre groupe</a></li>
+      <li><a href="#etape5">Étape 5 : la classe de remédiation</a></li>
+      <li><a href="#etape6">Étape 6 : chaque semaine</a></li>
+      <li><a href="#etape7">Étape 7 : progrès et changements de groupe</a></li>
+      <li><a href="#faq">Questions fréquentes</a></li>
+    </ol>
+  </div>
+
+  <h2 id="principe">1. C'est quoi, un « groupe de niveau » ?</h2>
+  <p>En remédiation PNAPAS, on fait travailler les élèves en difficulté <b>selon leur vrai niveau</b>, et non selon leur classe. Les guides PNAPAS proposent deux façons de s'organiser, et le Cahier de l'instituteur gère les deux.</p>
+  <div class="defilement"><table>
+    <tr><th></th><th>Classe hétérogène (choix par défaut)</th><th>Groupe de niveau de l'école (groupe homogène)</th></tr>
+    <tr><td><b>Qui sont les élèves ?</b></td><td>Vos propres élèves</td><td>Des élèves <b>de même niveau</b>, venus de <b>plusieurs classes</b> de l'école</td></tr>
+    <tr><td><b>Comment ?</b></td><td>Vous les répartissez en 2 groupes dans votre classe</td><td>L'école forme 3 groupes ; <b>chaque enseignant prend un groupe</b></td></tr>
+    <tr><td><b>Plans de séance</b></td><td>Un plan à deux colonnes (un par groupe)</td><td>Un plan pour <b>un seul groupe</b>, adapté à son niveau</td></tr>
+  </table></div>
+  <div class="note"><b>Exemple.</b> À l'EPP, les élèves de CE1 et de CE2 passent le test ASER de mathématiques. Ceux qui ne savent lire que les nombres à 1 chiffre vont tous chez M. Koné (groupe GH1), ceux qui maîtrisent les nombres à 2 chiffres chez Mme Bamba (GH2), et ceux qui savent déjà soustraire ou diviser chez M. Yao (GH3). Pendant la séance de remédiation, chaque maître reçoit son groupe.</div>
+  <h3>Les trois groupes (repris des guides PNAPAS)</h3>
+  <div class="defilement"><table>
+    <tr><th>Groupe</th><th>Mathématiques</th><th>Lecture</th></tr>
+    <tr><td><b>GH1</b></td><td>Débutant et nombres à 1 chiffre</td><td>Débutant et lettres</td></tr>
+    <tr><td><b>GH2</b></td><td>Nombres à 2 chiffres</td><td>Mots et paragraphes</td></tr>
+    <tr><td><b>GH3</b></td><td>Soustraction et division</td><td>Histoires et compréhension</td></tr>
+  </table></div>
+  <p><b>Pour quelles classes ?</b> Dans l'application, la « Remédiation PNAPAS » concerne le <b>CE1 et le CE2</b>. Au CP1 et au CP2, le module s'appelle « Soutien PNAPAS » et fonctionne autrement (groupes de besoins, sans groupes GH) : ce tutoriel ne le concerne pas.</p>
+
+  <h2 id="avant">2. Avant de commencer</h2>
+  <p>Vérifiez ces cinq points. S'il en manque un, l'application ne pourra pas vous guider jusqu'au bout.</p>
+  <ul class="case">
+    <li><b>Votre classe est un CE1 ou un CE2</b>, créée dans « Mes classes ».</li>
+    <li><b>Vous êtes abonné au niveau de cette classe.</b> Sans abonnement, le module affiche un cadenas.</li>
+    <li><b>Vos élèves sont inscrits</b> dans la classe (Mes classes → votre classe → onglet Élèves).</li>
+    <li><b>L'emploi du temps de la classe contient les créneaux de remédiation</b> : l'application place les séances sur ces créneaux.</li>
+    <li><b>Le test ASER a été fait en classe</b>, sur papier. L'application ne fait pas passer le test : vous y reportez seulement le niveau trouvé.</li>
+  </ul>
+  <h3>À décider en équipe, avec le directeur, avant d'ouvrir l'application</h3>
+  <ol>
+    <li>Quel enseignant prend quel groupe (GH1, GH2 ou GH3) en mathématiques ?</li>
+    <li>Quel enseignant prend quel groupe en lecture ?</li>
+    <li>Quels élèves vont dans chaque groupe, d'après les résultats du test ASER ?</li>
+  </ol>
+  <p>L'application ne déplace jamais un élève d'un groupe à l'autre toute seule : c'est toujours l'équipe qui décide.</p>
+
+  <h2 id="etape1">3. Étape 1 : ouvrir le module de remédiation</h2>
+  <ol>
+    <li>En bas de l'écran, touchez <b>Mes classes</b>.</li>
+    <li>Touchez la carte de votre classe de <b>CE1 ou CE2</b> (ou son bouton <b>Élèves</b>). L'écran « Détail de la classe » s'ouvre.</li>
+    <li>En haut, touchez l'onglet <b>Outils</b>.</li>
+    <li>Touchez <b>Remédiation PNAPAS</b> (sous-titre : « Évaluations ASER, groupes, programmation et fiches »).</li>
+    <li>En haut du module, choisissez la discipline : <b>Lecture</b> ou <b>Mathématiques</b>. Tout ce que vous faites ensuite concerne <b>cette discipline seulement</b>.</li>
+  </ol>
+  <p>Vous voyez alors six rubriques :</p>
+  <div class="defilement"><table>
+    <tr><th>Rubrique</th><th>À quoi elle sert</th></tr>
+    <tr><td><b>Évaluations ASER</b></td><td>Noter le niveau de chaque élève trouvé au test</td></tr>
+    <tr><td><b>Groupes</b></td><td>Choisir votre groupe de niveau (GH1, GH2 ou GH3)</td></tr>
+    <tr><td><b>Programmation et fiches</b></td><td>Voir les séances de la semaine, le plan et les fiches</td></tr>
+    <tr><td><b>Catalogue des activités</b></td><td>Consulter les activités officielles du guide</td></tr>
+    <tr><td><b>Suivi individuel</b></td><td>Voir les progrès de chaque élève</td></tr>
+    <tr><td><b>Bilans et historiques</b></td><td>Voir les séances faites et la répartition des élèves</td></tr>
+  </table></div>
+  <div class="note"><b>Un cadenas s'affiche ?</b> Votre abonnement ne couvre pas le niveau de cette classe. Abonnez-vous au niveau, puis touchez <b>Vérifier</b>.</div>
+
+  <h2 id="etape2">4. Étape 2 : noter le niveau ASER de chaque élève</h2>
+  <p>Le test ASER se passe <b>en classe, sur papier</b>, comme d'habitude. L'application sert seulement à <b>noter le résultat</b>. C'est ce niveau qui permet ensuite de dire dans quel groupe va chaque élève.</p>
+  <ol>
+    <li>Dans le module, touchez <b>Évaluations ASER</b>. La liste de vos élèves s'affiche ; sous chaque nom, vous lisez son niveau, ou « Non évalué ».</li>
+    <li>Touchez le nom d'un élève. Une fenêtre « Évaluation ASER » s'ouvre.</li>
+    <li>Dans <b>Niveau décidé</b>, touchez le niveau trouvé au test (par exemple <i>1 chiffre</i> en mathématiques, ou <i>Lettre</i> en lecture).</li>
+    <li>Dans <b>Protocole suivi</b>, cochez la façon dont vous avez fait passer le test.</li>
+    <li>Dans <b>Moment</b>, laissez <b>Évaluation initiale</b> pour le premier test de l'année.</li>
+    <li>Si vous avez hésité entre deux niveaux, activez <b>Cas litigieux</b> et écrivez une courte observation (facultatif).</li>
+    <li>Touchez <b>Enregistrer</b>. Passez à l'élève suivant.</li>
+  </ol>
+  <div class="note"><b>Vous vous êtes trompé ?</b> Touchez la petite horloge à droite du nom (Historique), puis <b>Corriger</b>. L'ancienne saisie est gardée dans l'historique, elle n'est jamais effacée.</div>
+  <h3>Correspondance entre niveaux et groupes</h3>
+  <div class="defilement"><table>
+    <tr><th>Groupe</th><th>Niveaux ASER en mathématiques</th><th>Niveaux ASER en lecture</th></tr>
+    <tr><td><b>GH1</b></td><td>Débutant, 1 chiffre</td><td>Débutant, Lettre</td></tr>
+    <tr><td><b>GH2</b></td><td>2 chiffres</td><td>Mot, Paragraphe</td></tr>
+    <tr><td><b>GH3</b></td><td>Soustraction, Division</td><td>Histoire, Compréhension</td></tr>
+  </table></div>
+  <p>L'application ne range pas les élèves toute seule : elle vous indique seulement le groupe qui correspond à leur niveau.</p>
+
+  <h2 id="etape3">5. Étape 3 : choisir la date de début</h2>
+  <p>Cette date dit à l'application quand commence votre remédiation. <b>Elle est obligatoire avant l'étape 4</b> : sans elle, l'application refuse de choisir un groupe de niveau.</p>
+  <ol>
+    <li>Revenez au module et touchez <b>Programmation et fiches</b>.</li>
+    <li>Touchez <b>Choisir la date de début</b>.</li>
+    <li>Premier calendrier, « Date de début de la programmation » : touchez le jour de la <b>première séance de remédiation</b>, puis <b>OK</b>.</li>
+    <li>Deuxième calendrier, « Date de rentrée de la classe » : touchez le <b>jour de la rentrée scolaire</b>, puis <b>OK</b>. Cette date sert à numéroter les semaines dans votre journal de classe.</li>
+  </ol>
+  <p>C'est fait : l'application calcule toute seule les dates des séances à partir de l'<b>emploi du temps</b> de la classe. Les séances de la semaine en cours et de la semaine suivante sont programmées automatiquement.</p>
+  <div class="note"><b>Pour changer ces dates plus tard :</b> dans Programmation et fiches, touchez le petit calendrier à roue dentée en haut à droite (<b>Dates</b>).</div>
+
+  <h2 id="etape4">6. Étape 4 : dire à l'application quel groupe vous prenez</h2>
+  <p>C'est l'étape qui fait passer de la « classe hétérogène » au <b>groupe de niveau</b>. Faites-la pour le groupe décidé en équipe (voir la partie 2).</p>
+  <ol>
+    <li>Dans le module, vérifiez en haut la discipline choisie (<b>Lecture</b> ou <b>Mathématiques</b>).</li>
+    <li>Touchez <b>Groupes</b>.</li>
+    <li>Touchez la carte <b>Organisation de la remédiation</b>. Elle indique pour l'instant « Classe hétérogène ».</li>
+    <li>Une liste s'ouvre. Touchez votre groupe, par exemple <b>Groupe de niveau GH1 · Débutant / 1 chiffre</b>.</li>
+    <li>Le message « Organisation enregistrée » s'affiche. L'écran s'appelle désormais <b>Groupe de niveau</b>.</li>
+  </ol>
+  <h3>Ce qui change aussitôt</h3>
+  <ul>
+    <li>Les séances qui suivent sont refaites avec les <b>plans de votre groupe</b> (une seule colonne, au niveau du groupe).</li>
+    <li>Les séances déjà faites, ou dont vous avez déjà ouvert la fiche, <b>ne changent pas</b>.</li>
+    <li>Dans la liste des élèves, chacun porte une mention : « Niveau du groupe », « Non évalué », ou « À orienter vers le GH2 » (voir l'étape 7).</li>
+  </ul>
+  <div class="note"><b>Vous prenez un groupe en lecture ET un groupe en mathématiques ?</b> Changez la discipline en haut du module, puis refaites seulement l'étape 4 pour l'autre discipline (la date de début vaut pour les deux).</div>
+  <p><b>Pour revenir en arrière :</b> touchez à nouveau <b>Organisation de la remédiation</b> et choisissez <b>Classe hétérogène</b>.</p>
+
+  <h2 id="etape5">7. Étape 5 : créer la classe de remédiation et y inscrire les élèves reçus</h2>
+  <p><b>Pourquoi ?</b> Votre classe habituelle contient <b>vos</b> élèves. Or, en groupe de niveau, vous recevez aussi des élèves <b>d'autres classes</b>. Pour ne pas mélanger, l'application crée une <b>classe à part</b>, réservée à votre groupe. Votre classe habituelle ne change pas.</p>
+  <h3>A. Créer la classe</h3>
+  <ol>
+    <li>Dans <b>Groupes</b>, touchez le bouton <b>Créer une classe de remédiation</b>.</li>
+    <li>Dans la fenêtre, vérifiez que votre groupe est coché (par exemple GH1).</li>
+    <li>Le nom est proposé tout seul, par exemple <b>« Remédiation GH1 Mathématiques »</b>. Vous pouvez le changer.</li>
+    <li>Touchez <b>Créer la classe</b>.</li>
+    <li>Le message « Remédiation GH1 Mathématiques créée » s'affiche. Touchez <b>Plus tard</b> : il faut d'abord inscrire les élèves.</li>
+  </ol>
+  <p>La nouvelle classe reprend <b>la même date de début</b> et <b>le même groupe de niveau</b> : vous n'avez pas à refaire les étapes 3 et 4.</p>
+  <h3>B. Inscrire les élèves du groupe</h3>
+  <ol>
+    <li>En bas de l'écran, touchez <b>Mes classes</b>. La classe « Remédiation GH1 Mathématiques » apparaît dans la liste.</li>
+    <li>Touchez-la, puis le bouton <b>Ajouter</b> (onglet Élèves).</li>
+    <li>Saisissez chaque élève du groupe : nom, prénoms, sexe. Il peut venir de votre classe ou d'une autre classe.</li>
+  </ol>
+  <h3>C. Noter leurs niveaux ASER dans cette classe</h3>
+  <p>Ouvrez le module de la classe de remédiation (Outils → Remédiation PNAPAS), puis refaites l'<b>étape 2</b> pour chaque élève reçu, avec le niveau trouvé à son test. C'est indispensable : sans niveau, l'application ne peut pas vous signaler un élève mal placé.</p>
+  <div class="note"><b>À partir de maintenant, pour la remédiation, travaillez toujours dans la classe « Remédiation GH… ».</b></div>
+
+  <h2 id="etape6">8. Étape 6 : chaque semaine, préparer et faire les séances</h2>
+  <p>La remédiation dure <b>27 semaines</b>, avec <b>4 séances par semaine</b> : lundi, mardi, jeudi et vendredi. Tout est déjà préparé ; vous n'avez qu'à suivre.</p>
+  <h3>Durée d'une séance</h3>
+  <div class="defilement"><table>
+    <tr><th></th><th>Mathématiques : 75 min</th><th>Lecture : 45 min</th></tr>
+    <tr><td><b>Mise en route</b></td><td>15 min, au niveau du groupe</td><td>15 min, à l'oral (dialogue, images)</td></tr>
+    <tr><td><b>Activité principale</b></td><td>30 min</td><td>30 min, sur les lettres ou textes de la semaine</td></tr>
+    <tr><td><b>Entraînement</b></td><td>30 min, sur la même notion</td><td>—</td></tr>
+  </table></div>
+  <h3>A. Voir le plan de la semaine (le lundi matin, ou la veille)</h3>
+  <ol>
+    <li>Dans la classe de remédiation, ouvrez le module puis <b>Programmation et fiches</b>.</li>
+    <li>En haut, « Semaine du … » : utilisez les flèches ‹ et › pour changer de semaine.</li>
+    <li>Touchez la carte <b>Plan de session de la semaine</b>. Le plan s'affiche comme la feuille imprimée : dates, objectifs, activités, matériel, durées.</li>
+    <li>Pour <b>modifier</b> une ligne ou l'objectif, touchez-le, changez le texte, puis <b>Enregistrer</b>. <b>Rétablir</b> remet le texte d'origine.</li>
+    <li>Pour <b>imprimer</b>, touchez l'imprimante en haut à droite : un PDF d'une page est produit.</li>
+  </ol>
+  <h3>B. Faire la séance du jour</h3>
+  <p>Sous le plan, chaque séance a sa carte (jour, heure, titre, statut) :</p>
+  <ol>
+    <li>Touchez <b>Fiche</b> : la fiche complète de la séance s'ouvre (étapes, consignes, matériel). Vous pouvez l'imprimer.</li>
+    <li>Faites la séance avec votre groupe.</li>
+    <li>Après la séance, touchez <b>Effectuée</b>. Elle s'inscrit toute seule dans votre <b>journal de classe</b> (« Remédiation PNAPAS »).</li>
+    <li>Si la séance n'a pas eu lieu, touchez <b>Non réalisée</b>.</li>
+  </ol>
+  <div class="note"><b>Une carte affiche « Programmer » ?</b> La séance n'est pas encore prévue sur ce créneau : touchez <b>Programmer</b>.</div>
+  <p><b>Bon à savoir :</b> si vous retouchez une fiche à la main, elle ne suit plus le plan. Si vous modifiez ensuite le plan, cette fiche n'est pas changée sans votre accord.</p>
+
+  <h2 id="etape7">9. Étape 7 : contrôler les progrès et changer un élève de groupe</h2>
+  <p>Un élève qui progresse doit pouvoir monter dans le groupe suivant. L'application vous prévient à des moments fixes.</p>
+  <div class="defilement"><table>
+    <tr><th>Semaines</th><th>Ce qui se passe</th><th>Ce que vous faites</th></tr>
+    <tr><td>Fin des semaines <b>4, 13 et 22</b></td><td><b>Point de contrôle</b> (le vendredi, 5 min à l'ardoise)</td><td>Notez les élèves qui semblent prêts pour le groupe suivant</td></tr>
+    <tr><td>Semaines <b>9, 18 et 27</b></td><td><b>Semaine d'évaluation</b> : on refait le test ASER</td><td>Saisissez les nouveaux niveaux dans l'application</td></tr>
+  </table></div>
+  <p>Ces semaines-là, un bandeau le rappelle en haut du plan de session.</p>
+  <h3>Après une évaluation</h3>
+  <ol>
+    <li>Faites passer le test ASER au groupe, en classe.</li>
+    <li>Dans <b>Évaluations ASER</b>, touchez chaque élève et saisissez son nouveau niveau. Dans <b>Moment</b>, choisissez <b>Mi-parcours</b> (semaine 9 ou 18) ou <b>Évaluation finale</b> (semaine 27).</li>
+    <li>Ouvrez <b>Groupes</b>. Un bandeau indique par exemple « 2 élève(s) à orienter vers un autre groupe de niveau ». Sous le nom de chaque élève concerné, vous lisez <b>« À orienter vers le GH2 »</b>. Cette liste figure aussi sur le PDF du plan de session.</li>
+    <li><b>L'application ne déplace personne.</b> Montrez la liste à vos collègues ou au directeur, et décidez ensemble.</li>
+    <li>Si l'élève change de groupe : le maître de son nouveau groupe l'ajoute dans <b>sa</b> classe de remédiation (étape 5 B), avec son nouveau niveau (étape 2).</li>
+  </ol>
+  <p>Pour suivre un élève en particulier, ouvrez <b>Suivi individuel</b> : vous y voyez tous ses niveaux successifs.</p>
+
+  <h2 id="faq">10. Questions fréquentes</h2>
+  <dl class="faq">
+    <dt>Je ne trouve pas « Remédiation PNAPAS » dans les Outils.</dt>
+    <dd>La classe n'est pas un CE1 ni un CE2. Au CP1 et au CP2, cherchez « Soutien PNAPAS » ; au CM1 et au CM2, le module n'existe pas.</dd>
+    <dt>Le message « Choisissez d'abord la date de début » s'affiche quand je choisis mon groupe.</dt>
+    <dd>Faites d'abord l'étape 3 (Programmation et fiches → Choisir la date de début), puis revenez à l'étape 4.</dd>
+    <dt>« Aucun créneau PNAPAS cette semaine ».</dt>
+    <dd>Vérifiez l'emploi du temps de la classe : les séances se placent sur les créneaux de remédiation. Vérifiez aussi que la semaine affichée est bien après la date de début.</dd>
+    <dt>Tous mes élèves sont « Non évalué ».</dt>
+    <dd>Les niveaux ASER n'ont pas été saisis dans <b>cette</b> classe. Faites l'étape 2. Attention : les niveaux saisis dans votre classe habituelle ne passent pas tout seuls dans la classe de remédiation.</dd>
+    <dt>Je n'ai que mes propres élèves dans le groupe, aucun ne vient d'une autre classe.</dt>
+    <dd>Vous pouvez alors rester dans votre classe habituelle : l'étape 5 (classe de remédiation) n'est pas nécessaire.</dd>
+    <dt>L'application peut-elle changer un élève de groupe toute seule ?</dt>
+    <dd>Non, jamais. Elle signale seulement les élèves « à orienter ». La décision revient à l'équipe.</dd>
+    <dt>Les plans sont-ils officiels ?</dt>
+    <dd>Ils sont construits avec les activités officielles des guides PNAPAS, mais l'organisation sur 27 semaines est une <b>proposition du Cahier de l'instituteur</b>, à adapter à votre groupe. Ce n'est pas un plan officiel de la DPFC.</dd>
+    <dt>Je travaille sans connexion internet.</dt>
+    <dd>Le module fonctionne hors ligne. Vos saisies sont gardées sur le téléphone ; touchez l'icône de synchronisation (deux flèches en cercle, en haut du module) quand vous avez du réseau.</dd>
+    <dt>Une autre question ?</dt>
+    <dd>Dans l'application : <b>Réglages → Nous contacter</b>.</dd>
+  </dl>
+</div>
+
+<footer>Cahier de l'instituteur — au service de l'école ivoirienne. <a href="/">cahier-de-l-instituteur.com</a></footer>
+
+</body>
+</html>
