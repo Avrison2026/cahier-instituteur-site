@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gérer sa classe avec le Cahier de l&#x27;instituteur — Cahier de l'instituteur</title>
+<meta name="description" content="Tutoriel pas à pas : gérer sa classe avec le cahier de l&#x27;instituteur.">
+<style>
+  :root{--marine:#0F1F4D;--orange:#ef7f1a;--vert:#176B63;--texte:#1F2A44;--texte-doux:#5A6478;--carte:#FFFFFF;--bordure:#E3E8EF;--fond:#F5F7FA;}
+  *{box-sizing:border-box;}
+  body{margin:0;background:var(--fond);color:var(--texte);font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;}
+  .wrap{max-width:720px;margin:0 auto;padding:0 16px 70px;}
+  header{background:var(--marine);color:#fff;padding:40px 16px 28px;}
+  header .inner{max-width:720px;margin:0 auto;}
+  header h1{font-size:1.55rem;margin:0 0 8px;line-height:1.3;}
+  header p{color:rgba(255,255,255,.8);margin:0;font-size:.95rem;}
+  h2{font-size:1.18rem;color:var(--marine);margin:38px 0 10px;padding-top:6px;border-top:3px solid var(--orange);}
+  p,li{font-size:.98rem;}
+  .maj{color:var(--texte-doux);font-size:.85rem;margin-top:14px;}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem;background:var(--carte);}
+  th,td{text-align:left;padding:9px 10px;border:1px solid var(--bordure);vertical-align:top;}
+  th{background:#EEF2F8;color:var(--marine);font-size:.85rem;}
+  .defilement{overflow-x:auto;}
+  ol,ul{padding-left:22px;}
+  li{margin:6px 0;}
+  li > ul,li > ol{margin:4px 0;}
+  .sommaire{background:var(--carte);border:1px solid var(--bordure);border-radius:10px;padding:12px 18px;margin:18px 0;}
+  .sommaire ol{margin:6px 0;}
+  a{color:var(--marine);}
+  footer{padding:30px 16px 50px;color:var(--texte-doux);font-size:.88rem;text-align:center;}
+  @media print{header{background:none;color:#000;padding:0 0 10px;}header p{color:#333;}body{background:#fff;}h2{break-after:avoid;}table{break-inside:avoid;}.sommaire,footer{display:none;}}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <h1>Gérer sa classe avec le Cahier de l&#x27;instituteur</h1>
+    <p>Tutoriel pas à pas · tous les niveaux · Cahier de l&#x27;instituteur</p>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="maj">Mis à jour le 21 novembre 2026</p>
+  <div class="sommaire"><b>Sommaire</b><ol><li><a href="#s1">Où se trouve la gestion de classe ?</a></li><li><a href="#s2">Étape 1 : créer votre école et votre classe</a></li><li><a href="#s3">Étape 2 : inscrire vos élèves</a></li><li><a href="#s4">Étape 3 : faire l'appel chaque jour</a></li><li><a href="#s5">Étape 4 : saisir les notes</a></li><li><a href="#s6">Étape 5 : résultats, moyennes, rangs et documents à imprimer</a></li><li><a href="#s7">Étape 6 : les autres outils de la classe</a></li><li><a href="#s8">Questions fréquentes</a></li></ol></div>
+<h2 id="s1">1. Où se trouve la gestion de classe ?</h2>
+<p>Tout part du bouton <b>Mes classes</b>, en bas de l'écran. Vous y trouvez votre classe, et quatre raccourcis pour le travail de tous les jours.</p>
+<p><b>L'écran « Mes classes » :</b></p>
+<div class="defilement"><table><tr><th>Zone</th><th>Ce qu'on y trouve</th></tr><tr><td>Carte de la classe</td><td>Nom, année, nombre d'élèves ; boutons <b>Élèves</b> et <b>Fiche</b></td></tr><tr><td>Prochain cours</td><td>Le prochain cours de l'emploi du temps, avec <b>Préparer</b></td></tr><tr><td><b>Au quotidien</b></td><td>Registre d'appel, Journal de classe, Suivi des élèves, Résultats</td></tr><tr><td><b>Ressources du niveau</b></td><td>Exercices, Proposition de sujets, Banque de dictées</td></tr></table></div>
+<p><b>L'écran « Détail de la classe »</b> s'ouvre quand vous touchez la carte de la classe (ou son bouton <b>Élèves</b>). Il a trois onglets :</p>
+<div class="defilement"><table><tr><th>Onglet</th><th>À quoi il sert</th></tr><tr><td><b>Élèves</b></td><td>La liste des élèves : ajouter, modifier, rechercher</td></tr><tr><td><b>Outils</b></td><td>Saisie des notes, résultats, composition mensuelle, matières et barèmes, registre d'appel, statistiques, groupes d'EPS</td></tr><tr><td><b>Documents</b></td><td>Tous les documents à imprimer : liste, tableau récapitulatif, résultats, kits, manuels, import Excel</td></tr></table></div>
+<p>Ce tutoriel suit l'ordre d'une année : créer la classe, inscrire les élèves, faire l'appel, saisir les notes, imprimer les résultats.</p>
+<h2 id="s2">2. Étape 1 : créer votre école et votre classe</h2>
+<p>Cela se fait <b>une seule fois</b> par année scolaire.</p>
+<p><b>A. Ajouter votre école</b> (si l'application vous le demande)</p>
+<ol>
+<li>Touchez <b>Mes classes</b>, puis <b>+ Ajouter</b> en haut. Tant que vous n'avez pas d'école, ce bouton ouvre la fenêtre « Ajouter une école » (pour une deuxième école : trois points en haut à droite, puis <b>Ajouter une école</b>).
+</li>
+<li><b>Nom de l'école</b> : écrivez-le en entier, par exemple <i>EPP Alla Lamine 1</i>. Ce nom sera imprimé sur vos fiches et vos documents.
+</li>
+<li><b>Année scolaire</b> : vérifiez qu'elle est juste, par exemple <i>2026-2027</i>.
+</li>
+<li>Touchez <b>Ajouter</b>.
+</li></ol>
+<p><b>B. Ajouter votre classe</b></p>
+<ol>
+<li>Dans <b>Mes classes</b>, touchez <b>+ Ajouter</b> en haut. La fenêtre « Ajouter une classe » s'ouvre.
+</li>
+<li>Si vous avez plusieurs écoles, choisissez la bonne dans <b>École</b>.
+</li>
+<li>Dans <b>Niveau</b>, touchez votre niveau (CP1, CP2, CE1, CE2, CM1, CM2, ou une section de maternelle).
+</li>
+<li><b>Nom de la classe</b> : par exemple <i>CM2 A</i>. Si vous le laissez vide, la classe prend le nom du niveau.
+</li>
+<li><b>Année scolaire</b> : vérifiez-la.
+</li>
+<li>Touchez <b>Ajouter</b>.
+</li></ol>
+<p>La classe apparaît dans <b>Mes classes</b>. Elle est enregistrée sur votre téléphone, même sans connexion, puis sauvegardée en ligne dès que vous avez du réseau.</p>
+<p><b>Vous avez plusieurs classes ?</b> Répétez l'étape B pour chacune. Pour changer le nom ou l'année d'une classe : ouvrez-la, touchez les trois points en haut à droite, puis <b>Modifier la classe</b>.</p>
+<h2 id="s3">3. Étape 2 : inscrire vos élèves</h2>
+<p>Vous avez deux façons de faire. Choisissez celle qui vous arrange.</p>
+<p><b>Façon 1 : un par un, sur le téléphone</b></p>
+<ol>
+<li>Dans <b>Mes classes</b>, touchez votre classe. L'écran « Détail de la classe » s'ouvre, sur l'onglet <b>Élèves</b>.
+</li>
+<li>Touchez <b>+ Ajouter</b>.
+</li>
+<li>Remplissez la fiche de l'élève. Seuls le <b>Nom</b> et les <b>Prénoms</b> sont obligatoires. Remplissez aussi, si possible : Genre, Date de naissance (l'âge se calcule tout seul), Lieu de naissance, Matricule, Nationalité, Nom du parent, Contacts, Scolarité (années), Conduite.
+</li>
+<li>Touchez <b>Ajouter</b>. Recommencez pour l'élève suivant.
+</li></ol>
+<p><b>Façon 2 : toute la liste d'un coup, avec Excel</b> (pratique si vous avez un ordinateur)</p>
+<ol>
+<li>Ouvrez votre classe, puis l'onglet <b>Documents</b>.
+</li>
+<li>Touchez <b>Télécharger le modèle Excel vierge</b>.
+</li>
+<li>Remplissez ce fichier : une ligne par élève, sans changer les titres des colonnes.
+</li>
+<li>Revenez dans <b>Documents</b> et touchez <b>Importer depuis Excel</b>. Choisissez votre fichier.
+</li>
+<li>Un <b>aperçu</b> s'affiche. Vérifiez les noms, puis confirmez l'import.
+</li></ol>
+<p><b>Une fois la liste faite :</b></p>
+<ul>
+<li>Les élèves sont classés par <b>ordre alphabétique</b>, l'ordre officiel des listes et des relevés.
+</li>
+<li>Les noms des filles s'affichent en rouge.
+</li>
+<li>Pour voir aussi les contacts et la conduite : touchez <b>Organiser</b>, puis <b>Afficher contacts et conduite</b>.
+</li>
+<li>Pour modifier ou supprimer un élève : touchez les trois points à droite de son nom, puis <b>Modifier</b> ou <b>Supprimer</b>.
+</li>
+<li>Pour chercher un élève : utilisez la barre <b>Rechercher un élève</b>.
+</li></ul>
+<p><b>Pourquoi bien remplir les fiches ?</b> Le genre, la date de naissance et la scolarité servent à remplir automatiquement le tableau récapitulatif et les statistiques (filles, garçons, âges).</p>
+<h2 id="s4">4. Étape 3 : faire l'appel chaque jour</h2>
+<p>Le registre d'appel remplace le registre papier. Il fonctionne <b>sans connexion internet</b>.</p>
+<p><b>Ouvrir le registre :</b> dans <b>Mes classes</b>, touchez la tuile <b>Registre d'appel</b> (rubrique « Au quotidien »).</p>
+<p><b>Faire l'appel du jour :</b></p>
+<ol>
+<li>L'onglet <b>Appel du jour</b> s'ouvre sur la date d'aujourd'hui.
+</li>
+<li>Par défaut, tous les élèves sont <b>présents</b>. Vous ne notez que les <b>absents</b>.
+</li>
+<li>Pour un absent, touchez la <b>case à droite de son nom</b>. Une petite fenêtre s'ouvre.
+</li>
+<li>Cochez <b>Absent le matin</b>, <b>Absent l'après-midi</b>, ou les deux. Touchez <b>Enregistrer</b>.
+</li>
+<li>Quand tous les absents sont notés, touchez <b>Valider l'appel</b> en bas de l'écran. Le message « Appel validé » s'affiche.
+</li></ol>
+<p><b>Les signes dans les cases</b> (comme sur le registre papier) :</p>
+<div class="defilement"><table><tr><th>Signe</th><th>Signification</th></tr><tr><td><b>−</b></td><td>Absent le matin</td></tr><tr><td><b>|</b></td><td>Absent l'après-midi</td></tr><tr><td><b>+</b></td><td>Absent toute la journée</td></tr></table></div>
+<p><b>Corriger une erreur :</b> touchez de nouveau la case de l'élève et décochez. Si vous décochez tout, l'absence est effacée.</p>
+<p><b>Un autre jour :</b> utilisez les flèches ‹ › à côté de la date pour revenir sur un jour passé. Un jour peut être marqué <b>Jour férié</b> ou <b>Vacances</b> : il ne compte plus dans les calculs.</p>
+<p><b>En haut de l'écran, trois boutons :</b></p>
+<ul>
+<li><b>Élèves</b> : enregistrer les entrées et sorties d'élèves en cours d'année.
+</li>
+<li><b>Bilan</b> : le taux de présence du mois, le nombre de demi-journées d'absence et les <b>élèves à surveiller</b> (présence sous le seuil).
+</li>
+<li><b>Imprimer</b> : le registre du mois en PDF, prêt à signer.
+</li></ul>
+<p>L'onglet <b>Vue du mois</b> montre tout le mois d'un coup d'œil, élève par élève.</p>
+<h2 id="s5">5. Étape 4 : saisir les notes</h2>
+<p><b>Avant la première composition, vérifiez vos matières</b> (une seule fois) :</p>
+<ol>
+<li>Ouvrez votre classe, onglet <b>Outils</b>, puis <b>Matières et barèmes</b>.
+</li>
+<li>Vous voyez les matières officielles du niveau et leur total (par exemple Dictée sur 20, Mathématiques sur 50).
+</li>
+<li>Si votre école fait autrement, vous pouvez <b>ajouter</b> une matière, en <b>retirer</b> une, ou <b>changer son total</b>. Enregistrez.
+</li></ol>
+<p>Ce réglage vaut pour cette classe seulement, pour les compositions et les compositions mensuelles.</p>
+<p><b>Saisir les notes d'une composition :</b></p>
+<ol>
+<li>Ouvrez votre classe, onglet <b>Outils</b>, puis <b>Saisie des notes</b>.
+</li>
+<li>En haut, choisissez l'évaluation : <b>Compo. 1</b>, <b>Compo. 2</b>, <b>Compo. 3</b>, <b>Passage</b>, ou <b>Mois</b> (composition mensuelle). La date officielle de la composition s'affiche dessous.
+</li>
+<li>Choisissez votre façon de saisir :
+<ul>
+<li><b>Par matière</b> : toute la classe en Dictée, puis toute la classe en Mathématiques… (le plus rapide avec les copies rangées par matière) ;
+</li>
+<li><b>Par élève</b> : toutes les matières d'un élève, puis l'élève suivant.
+</li></ul>
+</li>
+<li>La case de l'élève en cours est encadrée. Tapez la note sur le <b>clavier de l'écran</b> (la touche <b>,5</b> ajoute un demi-point).
+</li>
+<li>Touchez <b>Suivant</b> : la note est enregistrée et la case suivante s'ouvre. <b>Passer</b> laisse la case vide pour plus tard.
+</li></ol>
+<p><b>Bon à savoir :</b></p>
+<ul>
+<li>Une note <b>au-dessus du total</b> (par exemple 23 sur 20) est refusée, avec un message.
+</li>
+<li>Pour <b>corriger</b>, touchez la case de l'élève, effacez avec la touche ⌫, puis tapez la bonne note.
+</li>
+<li>L'écran indique combien de notes sont saisies (par exemple « Dictée · 8 / 14 notés »).
+</li>
+<li><b>Sur ordinateur</b> (version Web), la saisie se fait dans un grand tableau élèves × matières : tapez la note puis <b>Entrée</b> pour passer à l'élève suivant, <b>Tab</b> pour la matière suivante.
+</li></ul>
+<h2 id="s6">6. Étape 5 : résultats, moyennes, rangs et documents à imprimer</h2>
+<p>Vous n'avez <b>rien à calculer</b> : dès que les notes sont saisies, l'application calcule les moyennes et les rangs.</p>
+<p><b>Voir les résultats d'une composition :</b></p>
+<ol>
+<li>Ouvrez votre classe, onglet <b>Outils</b>, puis <b>Résultats des compositions</b> (ou la tuile <b>Résultats</b> dans Mes classes).
+</li>
+<li>Choisissez la composition en haut.
+</li>
+<li>Vous voyez la <b>moyenne de la classe</b>, la <b>plus forte</b> et la <b>plus faible</b> moyenne, et le <b>nombre d'élèves ayant la moyenne</b>.
+</li>
+<li>Dessous, la liste des élèves avec leur moyenne et leur rang. Le bouton <b>Par rang / A → Z</b> change l'ordre.
+</li></ol>
+<p><b>Imprimer ou partager le tableau de la classe :</b> touchez <b>Exporter</b> (pour imprimer) ou <b>Partager</b> (pour l'envoyer), puis choisissez <b>PDF</b> (pour imprimer ou envoyer) ou <b>Excel</b> (pour retravailler le tableau).</p>
+<p><b>Envoyer son résultat à un parent :</b></p>
+<ol>
+<li>Dans la liste, touchez l'élève.
+</li>
+<li>Sa fiche de résultat s'affiche (notes, moyenne, rang, observation).
+</li>
+<li>Touchez <b>Au parent</b> : WhatsApp s'ouvre avec un message prêt et le PDF du résultat joint. Le visa des parents est toujours imprimé sur le document.
+</li></ol>
+<p><b>Composition mensuelle :</b> Outils → <b>Composition mensuelle</b> donne les notes du mois, les moyennes, les rangs et les observations. Elle <b>ne compte pas</b> dans la moyenne générale de l'année.</p>
+<p><b>Envoyer les résultats au directeur :</b> dans votre classe, touchez les trois points en haut à droite, puis <b>Envoyer les résultats au directeur (PDF)</b>. Le même menu permet d'<b>exporter toutes les notes</b> en Excel, PDF ou Word.</p>
+<p><b>Le relevé d'un élève :</b> onglet Élèves, trois points à droite de son nom, puis <b>Relevé de notes</b>.</p>
+<p><b>Les statistiques :</b> Outils → <b>Statistiques de la classe</b> montre la moyenne générale et son évolution au fil des compositions.</p>
+<p><b>Les autres documents de la classe</b> sont dans l'onglet <b>Documents</b> :</p>
+<div class="defilement"><table><tr><th>Document</th><th>Contenu</th></tr><tr><td>Liste des élèves (PDF / Word)</td><td>Vous choisissez les colonnes à imprimer</td></tr><tr><td>Tableau récapitulatif (PDF / Word)</td><td>Effectifs, âges, scolarité, chants et poésie</td></tr><tr><td>Répartition mensuelle</td><td>Le programme du mois, PDF / Word</td></tr><tr><td>Rapports du registre d'appel</td><td>Absences du mois, assiduité</td></tr><tr><td>Mes documents</td><td>Tous les documents déjà produits sur ce téléphone (30 jours)</td></tr></table></div>
+<h2 id="s7">7. Étape 6 : les autres outils de la classe</h2>
+<p><b>L'emploi du temps</b></p>
+<ul>
+<li>Où : sur l'Accueil, rubrique <b>Outils pédagogiques</b>, puis <b>Emploi du temps</b>.
+</li>
+<li>Il est déjà rempli pour votre niveau. Choisissez le jour en haut (Lundi, Mardi, Jeudi, Vendredi) ; touchez une ligne pour la modifier, ou <b>+ Ajouter une ligne</b>.
+</li>
+<li>Il sert partout : la carte « Ma classe aujourd'hui » de l'Accueil, le « Prochain cours », la remédiation PNAPAS.
+</li></ul>
+<p><b>Le journal de classe</b></p>
+<ol>
+<li>Dans <b>Mes classes</b>, touchez la tuile <b>Journal de classe</b>.
+</li>
+<li>Dans <b>Préparer la semaine</b>, choisissez le <b>niveau</b> et la <b>semaine</b>.
+</li>
+<li>Le <b>contenu de la semaine</b> s'affiche jour par jour, déjà rempli d'après le programme. Touchez le crayon pour modifier une ligne.
+</li>
+<li>Touchez <b>Générer le PDF</b> ou <b>Word</b> : le journal est prêt à imprimer.
+</li></ol>
+<p><b>Les groupes d'EPS</b></p>
+<ul>
+<li>Où : votre classe, onglet <b>Outils</b>, puis <b>Groupes d'EPS</b>.
+</li>
+<li>Touchez <b>Créer un groupe</b> : donnez-lui un nom et une couleur, puis choisissez ses élèves. Dans chaque groupe, vous pouvez créer des équipes et désigner un capitaine. La liste « Élèves sans groupe » montre ceux qui restent à placer.
+</li>
+<li>Exportez en <b>PDF</b> ou <b>Word</b> : une grande feuille lisible à afficher au terrain.
+</li></ul>
+<p><b>La distribution des kits et les manuels PNAPAS</b></p>
+<ol>
+<li>Votre classe, onglet <b>Documents</b>, puis <b>Distribution des kits</b> (ou <b>Gestion des manuels PNAPAS</b>).
+</li>
+<li>Cochez les élèves qui ont reçu leur kit ou leur manuel ; notez le nom du parent (et l'état du manuel).
+</li>
+<li>Produisez le document en <b>PDF</b>, <b>Word</b> ou <b>Excel</b>, avec une colonne pour l'émargement des parents.
+</li></ol>
+<p><b>La cantine et les activités extra-scolaires</b></p>
+<ul>
+<li>Sur l'Accueil, rubrique <b>Gestion quotidienne</b>, touchez <b>Ajouter mon activité extra-scolaire</b>, puis choisissez <b>Cantine</b> (ou une autre activité).
+</li>
+<li>Une carte apparaît ensuite sur l'Accueil pour la saisie de chaque jour (rationnaires, plat du jour, stocks, résultats).
+</li></ul>
+<p><b>Le calendrier scolaire officiel</b></p>
+<ul>
+<li>Sur l'Accueil, la carte <b>Ma classe aujourd'hui</b> rappelle la prochaine composition et les prochains congés. Touchez-la pour voir tout le calendrier de l'année (compositions, examens, vacances).
+</li></ul>
+<h2 id="s8">8. Questions fréquentes</h2>
+<p><b>Je n'ai pas de connexion internet. Mes saisies sont-elles perdues ?</b><br>Non. La classe, les élèves et le registre d'appel sont enregistrés sur le téléphone, puis sauvegardés en ligne dès que le réseau revient.</p>
+<p><b>Je ne vois pas « Saisie des notes » dans les Outils.</b><br>Les outils de notes n'apparaissent pas pour les classes de maternelle. Pour les autres niveaux, vérifiez que vous avez ouvert la bonne classe.</p>
+<p><b>Une note est refusée.</b><br>Elle dépasse le total de la matière (par exemple 23 sur 20). Vérifiez la copie, ou changez le total dans <b>Matières et barèmes</b> si votre école note autrement.</p>
+<p><b>Les moyennes ne bougent pas après une correction.</b><br>Le message « Résultats à recalculer » peut s'afficher : les notes sont à jour, les moyennes et les rangs se mettent à jour juste après.</p>
+<p><b>J'ai supprimé une classe par erreur.</b><br>Dans <b>Mes classes</b>, touchez les trois points en haut à droite, puis <b>Corbeille</b> : la classe peut être restaurée pendant un temps limité.</p>
+<p><b>Un nouvel élève arrive en cours d'année.</b><br>Ajoutez-le dans l'onglet Élèves (étape 2), puis, dans le registre d'appel, bouton <b>Élèves</b>, notez sa date d'entrée : il ne sera pas compté absent les jours d'avant.</p>
+<p><b>Où retrouver un document déjà produit ?</b><br>Dans votre classe, onglet Documents, puis <b>Mes documents</b> : tous les documents produits sur ce téléphone pendant 30 jours.</p>
+<p><b>Une autre question ?</b><br>Dans l'application : <b>Réglages → Nous contacter</b>.</p>
+</div>
+
+<footer>Cahier de l'instituteur — au service de l'école ivoirienne. <a href="/">cahier-de-l-instituteur.com</a></footer>
+
+</body>
+</html>
